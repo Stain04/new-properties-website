@@ -39,18 +39,18 @@ export default function PageHero({
       <div className="scrim-full absolute inset-0" />
 
       <div
-        className={`relative flex flex-col justify-end pb-14 pt-40 ${
+        className={`relative flex flex-col justify-end pb-12 pt-32 md:pb-14 md:pt-40 ${
           size === "lg" ? "min-h-[78svh]" : "min-h-[62svh]"
         }`}
       >
         <div className="shell">
           {crumbs && (
-            <nav aria-label="Breadcrumb" className="mb-6">
+            <nav aria-label="Breadcrumb" className="mb-4">
               <ol className="flex flex-wrap items-center gap-2 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-bone-100/50">
                 {crumbs.map((c, i) => (
                   <li key={c.label} className="flex items-center gap-2">
                     {c.href ? (
-                      <Link href={c.href} className="transition-colors hover:text-gold-400">
+                      <Link href={c.href} className="inline-block py-2 transition-colors hover:text-gold-400">
                         {c.label}
                       </Link>
                     ) : (

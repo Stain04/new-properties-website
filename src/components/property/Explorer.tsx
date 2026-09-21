@@ -167,7 +167,7 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
                 setPurpose(o.k);
                 setMax("");
               }}
-              className={`flex-1 rounded-full px-3 py-2 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] transition-all duration-400 ${
+              className={`min-h-10 flex-1 rounded-full px-3 py-2 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] transition-all duration-400 ${
                 purpose === o.k
                   ? "bg-ink-900 text-bone-50"
                   : "bg-bone-100 text-ink-400 hover:text-ink-900"
@@ -251,7 +251,7 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
               key={b || "any"}
               type="button"
               onClick={() => setBeds(b)}
-              className={`flex-1 rounded-lg border px-2 py-2 text-[0.75rem] font-semibold transition-all duration-300 ${
+              className={`min-h-10 flex-1 rounded-lg border px-2 py-2 text-[0.75rem] font-semibold transition-all duration-300 ${
                 beds === b
                   ? "border-gold-500 bg-gold-500/12 text-gold-700"
                   : "border-ink-900/12 text-ink-400 hover:border-ink-900/30"
@@ -278,7 +278,7 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
                     on ? prev.filter((x) => x !== f.key) : [...prev, f.key],
                   )
                 }
-                className={`chip border transition-all duration-300 ${
+                className={`chip min-h-9 border px-3.5 transition-all duration-300 ${
                   on
                     ? "border-gold-500 bg-gold-500/12 text-gold-700"
                     : "border-ink-900/10 bg-bone-100 text-ink-500 hover:border-ink-900/25"
@@ -318,7 +318,7 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
   );
 
   return (
-    <div className="shell grid gap-10 pb-24 pt-12 lg:grid-cols-[17rem_1fr] lg:gap-14">
+    <div className="shell grid grid-cols-1 gap-10 pb-24 pt-12 lg:grid-cols-[17rem_1fr] lg:gap-14">
       {/* Desktop rail */}
       <aside className="hidden lg:block">
         <div className="sticky top-28">
@@ -336,7 +336,7 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
             {area && <span className="text-ink-300"> · {areas.find((a) => a.slug === area)?.name}</span>}
           </p>
 
-          <div className="flex items-center gap-2">
+          <div className="flex w-full items-center gap-2 sm:w-auto">
             <button
               type="button"
               onClick={() => setDrawerOpen(true)}
@@ -353,7 +353,7 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
               id="fx-sort"
               value={sort}
               onChange={(e) => setSort(e.target.value)}
-              className="rounded-full border border-ink-900/12 bg-white px-4 py-2 text-[0.75rem] font-semibold text-ink-700 outline-none transition-colors hover:border-ink-900/30 focus:border-gold-500"
+              className="min-h-10 min-w-0 flex-1 rounded-full border border-ink-900/12 bg-white px-4 py-2 text-[0.75rem] sm:flex-none font-semibold text-ink-700 outline-none transition-colors hover:border-ink-900/30 focus:border-gold-500"
             >
               {SORTS.map((s) => (
                 <option key={s.key} value={s.key}>
@@ -381,7 +381,7 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
             </div>
           </div>
         ) : (
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {results.map((p, i) => (
               <PropertyCard key={p.slug} property={p} priority={i < 3} />
             ))}
@@ -409,7 +409,7 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
               </button>
             </div>
             <div className="flex-1 overflow-y-auto px-5 py-6">{filterPanel}</div>
-            <div className="border-t border-ink-900/10 p-4">
+            <div className="border-t border-ink-900/10 p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
               <button
                 type="button"
                 onClick={() => setDrawerOpen(false)}

@@ -30,7 +30,7 @@ export default function ServicesPage() {
       <section className="border-b border-ink-900/10 bg-bone-50 py-8">
         <div className="shell flex flex-wrap gap-2">
           {services.map((s) => (
-            <Link key={s.id} href={`#${s.id}`} className="chip chip-quiet hover:border-gold-500">
+            <Link key={s.id} href={`#${s.id}`} className="chip chip-quiet min-h-10 px-4 hover:border-gold-500">
               <span className="text-gold-600">{s.number}</span>
               {s.title}
             </Link>
@@ -46,7 +46,7 @@ export default function ServicesPage() {
           className={`section scroll-mt-24 ${i % 2 === 0 ? "bg-bone-50" : "bg-bone-100"}`}
         >
           <div
-            className={`shell grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-20 ${
+            className={`shell grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-20 ${
               i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
             }`}
           >
@@ -102,7 +102,7 @@ export default function ServicesPage() {
             </h2>
           </Reveal>
 
-          <div className="grid gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
             {process.map((s, i) => (
               <Reveal
                 key={s.step}

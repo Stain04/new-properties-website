@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="bg-ink-950 text-bone-100">
       <div className="shell pb-10 pt-20 md:pt-28">
         {/* Masthead */}
-        <div className="grid gap-14 lg:grid-cols-[1.15fr_1.6fr]">
+        <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1.15fr_1.6fr]">
           <div>
             <p className="eyebrow eyebrow-light">{site.descriptor}</p>
             <p className="display-lg mt-6 text-bone-50">
@@ -38,18 +38,18 @@ export default function Footer() {
           </div>
 
           {/* Link columns */}
-          <div className="grid gap-10 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
             {footerNav.map((col) => (
               <div key={col.title}>
                 <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-gold-500">
                   {col.title}
                 </p>
-                <ul className="mt-5 space-y-3">
+                <ul className="mt-4 space-y-1 lg:mt-5 lg:space-y-3">
                   {col.links.map((link) => (
                     <li key={link.href + link.label}>
                       <Link
                         href={link.href}
-                        className="link-sweep text-sm text-bone-100/65 transition-colors duration-300 hover:text-bone-50"
+                        className="link-sweep inline-block py-2 text-sm text-bone-100/65 transition-colors duration-300 hover:text-bone-50 lg:py-0"
                       >
                         {link.label}
                       </Link>
@@ -64,7 +64,7 @@ export default function Footer() {
         {/* Offices */}
         <div className="rule-light my-14" />
 
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           {site.offices.map((office) => (
             <div key={office.city}>
               <p className="flex items-center gap-2 text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-gold-500">
@@ -83,7 +83,7 @@ export default function Footer() {
               </div>
               <a
                 href={`tel:${office.phone.replace(/\s/g, "")}`}
-                className="link-sweep mt-3 inline-block text-sm text-bone-50"
+                className="link-sweep mt-1 inline-block py-2 text-sm text-bone-50"
               >
                 {office.phone}
               </a>
@@ -101,7 +101,7 @@ export default function Footer() {
                     href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-1.5 text-sm text-bone-100/65 transition-colors duration-300 hover:text-bone-50"
+                    className="group inline-flex items-center gap-1.5 py-2 text-sm lg:py-1 text-bone-100/65 transition-colors duration-300 hover:text-bone-50"
                   >
                     {s.label}
                     <ArrowUpRight
@@ -121,14 +121,14 @@ export default function Footer() {
           <p>
             © {year} {site.legalName}. All rights reserved.
           </p>
-          <div className="flex flex-wrap gap-6">
-            <Link href="/contact" className="hover:text-bone-100/70">
+          <div className="flex flex-wrap gap-x-6 gap-y-3">
+            <Link href="/contact" className="inline-block py-2 hover:text-bone-100/70">
               Privacy policy
             </Link>
-            <Link href="/contact" className="hover:text-bone-100/70">
+            <Link href="/contact" className="inline-block py-2 hover:text-bone-100/70">
               Terms of engagement
             </Link>
-            <Link href="/properties" className="hover:text-bone-100/70">
+            <Link href="/properties" className="inline-block py-2 hover:text-bone-100/70">
               Full catalogue
             </Link>
           </div>

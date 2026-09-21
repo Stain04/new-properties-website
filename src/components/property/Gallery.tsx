@@ -2,10 +2,27 @@
 
 import { ChevronLeft, ChevronRight, Expand, X } from "lucide-react";
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 export default function Gallery({ images, title }: { images: string[]; title: string }) {
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
+
+  // Horizontal swipe changes photo; a mostly-vertical drag is ignored so it
+  // never fights the user trying to scroll or dismiss.
+  const onTouchStart = (e: React.TouchEvent) => {
+    const t = e.touches[0];
+    touchStart.current = { x: t.clientX, y: t.clientY };
+  };
+  const onTouchEnd = (e: React.TouchEvent) => {
+    const start = touchStart.current;
+    touchStart.current = null;
+    if (!start) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - start.x;
+    const dy = t.clientY - start.y;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.3) step(dx < 0 ? 1 : -1);
+  };
 
   const step = useCallback(
     (dir: 1 | -1) =>
@@ -33,7 +50,7 @@ export default function Gallery({ images, title }: { images: string[]; title: st
   return (
     <>
       {/* Mosaic */}
-      <div className="grid gap-2 md:grid-cols-[1.9fr_1fr] md:gap-3">
+      <div className="grid grid-cols-1 gap-2 md:grid-cols-[1.9fr_1fr] md:gap-3">
         <button
           type="button"
           onClick={() => setLightbox(0)}
@@ -106,12 +123,14 @@ export default function Gallery({ images, title }: { images: string[]; title: st
           role="dialog"
           aria-modal="true"
           aria-label={`${title} — photograph viewer`}
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
         >
           <button
             type="button"
             onClick={() => setLightbox(null)}
             aria-label="Close"
-            className="absolute right-5 top-5 z-10 grid size-11 place-items-center rounded-full border border-bone-100/25 text-bone-50 transition-colors hover:bg-bone-50 hover:text-ink-950"
+            className="absolute right-5 top-[max(1.25rem,env(safe-area-inset-top))] z-10 grid size-11 place-items-center rounded-full border border-bone-100/25 text-bone-50 transition-colors hover:bg-bone-50 hover:text-ink-950"
           >
             <X className="size-5" strokeWidth={1.5} />
           </button>
@@ -120,7 +139,7 @@ export default function Gallery({ images, title }: { images: string[]; title: st
             type="button"
             onClick={() => step(-1)}
             aria-label="Previous photograph"
-            className="absolute left-3 z-10 grid size-11 place-items-center rounded-full border border-bone-100/25 text-bone-50 transition-colors hover:bg-bone-50 hover:text-ink-950 md:left-8"
+            className="absolute bottom-[max(1.25rem,env(safe-area-inset-bottom))] left-5 z-10 grid size-11 place-items-center rounded-full border border-bone-100/25 text-bone-50 transition-colors hover:bg-bone-50 hover:text-ink-950 md:bottom-auto md:left-8"
           >
             <ChevronLeft className="size-5" strokeWidth={1.5} />
           </button>
@@ -129,7 +148,7 @@ export default function Gallery({ images, title }: { images: string[]; title: st
             type="button"
             onClick={() => step(1)}
             aria-label="Next photograph"
-            className="absolute right-3 z-10 grid size-11 place-items-center rounded-full border border-bone-100/25 text-bone-50 transition-colors hover:bg-bone-50 hover:text-ink-950 md:right-8"
+            className="absolute bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-5 z-10 grid size-11 place-items-center rounded-full border border-bone-100/25 text-bone-50 transition-colors hover:bg-bone-50 hover:text-ink-950 md:bottom-auto md:right-8"
           >
             <ChevronRight className="size-5" strokeWidth={1.5} />
           </button>
@@ -144,7 +163,7 @@ export default function Gallery({ images, title }: { images: string[]; title: st
             />
           </div>
 
-          <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-bone-100/60">
+          <p className="absolute bottom-[max(2rem,calc(env(safe-area-inset-bottom)+0.75rem))] left-1/2 max-w-[55vw] -translate-x-1/2 truncate text-center text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-bone-100/60">
             {lightbox + 1} / {images.length} — {title}
           </p>
         </div>

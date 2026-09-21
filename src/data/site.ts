@@ -31,13 +31,13 @@ export const site = {
   },
 
   contact: {
-    phoneDisplay: "+20 11 48238883",
-    phoneHref: "+201148238883",
-    whatsappDisplay: "+20 11 48238883",
-    whatsapp: "201148238883",
-    // ⚠ Placeholder addresses — replace with the agency's real inboxes.
-    email: "info@newproperties.eg",
-    salesEmail: "sales@newproperties.eg",
+    phoneDisplay: "011 XXXX XXXX",
+    phoneHref: "011XXXXXXXX",
+    whatsappDisplay: "011 XXXX XXXX",
+    whatsapp: "2011XXXXXXXX",
+    // Demo placeholders — anonymised so the site can be shown to prospective agencies.
+    email: "info@example.com",
+    salesEmail: "sales@example.com",
   },
 
   offices: [
@@ -46,7 +46,7 @@ export const site = {
       label: "Head Office",
       lines: ["90th Street North, Fifth Settlement", "New Cairo 11835, Cairo Governorate"],
       hours: ["Sunday – Thursday, 10:00 – 19:00", "Saturday by appointment"],
-      phone: "+20 11 48238883",
+      phone: "011 XXXX XXXX",
       mapQuery: "90th Street, New Cairo, Egypt",
       /** OpenStreetMap embed bounds: minLng, minLat, maxLng, maxLat */
       mapBbox: "31.43,29.97,31.55,30.04",
@@ -56,7 +56,7 @@ export const site = {
       label: "New Capital Office",
       lines: ["Downtown District, Central Business District", "New Administrative Capital, Egypt"],
       hours: ["Sunday – Thursday, 10:00 – 18:00", "Saturday by appointment"],
-      phone: "+20 11 48238883",
+      phone: "011 XXXX XXXX",
       mapQuery: "Downtown District, New Administrative Capital, Egypt",
       mapBbox: "31.68,29.96,31.80,30.06",
     },

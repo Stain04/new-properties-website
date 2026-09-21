@@ -11,7 +11,7 @@ export default function Testimonials() {
   const step = (d: 1 | -1) => setI((v) => (v + d + testimonials.length) % testimonials.length);
 
   return (
-    <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+    <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
       <div className="relative aspect-[4/5] max-w-sm overflow-hidden rounded-2xl bg-ink-800">
         {testimonials.map((item, idx) => (
           <Image

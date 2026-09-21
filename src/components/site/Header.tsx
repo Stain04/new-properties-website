@@ -109,7 +109,7 @@ export default function Header() {
           menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
-        <div className="shell flex h-full flex-col justify-between pb-10 pt-28">
+        <div className="shell flex h-full flex-col justify-between gap-8 overflow-y-auto pb-[max(2.5rem,env(safe-area-inset-bottom))] pt-24">
           <nav className="flex flex-col">
             {nav.map((item, i) => (
               <Link
@@ -138,11 +138,11 @@ export default function Header() {
             <Link href="/contact" onClick={() => setMenuOpen(false)} className="btn btn-gold w-full">
               Book a consultation
             </Link>
-            <div className="flex flex-col gap-1 text-sm text-ink-500">
-              <a href={`tel:${site.contact.phoneHref}`} className="hover:text-gold-600">
+            <div className="flex flex-col text-sm text-ink-500">
+              <a href={`tel:${site.contact.phoneHref}`} className="py-2 hover:text-gold-600">
                 {site.contact.phoneDisplay}
               </a>
-              <a href={`mailto:${site.contact.email}`} className="hover:text-gold-600">
+              <a href={`mailto:${site.contact.email}`} className="py-2 hover:text-gold-600">
                 {site.contact.email}
               </a>
             </div>

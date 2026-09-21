@@ -45,7 +45,7 @@ export default function DestinationsPage() {
                 </p>
               </Reveal>
 
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 {list.map((a, i) => {
                   const count = properties.filter((p) => p.areaSlug === a.slug).length;
                   return (

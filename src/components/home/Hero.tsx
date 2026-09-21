@@ -119,10 +119,14 @@ export default function Hero() {
                   type="button"
                   onClick={() => setIndex(i)}
                   aria-label={`Show ${captions[i]}`}
-                  className={`h-px transition-all duration-700 ${
-                    i === index ? "w-12 bg-gold-400" : "w-6 bg-bone-100/30 hover:bg-bone-100/60"
-                  }`}
-                />
+                  className="group -my-4 py-4"
+                >
+                  <span
+                    className={`block h-px transition-all duration-700 ${
+                      i === index ? "w-12 bg-gold-400" : "w-6 bg-bone-100/30 group-hover:bg-bone-100/60"
+                    }`}
+                  />
+                </button>
               ))}
               <span className="ml-2 text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-bone-100/55">
                 {captions[index]}

@@ -76,7 +76,7 @@ export default async function DestinationPage({
 
       {/* Editorial */}
       <section className="section bg-bone-50">
-        <div className="shell grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-20">
+        <div className="shell grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-20">
           <Reveal>
             <p className="eyebrow">Our read on the market</p>
             <h2 className="display-md mt-5 max-w-2xl text-balance text-ink-900">{area.blurb}</h2>
@@ -127,7 +127,7 @@ export default async function DestinationPage({
               </Link>
             </Reveal>
 
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {sales.map((p, i) => (
                 <Reveal key={p.slug} delay={(i % 3) * 110}>
                   <PropertyCard property={p} priority={i < 3} />
@@ -145,7 +145,7 @@ export default async function DestinationPage({
               <p className="eyebrow">To let</p>
               <h2 className="display-lg mt-5 text-ink-900">Rentals in {area.name}</h2>
             </Reveal>
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {rentals.map((p, i) => (
                 <Reveal key={p.slug} delay={(i % 3) * 110}>
                   <PropertyCard property={p} />
@@ -158,7 +158,7 @@ export default async function DestinationPage({
 
       {/* Nearby + enquiry */}
       <section className="section bg-ink-950">
-        <div className="shell grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
+        <div className="shell grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <Reveal>
             <p className="eyebrow eyebrow-light">Also consider</p>
             <h2 className="display-lg mt-5 text-bone-50">Nearby in {area.regionLabel}</h2>

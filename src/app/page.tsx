@@ -31,7 +31,7 @@ export default function HomePage() {
 
       {/* ═══════════ Positioning ═══════════ */}
       <section className="section bg-bone-50">
-        <div className="shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+        <div className="shell grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <Reveal>
             <p className="eyebrow">Who we are</p>
             <h2 className="display-lg mt-6 text-balance text-ink-900">
@@ -82,7 +82,7 @@ export default function HomePage() {
             </Link>
           </Reveal>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {sales.map((p, i) => (
               <Reveal key={p.slug} delay={(i % 3) * 110}>
                 <PropertyCard property={p} priority={i < 3} />
@@ -107,7 +107,7 @@ export default function HomePage() {
 
       {/* ═══════════ Editorial split ═══════════ */}
       <section className="section-lg bg-bone-50">
-        <div className="shell grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
+        <div className="shell grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
           <Reveal className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
               <Image
@@ -189,7 +189,7 @@ export default function HomePage() {
             </h2>
           </Reveal>
 
-          <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((s, i) => (
               <Reveal key={s.label} delay={i * 110} className="border-t border-bone-100/15 pt-6">
                 <p className="font-display text-5xl font-light text-gold-400 md:text-6xl">
@@ -221,7 +221,7 @@ export default function HomePage() {
             </Link>
           </Reveal>
 
-          <div className="grid gap-px overflow-hidden rounded-2xl border border-ink-900/10 bg-ink-900/10 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-ink-900/10 bg-ink-900/10 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
               <Reveal key={s.id} delay={(i % 3) * 90}>
                 <Link
@@ -248,7 +248,7 @@ export default function HomePage() {
 
       {/* ═══════════ Investment case ═══════════ */}
       <section className="section-lg bg-ink-950 text-bone-100">
-        <div className="shell grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+        <div className="shell grid grid-cols-1 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <Reveal>
             <p className="eyebrow eyebrow-light">The investment case</p>
             <h2 className="display-lg mt-6 text-balance text-bone-50">
@@ -302,7 +302,7 @@ export default function HomePage() {
             capital to it. These are the furnished properties we currently hold.
           </p>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {featuredRentals.slice(0, 3).map((p, i) => (
               <Reveal key={p.slug} delay={i * 110}>
                 <PropertyCard property={p} />
@@ -329,7 +329,7 @@ export default function HomePage() {
 
       {/* ═══════════ FAQ ═══════════ */}
       <section className="section-lg bg-bone-100">
-        <div className="shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+        <div className="shell grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <Reveal>
             <p className="eyebrow">Common questions</p>
             <h2 className="display-lg mt-6 text-balance text-ink-900">
@@ -361,7 +361,7 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/85 to-ink-950/40" />
 
-        <div className="shell relative grid gap-12 py-20 md:py-28 lg:grid-cols-2 lg:gap-20">
+        <div className="shell relative grid grid-cols-1 gap-12 py-20 md:py-28 lg:grid-cols-2 lg:gap-20">
           <Reveal className="flex flex-col justify-center">
             <p className="eyebrow eyebrow-light">Start here</p>
             <h2 className="display-lg mt-6 text-balance text-bone-50">
@@ -373,7 +373,7 @@ export default function HomePage() {
               conversation costs nothing.
             </p>
 
-            <div className="mt-10 grid gap-6 border-t border-bone-100/15 pt-8 sm:grid-cols-2">
+            <div className="mt-10 grid grid-cols-1 gap-6 border-t border-bone-100/15 pt-8 sm:grid-cols-2">
               {site.offices.map((o) => (
                 <div key={o.city}>
                   <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-gold-500">
@@ -382,7 +382,7 @@ export default function HomePage() {
                   <p className="mt-2 text-sm leading-relaxed text-bone-100/60">{o.lines[0]}</p>
                   <a
                     href={`tel:${o.phone.replace(/\s/g, "")}`}
-                    className="link-sweep mt-1 inline-block text-sm text-bone-50"
+                    className="link-sweep inline-block py-2 text-sm text-bone-50"
                   >
                     {o.phone}
                   </a>

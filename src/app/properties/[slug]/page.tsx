@@ -114,16 +114,16 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
         <div className="absolute inset-0 bg-gradient-to-b from-ink-950/85 via-ink-950/80 to-ink-950" />
 
         <div className="shell relative">
-          <nav aria-label="Breadcrumb" className="mb-7">
+          <nav aria-label="Breadcrumb" className="mb-5">
             <ol className="flex flex-wrap items-center gap-2 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-bone-100/45">
               <li>
-                <Link href="/" className="transition-colors hover:text-gold-400">
+                <Link href="/" className="inline-block py-2 transition-colors hover:text-gold-400">
                   Home
                 </Link>
               </li>
               <li className="text-bone-100/25">/</li>
               <li>
-                <Link href="/properties" className="transition-colors hover:text-gold-400">
+                <Link href="/properties" className="inline-block py-2 transition-colors hover:text-gold-400">
                   Properties
                 </Link>
               </li>
@@ -131,7 +131,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
               <li>
                 <Link
                   href={`/destinations/${p.areaSlug}`}
-                  className="transition-colors hover:text-gold-400"
+                  className="inline-block py-2 transition-colors hover:text-gold-400"
                 >
                   {area?.name}
                 </Link>
@@ -190,7 +190,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
 
       {/* ═══════════ Detail ═══════════ */}
       <section className="bg-bone-50 pb-24 pt-14">
-        <div className="shell grid gap-12 lg:grid-cols-[1.6fr_1fr] lg:gap-16">
+        <div className="shell grid grid-cols-1 gap-12 lg:grid-cols-[1.6fr_1fr] lg:gap-16">
           {/* Left */}
           <div>
             {/* Specs */}
@@ -224,7 +224,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
             {/* Features */}
             <Reveal delay={80} className="mt-14">
               <p className="eyebrow">Specification</p>
-              <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+              <ul className="mt-6 grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
                 {p.features.map((f) => (
                   <li
                     key={f}
@@ -242,7 +242,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
               <Reveal delay={80} className="mt-14">
                 <div className="rounded-2xl border border-gold-500/35 bg-gold-500/8 p-7">
                   <p className="eyebrow">Payment structure</p>
-                  <div className="mt-6 grid gap-6 sm:grid-cols-3">
+                  <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
                     <div>
                       <p className="font-display text-3xl text-ink-900">
                         {p.paymentPlan.downPayment}
@@ -409,7 +409,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
               </Link>
             </div>
 
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {similar.map((s, i) => (
                 <Reveal key={s.slug} delay={i * 110}>
                   <PropertyCard property={s} />

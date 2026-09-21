@@ -31,7 +31,7 @@ export default function ContactPage() {
 
       {/* Quick contact */}
       <section className="border-b border-ink-900/10 bg-bone-50 py-10">
-        <div className="shell grid gap-px overflow-hidden rounded-2xl border border-ink-900/10 bg-ink-900/10 sm:grid-cols-3">
+        <div className="shell grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-ink-900/10 bg-ink-900/10 sm:grid-cols-3">
           <a
             href={`tel:${site.contact.phoneHref}`}
             className="group flex items-center gap-4 bg-white p-6 transition-colors hover:bg-bone-50"
@@ -89,7 +89,7 @@ export default function ContactPage() {
 
       {/* Form + offices */}
       <section className="section bg-bone-50">
-        <div className="shell grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
+        <div className="shell grid grid-cols-1 gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
           <Reveal>
             <p className="eyebrow">Send an enquiry</p>
             <h2 className="display-md mt-5 text-balance text-ink-900">
@@ -134,7 +134,7 @@ export default function ContactPage() {
 
                   <a
                     href={`tel:${o.phone.replace(/\s/g, "")}`}
-                    className="mt-4 flex items-center gap-3 text-[0.875rem] font-semibold text-ink-900 hover:text-gold-600"
+                    className="mt-2 flex items-center gap-3 py-2 text-[0.875rem] font-semibold text-ink-900 hover:text-gold-600"
                   >
                     <Phone className="size-4 text-gold-600" strokeWidth={1.5} />
                     {o.phone}
@@ -167,7 +167,7 @@ export default function ContactPage() {
             </h2>
           </Reveal>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {leads.map((m, i) => (
               <Reveal key={m.slug} delay={(i % 4) * 90}>
                 <div className="card-surface h-full p-6">
@@ -182,13 +182,13 @@ export default function ContactPage() {
                   <div className="rule my-4" />
                   <a
                     href={`tel:${m.phone.replace(/\s/g, "")}`}
-                    className="block text-[0.8125rem] font-semibold text-ink-900 hover:text-gold-600"
+                    className="block py-2 text-[0.8125rem] font-semibold text-ink-900 hover:text-gold-600"
                   >
                     {m.phone}
                   </a>
                   <a
                     href={`mailto:${m.email}`}
-                    className="mt-1 block truncate text-[0.8125rem] text-ink-400 hover:text-gold-600"
+                    className="block truncate py-2 text-[0.8125rem] text-ink-400 hover:text-gold-600"
                   >
                     {m.email}
                   </a>
@@ -201,7 +201,7 @@ export default function ContactPage() {
 
       {/* FAQ */}
       <section className="section bg-bone-50">
-        <div className="shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+        <div className="shell grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <Reveal>
             <p className="eyebrow">Before you write</p>
             <h2 className="display-lg mt-6 text-balance text-ink-900">

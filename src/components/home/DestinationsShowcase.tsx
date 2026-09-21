@@ -11,9 +11,9 @@ export default function DestinationsShowcase() {
   const [active, setActive] = useState(0);
 
   return (
-    <div className="grid gap-10 lg:grid-cols-[1fr_1.05fr] lg:items-center lg:gap-16">
+    <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.05fr] lg:items-center lg:gap-16">
       {/* Preview */}
-      <div className="relative order-2 aspect-[4/5] overflow-hidden rounded-2xl bg-ink-900 lg:order-1 lg:aspect-[4/5]">
+      <div className="relative hidden aspect-[4/5] overflow-hidden rounded-2xl bg-ink-900 lg:order-1 lg:block">
         {areas.map((a, i) => (
           <Image
             key={a.slug}
@@ -62,15 +62,18 @@ export default function DestinationsShowcase() {
                 href={`/destinations/${a.slug}`}
                 onMouseEnter={() => setActive(i)}
                 onFocus={() => setActive(i)}
-                className="group flex items-center justify-between gap-6 border-b border-ink-900/10 py-5 transition-colors duration-500"
+                className="group flex items-center justify-between gap-4 border-b border-ink-900/10 py-4 transition-colors duration-500 lg:gap-6 lg:py-5"
               >
-                <div className="flex min-w-0 items-baseline gap-4">
-                  <span className="index-num shrink-0">0{i + 1}</span>
+                <div className="flex min-w-0 items-center gap-4 lg:items-baseline">
+                  <span className="relative size-16 shrink-0 overflow-hidden rounded-xl bg-ink-900 lg:hidden">
+                    <Image src={a.image} alt="" fill sizes="64px" className="object-cover" />
+                  </span>
+                  <span className="index-num hidden shrink-0 lg:inline">0{i + 1}</span>
                   <span className="min-w-0">
                     <span
-                      className={`display-md block truncate transition-colors duration-500 ${
-                        i === active ? "text-gold-600" : "text-ink-900"
-                      }`}
+                      className={`display-md block text-balance transition-colors duration-500 max-lg:!text-[1.4rem] ${
+                        i === active ? "lg:text-gold-600" : ""
+                      } text-ink-900`}
                     >
                       {a.name}
                     </span>
@@ -82,7 +85,7 @@ export default function DestinationsShowcase() {
                 <span
                   className={`grid size-9 shrink-0 place-items-center rounded-full border transition-all duration-500 ${
                     i === active
-                      ? "border-gold-500 bg-gold-500 text-ink-950"
+                      ? "border-ink-900/15 text-ink-400 lg:border-gold-500 lg:bg-gold-500 lg:text-ink-950"
                       : "border-ink-900/15 text-ink-400"
                   }`}
                 >

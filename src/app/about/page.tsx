@@ -30,7 +30,7 @@ export default function AboutPage() {
 
       {/* Story */}
       <section className="section bg-bone-50">
-        <div className="shell grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-20">
+        <div className="shell grid grid-cols-1 gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-20">
           <Reveal>
             <p className="eyebrow">The story</p>
             <h2 className="display-lg mt-6 text-balance text-ink-900">
@@ -83,7 +83,7 @@ export default function AboutPage() {
 
       {/* Stats */}
       <section className="bg-ink-950 py-20 md:py-24">
-        <div className="shell grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="shell grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 100} className="border-t border-bone-100/15 pt-6">
               <p className="font-display text-5xl font-light text-gold-400">
@@ -106,7 +106,7 @@ export default function AboutPage() {
             </h2>
           </Reveal>
 
-          <div className="grid gap-px overflow-hidden rounded-2xl border border-ink-900/10 bg-ink-900/10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-ink-900/10 bg-ink-900/10 md:grid-cols-2 lg:grid-cols-3">
             {advantages.map((a, i) => (
               <Reveal key={a.number} delay={(i % 3) * 90}>
                 <div className="flex h-full flex-col bg-bone-50 p-8">
@@ -146,7 +146,7 @@ export default function AboutPage() {
             </p>
           </Reveal>
 
-          <div className="grid gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
             {process.map((s, i) => (
               <Reveal key={s.step} delay={(i % 4) * 90} className="border-t border-ink-900/12 pt-5">
                 <span className="index-num">{s.step}</span>
@@ -172,7 +172,7 @@ export default function AboutPage() {
             </p>
           </Reveal>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {team.map((m, i) => (
               <Reveal key={m.slug} delay={(i % 4) * 80}>
                 <div className="group card-surface overflow-hidden">

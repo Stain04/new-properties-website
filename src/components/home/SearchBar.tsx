@@ -43,8 +43,8 @@ export default function SearchBar({ tone = "glass" }: { tone?: "glass" | "solid"
     ? "border-white/15 bg-white/10 backdrop-blur-2xl"
     : "border-ink-900/10 bg-white shadow-[0_30px_70px_-40px_rgba(5,8,11,0.45)]";
   const select = glass
-    ? "w-full appearance-none bg-transparent text-[0.9375rem] text-bone-50 outline-none [&>option]:bg-ink-900 [&>option]:text-bone-50"
-    : "w-full appearance-none bg-transparent text-[0.9375rem] text-ink-900 outline-none";
+    ? "w-full appearance-none bg-transparent py-1.5 text-[0.9375rem] text-bone-50 outline-none lg:py-0 [&>option]:bg-ink-900 [&>option]:text-bone-50"
+    : "w-full appearance-none bg-transparent py-1.5 text-[0.9375rem] text-ink-900 outline-none lg:py-0";
   const label = glass
     ? "block text-[0.625rem] font-semibold uppercase tracking-[0.2em] text-bone-100/55"
     : "block text-[0.625rem] font-semibold uppercase tracking-[0.2em] text-ink-400";
@@ -64,7 +64,7 @@ export default function SearchBar({ tone = "glass" }: { tone?: "glass" | "solid"
               setPurpose(p);
               setMax("");
             }}
-            className={`rounded-full px-4 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.16em] transition-all duration-400 ${
+            className={`rounded-full px-5 py-2.5 text-[0.6875rem] lg:px-4 lg:py-1.5 font-semibold uppercase tracking-[0.16em] transition-all duration-400 ${
               purpose === p
                 ? "bg-gold-500 text-ink-950"
                 : glass
@@ -77,7 +77,7 @@ export default function SearchBar({ tone = "glass" }: { tone?: "glass" | "solid"
         ))}
       </div>
 
-      <div className="grid items-stretch sm:grid-cols-2 md:grid-cols-[1.15fr_1fr_1.15fr_auto]">
+      <div className="grid grid-cols-1 items-stretch sm:grid-cols-2 md:grid-cols-[1.15fr_1fr_1.15fr_auto]">
         <div className="px-4 py-3">
           <label className={label} htmlFor="sb-area">
             Destination
