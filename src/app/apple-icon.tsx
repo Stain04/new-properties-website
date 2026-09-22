@@ -7,7 +7,7 @@ export const contentType = "image/png";
 
 /** Home-screen icon for iPhone/iPad, and the square thumbnail some apps show next to links. */
 export default async function AppleIcon() {
-  const fraunces = await readFile(path.join(process.cwd(), "src", "assets", "og-fonts", "fraunces-latin-400-normal.woff"));
+  const fraunces = await readFile(path.join(process.cwd(), "src", "assets", "og-fonts", "fraunces-latin-400-normal.ttf"));
   return new ImageResponse(
     (
       <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", background: "#05080b" }}>
