@@ -2,7 +2,7 @@
 
 import { Check, Loader2, Send } from "lucide-react";
 import { useState } from "react";
-import { areas } from "@/data/areas";
+import { useI18n } from "@/i18n/I18nProvider";
 
 interface LeadFormProps {
   /** Pre-fills the message, e.g. from a property page. */
@@ -12,16 +12,9 @@ interface LeadFormProps {
   tone?: "light" | "dark";
 }
 
-const budgets = [
-  "Under €75,000",
-  "€75,000 – €150,000",
-  "€150,000 – €350,000",
-  "€350,000 – €750,000",
-  "Above €750,000",
-  "Renting, not buying",
-];
-
 export default function LeadForm({ subject, compact = false, tone = "light" }: LeadFormProps) {
+  const { dict, fmt, areas, locale } = useI18n();
+  const t = dict.form;
   const [state, setState] = useState<"idle" | "sending" | "sent">("idle");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -55,12 +48,9 @@ export default function LeadForm({ subject, compact = false, tone = "light" }: L
         <div className="mx-auto grid size-12 place-items-center rounded-full bg-gold-500 text-ink-950">
           <Check className="size-6" strokeWidth={2} />
         </div>
-        <p className={`display-sm mt-5 ${dark ? "text-bone-50" : "text-ink-900"}`}>
-          Enquiry received
-        </p>
+        <p className={`display-sm mt-5 ${dark ? "text-bone-50" : "text-ink-900"}`}>{t.sentTitle}</p>
         <p className={`mt-3 text-sm leading-relaxed ${dark ? "text-bone-100/60" : "text-ink-400"}`}>
-          An adviser will be in touch within one working day. If it is urgent, call the desk
-          directly and ask for whoever covers your area.
+          {t.sentBody}
         </p>
       </div>
     );
@@ -68,10 +58,10 @@ export default function LeadForm({ subject, compact = false, tone = "light" }: L
 
   return (
     <form onSubmit={onSubmit} className="space-y-4">
-      <div className={compact ? "space-y-4" : "grid gap-4 sm:grid-cols-2"}>
+      <div className={compact ? "space-y-4" : "grid grid-cols-1 gap-4 sm:grid-cols-2"}>
         <div>
           <label className={labelClass} htmlFor="lf-name">
-            Name
+            {t.name}
           </label>
           <input
             id="lf-name"
@@ -79,44 +69,46 @@ export default function LeadForm({ subject, compact = false, tone = "light" }: L
             required
             autoComplete="name"
             className={fieldClass}
-            placeholder="Your full name"
+            placeholder={t.namePlaceholder}
           />
         </div>
         <div>
           <label className={labelClass} htmlFor="lf-email">
-            Email
+            {t.email}
           </label>
           <input
             id="lf-email"
             name="email"
             type="email"
+            dir="ltr"
             required
             autoComplete="email"
-            className={fieldClass}
-            placeholder="you@example.com"
+            className={`${fieldClass} rtl:text-right`}
+            placeholder={t.emailPlaceholder}
           />
         </div>
         <div>
           <label className={labelClass} htmlFor="lf-phone">
-            Phone / WhatsApp
+            {t.phone}
           </label>
           <input
             id="lf-phone"
             name="phone"
             type="tel"
+            dir="ltr"
             autoComplete="tel"
-            className={fieldClass}
-            placeholder="+44 …"
+            className={`${fieldClass} rtl:text-right`}
+            placeholder={t.phonePlaceholder}
           />
         </div>
         <div>
           <label className={labelClass} htmlFor="lf-area">
-            Area of interest
+            {t.area}
           </label>
           <select id="lf-area" name="area" className={fieldClass} defaultValue="">
-            <option value="">No preference yet</option>
+            <option value="">{t.noPreference}</option>
             {areas.map((a) => (
-              <option key={a.slug} value={a.name}>
+              <option key={a.slug} value={a.slug}>
                 {a.name}
               </option>
             ))}
@@ -127,11 +119,11 @@ export default function LeadForm({ subject, compact = false, tone = "light" }: L
       {!compact && (
         <div>
           <label className={labelClass} htmlFor="lf-budget">
-            Budget
+            {t.budget}
           </label>
           <select id="lf-budget" name="budget" className={fieldClass} defaultValue="">
-            <option value="">Prefer not to say</option>
-            {budgets.map((b) => (
+            <option value="">{t.preferNot}</option>
+            {t.budgets.map((b) => (
               <option key={b} value={b}>
                 {b}
               </option>
@@ -142,42 +134,36 @@ export default function LeadForm({ subject, compact = false, tone = "light" }: L
 
       <div>
         <label className={labelClass} htmlFor="lf-message">
-          What are you looking for?
+          {t.message}
         </label>
         <textarea
           id="lf-message"
           name="message"
           rows={compact ? 3 : 4}
           className={`${fieldClass} resize-none`}
-          defaultValue={subject ? `I'd like more information about ${subject}.` : ""}
-          placeholder="Tell us what you have in mind — purpose, timing, anything that matters."
+          defaultValue={subject ? fmt(t.prefill, { subject }) : ""}
+          placeholder={t.messagePlaceholder}
         />
       </div>
 
-      <input type="hidden" name="source" value={subject ?? "General enquiry"} />
+      <input type="hidden" name="source" value={subject ?? t.general} />
+      <input type="hidden" name="language" value={locale} />
 
-      <button
-        type="submit"
-        disabled={state === "sending"}
-        className="btn btn-gold w-full disabled:opacity-70"
-      >
+      <button type="submit" disabled={state === "sending"} className="btn btn-gold w-full disabled:opacity-70">
         {state === "sending" ? (
           <>
             <Loader2 className="size-4 animate-spin" strokeWidth={2} />
-            Sending
+            {t.sending}
           </>
         ) : (
           <>
-            <Send className="size-4" strokeWidth={2} />
-            Send enquiry
+            <Send className="size-4 rtl:-scale-x-100" strokeWidth={2} />
+            {t.send}
           </>
         )}
       </button>
 
-      <p className={`text-xs leading-relaxed ${dark ? "text-bone-100/40" : "text-ink-300"}`}>
-        We reply within one working day. Your details are used only to answer this enquiry and
-        are never passed to third parties.
-      </p>
+      <p className={`text-xs leading-relaxed ${dark ? "text-bone-100/40" : "text-ink-300"}`}>{t.privacy}</p>
     </form>
   );
 }

@@ -2,12 +2,20 @@
 
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/i18n/Link";
 import { useState } from "react";
-import { areas } from "@/data/areas";
-import { properties } from "@/data/properties";
+import { useI18n } from "@/i18n/I18nProvider";
+import type { Area } from "@/lib/types";
 
-export default function DestinationsShowcase() {
+export default function DestinationsShowcase({
+  areas,
+  counts,
+}: {
+  areas: Area[];
+  /** Number of listings per area slug. */
+  counts: Record<string, number>;
+}) {
+  const { dict, plural } = useI18n();
   const [active, setActive] = useState(0);
 
   return (
@@ -55,7 +63,7 @@ export default function DestinationsShowcase() {
       {/* List */}
       <ul className="order-1 lg:order-2">
         {areas.map((a, i) => {
-          const count = properties.filter((p) => p.areaSlug === a.slug).length;
+          const count = counts[a.slug] ?? 0;
           return (
             <li key={a.slug}>
               <Link
@@ -78,7 +86,7 @@ export default function DestinationsShowcase() {
                       {a.name}
                     </span>
                     <span className="mt-1 block text-[0.8125rem] text-ink-400">
-                      {a.regionLabel} · {count} {count === 1 ? "listing" : "listings"}
+                      {a.regionLabel} · {plural(count, dict.labels.listings)}
                     </span>
                   </span>
                 </div>
@@ -89,7 +97,7 @@ export default function DestinationsShowcase() {
                       : "border-ink-900/15 text-ink-400"
                   }`}
                 >
-                  <ArrowUpRight className="size-4" strokeWidth={1.75} />
+                  <ArrowUpRight className="size-4 rtl:-scale-x-100" strokeWidth={1.75} />
                 </span>
               </Link>
             </li>

@@ -3,9 +3,18 @@
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import { testimonials } from "@/data/content";
+import { useI18n } from "@/i18n/I18nProvider";
 
-export default function Testimonials() {
+interface Testimonial {
+  quote: string;
+  name: string;
+  detail: string;
+  origin: string;
+  image: string;
+}
+
+export default function Testimonials({ testimonials }: { testimonials: Testimonial[] }) {
+  const { dict } = useI18n();
   const [i, setI] = useState(0);
   const t = testimonials[i];
   const step = (d: 1 | -1) => setI((v) => (v + d + testimonials.length) % testimonials.length);
@@ -34,7 +43,7 @@ export default function Testimonials() {
       <div className="flex flex-col justify-center">
         <Quote className="size-9 text-gold-500" strokeWidth={1} />
         <blockquote className="display-md mt-6 text-balance text-ink-900">
-          &ldquo;{t.quote}&rdquo;
+          {t.quote}
         </blockquote>
         <p className="mt-7 text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-gold-600">
           {t.detail}
@@ -44,20 +53,20 @@ export default function Testimonials() {
           <button
             type="button"
             onClick={() => step(-1)}
-            aria-label="Previous testimonial"
+            aria-label={dict.testimonials.prev}
             className="grid size-11 place-items-center rounded-full border border-ink-900/15 text-ink-600 transition-all duration-400 hover:border-ink-900 hover:bg-ink-900 hover:text-bone-50"
           >
-            <ChevronLeft className="size-4" strokeWidth={1.75} />
+            <ChevronLeft className="size-4 rtl:-scale-x-100" strokeWidth={1.75} />
           </button>
           <button
             type="button"
             onClick={() => step(1)}
-            aria-label="Next testimonial"
+            aria-label={dict.testimonials.next}
             className="grid size-11 place-items-center rounded-full border border-ink-900/15 text-ink-600 transition-all duration-400 hover:border-ink-900 hover:bg-ink-900 hover:text-bone-50"
           >
-            <ChevronRight className="size-4" strokeWidth={1.75} />
+            <ChevronRight className="size-4 rtl:-scale-x-100" strokeWidth={1.75} />
           </button>
-          <span className="ml-2 font-display text-sm text-ink-400">
+          <span className="ms-2 font-display text-sm text-ink-400">
             {String(i + 1).padStart(2, "0")} / {String(testimonials.length).padStart(2, "0")}
           </span>
         </div>

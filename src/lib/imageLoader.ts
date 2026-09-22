@@ -31,7 +31,12 @@ export default function imageLoader({ src, width, quality }: LoaderArgs): string
     return `/_next/image?url=${encodeURIComponent(src)}&w=${width}&q=${q}`;
   }
 
-  // Remote asset — ask the source CDN for exactly the size we need.
+  // Anything that is not Unsplash (e.g. photos uploaded to Supabase) goes through Next's optimizer.
+  if (!src.startsWith("https://images.unsplash.com/")) {
+    return `/_next/image?url=${encodeURIComponent(src)}&w=${width}&q=${q}`;
+  }
+
+  // Unsplash — ask the source CDN for exactly the size we need.
   const [base, existingQuery] = src.split("?");
   const params = new URLSearchParams(existingQuery);
   params.set("auto", "format");

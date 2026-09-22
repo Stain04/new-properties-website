@@ -182,24 +182,10 @@ export const photos = {
   },
 } as const;
 
-/** Deterministic gallery builder so every listing gets a coherent photo set. */
-export function gallery(seed: number, opts?: { outdoor?: "pool" | "aerial" | "terrace" }) {
-  const pick = <T,>(arr: readonly T[], offset: number) => arr[(seed + offset) % arr.length];
-  const outdoorPool =
-    opts?.outdoor === "aerial"
-      ? photos.aerial
-      : opts?.outdoor === "terrace"
-        ? photos.terrace
-        : photos.pool;
-
-  return [
-    pick(photos.living, 0),
-    pick(photos.exterior, 1),
-    pick(photos.kitchen, 2),
-    pick(photos.bedroom, 3),
-    pick(outdoorPool, 1),
-    pick(photos.bathroom, 4),
-    pick(photos.terrace, 2),
-    pick(photos.bedroom, 7),
-  ];
-}
+/** Homepage hero slideshow, in order. */
+export const heroImages = [
+  photos.newCapital,
+  photos.newCairoAlt,
+  photos.newCapitalTowers,
+  photos.sheikhZayed,
+];

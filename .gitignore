@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -45,3 +46,6 @@ desktop.ini
 Thumbs.db
 ehthumbs.db
 $RECYCLE.BIN/
+
+# Photos uploaded through the admin in local-storage mode (agency data, not source code)
+/data/uploads/

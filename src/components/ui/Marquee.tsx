@@ -9,6 +9,8 @@ export default function Marquee({
 
   return (
     <div
+      // The scroll animation is direction-agnostic; keep the track LTR so it runs the same in Arabic.
+      dir="ltr"
       className={`mask-fade-x overflow-hidden border-y py-5 ${
         tone === "dark" ? "border-bone-100/10" : "border-ink-900/10"
       }`}

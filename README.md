@@ -10,8 +10,8 @@ A production-ready, white-label real estate website built with **Next.js 16**, *
 > The brand layer — name, positioning line, hero, contact details, metadata — is set to
 > **New Properties**, focused on New Cairo, TMG Group and the New Capital.
 >
-> The **demo inventory has not been refocused yet.** `src/data/properties.ts` and
-> `src/data/areas.ts` still carry 17 Red Sea listings (El Gouna, Hurghada, Sahl Hasheesh,
+> The **demo inventory has not been refocused yet.** The listings (manage them at `/admin`)
+> and `src/data/areas.ts` still carry 17 Red Sea listings (El Gouna, Hurghada, Sahl Hasheesh,
 > Soma Bay, Makadi Bay) alongside the 15 Cairo ones, and five Red Sea destination guides.
 > Until those are replaced, the catalogue contradicts the positioning line on the homepage.
 
@@ -59,8 +59,9 @@ Everything a new agency needs to change lives in four files. **No component mark
 
 ### 1. Brand, contact details and offices — `src/data/site.ts`
 
-Agency name, tagline, phone, WhatsApp, email, both office addresses and opening hours,
-social links, and the navigation menus.
+Agency name, tagline, phone, WhatsApp, email, both office addresses and opening hours, and
+social links. Their Arabic versions live in `src/i18n/content/ar/site.ts`; menu labels live in
+the UI dictionaries.
 
 ### 2. Colours and typography — `src/app/globals.css`
 
@@ -73,7 +74,8 @@ The palette is defined once at the top of the file, in the `@theme` block:
 ```
 
 Change those values and the entire site follows — buttons, borders, hovers, dark sections.
-Fonts are swapped in `src/app/layout.tsx` (currently Fraunces for display, Manrope for UI).
+Fonts are swapped in `src/app/[locale]/layout.tsx` (Fraunces and Manrope for English,
+Alexandria and IBM Plex Sans Arabic for Arabic).
 
 ### 3. Photography — `src/lib/images.ts`
 
@@ -89,19 +91,101 @@ See "Image handling" below for why.
 
 | File | Contains |
 | --- | --- |
-| `src/data/properties.ts` | All property listings |
+| `data/listings.json` | All property listings, English and Arabic — **edit them in the admin panel** (see below) |
 | `src/data/areas.ts` | The eight destination/market guides |
 | `src/data/team.ts` | Advisers, their specialisms, languages and direct lines |
 | `src/data/content.ts` | Services, FAQ, testimonials, statistics, process, developers |
 
-Every page consumes listings through the selector functions at the bottom of
-`properties.ts` (`propertyBySlug`, `byArea`, `similarTo`, …). To move to a CMS or database,
-replace the `properties` array with your query and keep the selectors — nothing else changes.
+Every page reads listings through the getters in `src/i18n/data.ts` (`getProperties`,
+`getProperty`, `getSimilar`, …), which pick the right language for each field.
 
 ### The logo
 
 `src/components/site/Logo.tsx` renders a typographic wordmark. Replace its markup with an
 `<Image>` when the agency supplies a drawn logo; it is the only place the mark appears.
+
+---
+
+## English and Arabic
+
+The site is fully bilingual. English lives at the root (`/properties`), Arabic under
+`/ar` (`/ar/properties`), and the header switch moves between the two while keeping the
+visitor on the same page with the same filters. Arabic pages are right-to-left, use Arabic
+typefaces (Alexandria for headings, IBM Plex Sans Arabic for text), and are written in a
+polished Egyptian register.
+
+| What | Where |
+| --- | --- |
+| Buttons, labels, headings, page copy | `src/i18n/dictionaries/en.ts` and `ar.ts` — identical keys |
+| Listings, destinations, team, services, FAQ in Arabic | `src/i18n/content/ar/` — keyed by slug |
+| Brand details in Arabic (offices, positioning line) | `src/i18n/content/ar/site.ts` |
+| Merging English data with Arabic text | `src/i18n/data.ts` — every page reads data through these getters |
+| Routing (`/ar` prefix, English at the root) | `src/proxy.ts` |
+
+**Numbers, prices, specs and photos are never duplicated.** The Arabic files hold only
+words; everything else comes from the English data files. A listing added without an Arabic
+translation still appears on the Arabic site, in English, rather than breaking.
+
+**TypeScript enforces completeness.** If `ar.ts` is missing a key that `en.ts` has, the
+build fails and names the missing string.
+
+**Plurals** use the browser's own rules (`Intl.PluralRules`), so Arabic gets the right form
+automatically: عقار واحد، عقارين، ٣ عقارات، ١١ عقار.
+
+To write Arabic-safe components: use `ms-/me-/ps-/pe-/start-/end-` instead of
+`ml-/mr-/pl-/pr-/left-/right-`, add `rtl:-scale-x-100` to directional arrow icons, and
+import `Link` from `@/i18n/Link` rather than `next/link` so links stay in the visitor's
+language.
+
+---
+
+## Managing listings (the admin panel)
+
+Agencies add, edit and remove listings themselves at **`/admin`** — no code, no developer.
+
+- **Log in** with the password set in `ADMIN_PASSWORD`.
+- **Add listing** → drag in photos, fill the details, write the English, optionally the
+  Arabic, then **Publish**. It appears on the site in both languages within seconds.
+- **Edit** any listing, reorder photos, choose the cover, change the price.
+- **Quick changes** from the list: star a listing to feature it on the homepage, mark it
+  Reserved or Sold, or delete it (with a confirmation).
+- A listing without Arabic still shows on the Arabic site, in English. The list flags
+  which listings are missing Arabic.
+
+### Setting it up for an agency
+
+1. Copy `.env.example` to `.env.local` and set `ADMIN_PASSWORD` and `ADMIN_SESSION_SECRET`
+   (the file explains how to generate the secret). On a host like Vercel, add the same
+   values under the project's *Environment Variables* instead.
+2. That's enough on a computer or a VPS: listings are saved to `data/listings.json` and
+   photos to `data/uploads/`.
+3. **On Vercel (or any host with a read-only disk)** listings must live in the cloud:
+   - Create a free project at [supabase.com](https://supabase.com).
+   - In *Project Settings → API*, copy the **Project URL** and the **service_role** key
+     into `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`.
+   - Run `npm run setup:supabase` once. It creates a storage bucket and uploads the current
+     listings — and any photos uploaded locally. No database tables are needed.
+   - Add the same three variables to the host and redeploy.
+
+The admin header shows **Local storage** or **Cloud storage** so it's always clear where
+changes are going.
+
+> The `service_role` key is a master key for that Supabase project. It is only ever used
+> on the server — never sent to the browser — but keep it out of git, chats and screenshots.
+
+### How it's built
+
+| Piece | Where |
+| --- | --- |
+| Listing shape and validation (runs on every save) | `src/lib/listings/schema.ts` |
+| Storage — local files or Supabase, chosen automatically | `src/lib/listings/` |
+| Login (signed, http-only cookie, 7 days) | `src/lib/admin/auth.ts` |
+| Admin pages and form | `src/app/admin/`, `src/components/admin/` |
+| Save / delete / quick-change actions | `src/app/admin/actions.ts` |
+| Photo upload endpoint | `src/app/api/admin/upload/route.ts` |
+
+Every admin page and action re-checks the login on the server. Saving triggers a rebuild of
+the affected pages, so the public site stays fast (static) and still shows changes at once.
 
 ---
 
@@ -146,10 +230,15 @@ conversion and caching. Swapping placeholders for real photos needs no configura
 
 ## Notes for deployment
 
-- **Set the canonical URL.** `site.meta.url` in `src/data/site.ts` feeds the sitemap, the
-  Open Graph tags and the structured data. It must be the real domain before launch.
+- **Site address.** Link previews, the sitemap and Google data use the live domain. On
+  Vercel it is detected automatically; on any other host set `NEXT_PUBLIC_SITE_URL`.
+- **Link previews.** Every page has a branded share card, and each listing gets its own
+  (photo, title, price, specs) in the visitor's language — see `src/lib/og.tsx`. WhatsApp
+  caches previews per link: to see a new card on a link already shared, add `?v=2` to it.
 - **Vercel** is the path of least resistance (`vercel deploy`); any Node host works with
-  `npm run build && npm start`.
+  `npm run build && npm start`. On Vercel, connect Supabase before using the admin — see
+  *Managing listings*.
+- **Environment variables** are listed, with explanations, in `.env.example`.
 - **Maps** are OpenStreetMap embeds — no API key, no billing. Swap for Google Maps if the
   agency wants Street View or their own place listing.
 - **Currencies.** Listings carry their own currency (EUR/USD/EGP). Filtering and sorting
@@ -191,4 +280,4 @@ src/
 - `prefers-reduced-motion` disables all animation
 - Scroll-reveal degrades safely — content already on screen, jumped past via an anchor, or
   rendered without JavaScript is shown immediately rather than staying hidden
-- 51 pages prerendered as static HTML at build time; only the filtered catalogue is dynamic
+- 97 pages (both languages) prerendered as static HTML at build time; only the filtered catalogue is dynamic

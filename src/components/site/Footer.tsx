@@ -1,8 +1,14 @@
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
-import Link from "next/link";
-import { footerNav, site } from "@/data/site";
+import type { Locale } from "@/i18n/config";
+import { getFooterNav, getSite } from "@/i18n/data";
+import { getDictionary } from "@/i18n/dictionaries";
+import { fmt } from "@/i18n/format";
+import Link from "@/i18n/Link";
 
-export default function Footer() {
+export default function Footer({ locale }: { locale: Locale }) {
+  const site = getSite(locale);
+  const t = getDictionary(locale).footer;
+  const columns = getFooterNav(locale);
   const year = new Date().getFullYear();
 
   return (
@@ -12,34 +18,29 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1.15fr_1.6fr]">
           <div>
             <p className="eyebrow eyebrow-light">{site.descriptor}</p>
-            <p className="display-lg mt-6 text-bone-50">
+            <p dir="ltr" className="display-lg mt-6 font-latin-display text-bone-50 rtl:text-right">
               {site.nameLine1} <span className="text-gold-500">{site.nameLine2}</span>
             </p>
             <p className="mt-5 max-w-md text-[0.875rem] font-semibold leading-relaxed tracking-wide text-gold-400">
               {site.positioning}
             </p>
-            <p className="lede lede-light mt-4 max-w-md">
-              Advising private buyers, investors and families since {site.established}.
-            </p>
+            <p className="lede lede-light mt-4 max-w-md">{fmt(t.since, { year: site.established })}</p>
 
             <div className="mt-9 flex flex-wrap gap-3">
               <a href={`tel:${site.contact.phoneHref}`} className="btn btn-gold btn-sm">
                 <Phone className="size-3.5" strokeWidth={2} />
-                {site.contact.phoneDisplay}
+                <span dir="ltr">{site.contact.phoneDisplay}</span>
               </a>
-              <a
-                href={`mailto:${site.contact.email}`}
-                className="btn btn-outline-light btn-sm"
-              >
+              <a href={`mailto:${site.contact.email}`} className="btn btn-outline-light btn-sm">
                 <Mail className="size-3.5" strokeWidth={2} />
-                Email us
+                {getDictionary(locale).common.emailUs}
               </a>
             </div>
           </div>
 
           {/* Link columns */}
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
-            {footerNav.map((col) => (
+            {columns.map((col) => (
               <div key={col.title}>
                 <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-gold-500">
                   {col.title}
@@ -85,27 +86,27 @@ export default function Footer() {
                 href={`tel:${office.phone.replace(/\s/g, "")}`}
                 className="link-sweep mt-1 inline-block py-2 text-sm text-bone-50"
               >
-                {office.phone}
+                <span dir="ltr">{office.phone}</span>
               </a>
             </div>
           ))}
 
           <div>
             <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-gold-500">
-              Follow
+              {t.follow}
             </p>
             <ul className="mt-4 space-y-3">
               {site.social.map((s) => (
-                <li key={s.label}>
+                <li key={s.href}>
                   <a
                     href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-1.5 py-2 text-sm lg:py-1 text-bone-100/65 transition-colors duration-300 hover:text-bone-50"
+                    className="group inline-flex items-center gap-1.5 py-2 text-sm text-bone-100/65 transition-colors duration-300 hover:text-bone-50 lg:py-1"
                   >
                     {s.label}
                     <ArrowUpRight
-                      className="size-3.5 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      className="size-3.5 transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5"
                       strokeWidth={1.75}
                     />
                   </a>
@@ -119,17 +120,17 @@ export default function Footer() {
 
         <div className="flex flex-col gap-4 text-xs text-bone-100/40 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {site.legalName}. All rights reserved.
+            © {year} {site.legalName}. {t.rights}
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-3">
             <Link href="/contact" className="inline-block py-2 hover:text-bone-100/70">
-              Privacy policy
+              {t.privacy}
             </Link>
             <Link href="/contact" className="inline-block py-2 hover:text-bone-100/70">
-              Terms of engagement
+              {t.terms}
             </Link>
             <Link href="/properties" className="inline-block py-2 hover:text-bone-100/70">
-              Full catalogue
+              {t.catalogue}
             </Link>
           </div>
         </div>

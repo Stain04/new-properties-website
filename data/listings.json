@@ -1,0 +1,2367 @@
+[
+  {
+    "slug": "lagoon-townhouse-el-gouna-west-golf",
+    "ref": "NS-EG-104",
+    "purpose": "sale",
+    "type": "Townhouse",
+    "areaSlug": "el-gouna",
+    "price": 465000,
+    "currency": "EUR",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "size": 186,
+    "plotSize": 260,
+    "deliveryYear": 2016,
+    "finishing": "Fully finished",
+    "status": "available",
+    "featured": true,
+    "exclusive": true,
+    "coordinates": {
+      "lat": 27.3948,
+      "lng": 33.6784
+    },
+    "agentSlug": "karim-el-shazly",
+    "images": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1745761320630-148540d19a6c?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1643949915134-73a4c880f7c7?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1642541070065-3912f347e7c6?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1780914149187-c4f302dafbb0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1744025098626-66c0b9cb1ba8?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1774348692705-704860626289?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1640109478916-f445f8f19b11?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Lagoon-front townhouse, West Golf",
+      "address": "West Golf, El Gouna",
+      "summary": "One of eleven townhouses with direct lagoon frontage in West Golf, held by the same owner since delivery and offered with the buggy and furniture in place.",
+      "description": [
+        "West Golf sits on the quieter western arm of El Gouna's lagoon system, where the water is still and the golf course provides an uninterrupted outlook that cannot be built out. This is one of only eleven houses on the row with frontage directly onto the water rather than across a path.",
+        "The ground floor opens fully to the terrace through sliding panels, so the living space and the waterside effectively become one room for most of the year. Three bedrooms sit above, the principal with its own terrace facing the lagoon, and a roof terrace above that catches the evening breeze off the water.",
+        "The seller is relocating and has priced for a clean, unhurried sale. Title is a registered green contract, service charges are paid to the end of the year, and the golf buggy and furniture transfer with the house."
+      ],
+      "features": [
+        "Private lagoon frontage",
+        "Mooring for a small boat",
+        "Roof terrace",
+        "Shared pool",
+        "Covered parking",
+        "Landscaped garden",
+        "Registered green contract",
+        "Golf buggy included"
+      ],
+      "view": "Lagoon and golf course"
+    },
+    "ar": {
+      "title": "تاون هاوس على البحيرة، ويست جولف",
+      "address": "ويست جولف، الجونة",
+      "summary": "واحد من 11 تاون هاوس بس على البحيرة مباشرة في ويست جولف، مع نفس المالك من يوم الاستلام، ومعروض بالفرش وعربية الجولف.",
+      "description": [
+        "ويست جولف في الجزء الغربي الهادي من بحيرات الجونة، المية فيه راكدة وملعب الجولف قدامك على طول ومستحيل يتبني عليه. البيت ده واحد من 11 بيت بس في الصف ده واجهتهم على المية مباشرة، مش ورا ممشى.",
+        "الدور الأرضي بيتفتح بالكامل على التراس بأبواب سحّاب، فالليفينج والمية بيبقوا أوضة واحدة أغلب السنة. فوق تلات غرف نوم، الماستر ليها تراس على البحيرة، وفوقهم روف بيجيله هوا البحيرة بالليل.",
+        "المالك مسافر وحاطط سعر لبيعة هادية ونضيفة. العقد مسجّل، ومصاريف الصيانة مدفوعة لآخر السنة، وعربية الجولف والفرش ضمن البيعة."
+      ],
+      "features": [
+        "على البحيرة مباشرة",
+        "مرسى لقارب صغير",
+        "روف",
+        "حمّام سباحة مشترك",
+        "جراج مغطّى",
+        "جنينة متنسّقة",
+        "عقد مسجّل",
+        "عربية جولف ضمن البيعة"
+      ],
+      "view": "البحيرة وملعب الجولف"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "beachfront-penthouse-sahl-hasheesh-south-bay",
+    "ref": "NS-SH-211",
+    "purpose": "sale",
+    "type": "Penthouse",
+    "areaSlug": "sahl-hasheesh",
+    "price": 398000,
+    "currency": "EUR",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "size": 214,
+    "deliveryYear": 2021,
+    "finishing": "Furnished",
+    "status": "available",
+    "featured": true,
+    "exclusive": true,
+    "coordinates": {
+      "lat": 27.0369,
+      "lng": 33.8894
+    },
+    "agentSlug": "laila-mansour",
+    "images": [
+      "https://images.unsplash.com/photo-1757924461488-ef9ad0670978?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1598911096723-af003b4ea77a?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1610177534644-34d881503b83?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1696762932825-2737db830bbe?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1774348692705-704860626289?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1564540583246-934409427776?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1767555027401-6829988ca9df?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1644057501622-dfa7dd26dbfb?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Beachfront penthouse, South Bay",
+      "address": "South Bay, Sahl Hasheesh",
+      "summary": "A top-floor penthouse on the first line of South Bay, with a 92 m² roof terrace, plunge pool and an existing hotel rental agreement in place.",
+      "description": [
+        "First-line means what it says here: nothing stands between the terrace and the water. South Bay's promenade runs below, and the bay curves away to the south with no high-rise interrupting it, because the masterplan does not permit one.",
+        "Internally the apartment is arranged around a single twelve-metre living run facing the sea, with the three bedrooms set behind it. The staircase leads to a private roof terrace of 92 square metres with a plunge pool, an outdoor kitchen and a shaded dining pergola.",
+        "The current owner runs the apartment through the resort's managed rental programme, which is transferable and has produced consistent occupancy through the winter season. Full figures are available to qualified buyers on request."
+      ],
+      "features": [
+        "First-line beachfront",
+        "92 m² private roof terrace",
+        "Plunge pool on terrace",
+        "Hotel-managed rental programme",
+        "Beach service",
+        "Underground parking",
+        "Concierge",
+        "Fully furnished"
+      ],
+      "view": "Open sea, first line",
+      "floor": "Top floor of 4"
+    },
+    "ar": {
+      "title": "بنتهاوس على البحر مباشرة، ساوث باي",
+      "address": "ساوث باي، سهل حشيش",
+      "summary": "بنتهاوس في الدور الأخير صف أول في ساوث باي، بروف 92 متر وبلانج بول، وعليه عقد إيجار فندقي شغال.",
+      "description": [
+        "الصف الأول هنا معناه حرفيًا إن مفيش حاجة بين التراس والمية. الممشى تحتك، والخليج ممتد ناحية الجنوب من غير أي برج عالي، لأن المخطط أصلاً مش بيسمح.",
+        "الشقة متصمّمة حوالين ليفينج طوله 12 متر ناحية البحر، وتلات غرف نوم وراه. السلم بيطلّعك على روف خاص 92 متر فيه بلانج بول ومطبخ خارجي وبرجولا للأكل.",
+        "المالك بيأجّرها من خلال برنامج الإيجار بتاع المنتجع، والبرنامج ده بينتقل للمشتري، وجاب إشغال ثابت طول موسم الشتا. الأرقام كاملة متاحة للمشترين الجادّين."
+      ],
+      "features": [
+        "صف أول على البحر",
+        "روف خاص 92 متر",
+        "بلانج بول على الروف",
+        "برنامج إيجار بإدارة فندقية",
+        "خدمة على الشط",
+        "جراج تحت الأرض",
+        "كونسيرج",
+        "مفروش بالكامل"
+      ],
+      "view": "بحر مفتوح، صف أول",
+      "floor": "الدور الأخير من 4"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "sea-view-villa-soma-bay-peninsula",
+    "ref": "NS-SB-318",
+    "purpose": "sale",
+    "type": "Villa",
+    "areaSlug": "soma-bay",
+    "price": 1250000,
+    "currency": "EUR",
+    "bedrooms": 5,
+    "bathrooms": 5,
+    "size": 486,
+    "plotSize": 1100,
+    "deliveryYear": 2019,
+    "finishing": "Fully finished",
+    "status": "available",
+    "featured": true,
+    "exclusive": true,
+    "coordinates": {
+      "lat": 26.8467,
+      "lng": 33.9917
+    },
+    "agentSlug": "karim-el-shazly",
+    "images": [
+      "https://images.unsplash.com/photo-1707484687082-9493754d389f?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1774685110718-c5b4fe026144?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1663811396777-05505d999151?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1710883734891-93709398496d?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1672421186928-ac9709797b07?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1564540579594-0930edb6de43?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1758907749704-7ad4e48b2aa0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1663811397207-418a92396ad5?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Peninsula villa with private pool, Soma Bay",
+      "address": "The Peninsula, Soma Bay",
+      "summary": "A five-bedroom villa on an 1,100 m² plot at the head of the Soma Bay peninsula, with sea on one side and the Cascades course on the other.",
+      "description": [
+        "Soma Bay releases very little land, and almost none of it at this size. The plot sits at the head of the peninsula with water visible from the upper floor on two sides and the Cascades golf course running along the southern boundary.",
+        "The house is arranged as two linked volumes around a courtyard and a fourteen-metre pool, keeping the reception rooms separate from the bedroom wing. Four bedrooms are on the upper floor, a fifth with its own entrance on the ground floor, and there are staff quarters with independent access.",
+        "Specification is current rather than merely adequate: a full smart-home installation, imported joinery, and a landscape scheme now mature enough to give the garden real privacy. Beach club membership transfers with the sale."
+      ],
+      "features": [
+        "Private 14 m pool",
+        "Staff quarters",
+        "Direct golf course access",
+        "Gated peninsula security",
+        "Smart home system",
+        "Double garage",
+        "Mature landscaping",
+        "Beach club membership"
+      ],
+      "view": "Sea and golf course"
+    },
+    "ar": {
+      "title": "فيلا بحمّام سباحة خاص على شبه الجزيرة، سوما باي",
+      "address": "ذا بينينسولا، سوما باي",
+      "summary": "فيلا خمس غرف على أرض 1,100 متر في رأس شبه جزيرة سوما باي، البحر من ناحية وملعب كاسكيدز من الناحية التانية.",
+      "description": [
+        "سوما باي بتطرح أراضي قليلة جدًا، وتقريبًا مفيش بالمساحة دي. الأرض في رأس شبه الجزيرة، والمية باينة من الدور الأول من ناحيتين، وملعب كاسكيدز ماشي على الحد الجنوبي.",
+        "البيت عبارة عن مبنيين متوصّلين حوالين كورت يارد وحمّام سباحة 14 متر، عشان الريسبشن يبقى بعيد عن غرف النوم. أربع غرف فوق، وخامسة في الأرضي بمدخل خاص، وسكن للعاملين بمدخل مستقل.",
+        "المواصفات حديثة بجد مش مقبولة وخلاص: سمارت هوم كامل، ونجارة مستوردة، وتنسيق حدايق كبر كفاية إنه يدّي الجنينة خصوصية حقيقية. وعضوية البيتش كلوب بتنتقل مع البيعة."
+      ],
+      "features": [
+        "حمّام سباحة خاص 14 متر",
+        "سكن للعاملين",
+        "دخول مباشر لملعب الجولف",
+        "أمن شبه الجزيرة المقفولة",
+        "نظام سمارت هوم",
+        "جراج لعربيتين",
+        "زرع ناضج",
+        "عضوية بيتش كلوب"
+      ],
+      "view": "البحر وملعب الجولف"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "marina-apartment-el-gouna-abu-tig",
+    "ref": "NS-EG-127",
+    "purpose": "sale",
+    "type": "Apartment",
+    "areaSlug": "el-gouna",
+    "price": 285000,
+    "currency": "EUR",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "size": 118,
+    "deliveryYear": 2012,
+    "finishing": "Furnished",
+    "status": "available",
+    "featured": true,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 27.4025,
+      "lng": 33.6742
+    },
+    "agentSlug": "karim-el-shazly",
+    "images": [
+      "https://images.unsplash.com/photo-1780257562963-3389a4105371?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1768200498972-fd56353d73fc?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1689043528099-2ba014dd7c64?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1625579002297-aeebbf69de89?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1758907749704-7ad4e48b2aa0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1572742482459-e04d6cfdd6f3?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1617695591915-87d753983ac0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1616594092403-fb65629b0a46?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Marina apartment, Abu Tig",
+      "address": "Abu Tig Marina, El Gouna",
+      "summary": "A two-bedroom apartment on the marina front at Abu Tig, where short-letting is permitted and the restaurant strip is a ninety-second walk.",
+      "description": [
+        "Abu Tig is the part of El Gouna that stays busy in February. The marina front carries the town's densest run of restaurants and bars, and apartments looking directly onto the berths are rarely on the market for long.",
+        "This is a two-bedroom on the second floor with a balcony running the width of the living room over the water. It has been let short-term by the current owner for six years with strong repeat occupancy, and the furniture, linen and inventory transfer with the sale.",
+        "Short-letting is expressly permitted here, which is not true everywhere in El Gouna and is worth confirming carefully before buying elsewhere in the town."
+      ],
+      "features": [
+        "Direct marina frontage",
+        "Furnished throughout",
+        "Balcony over the berths",
+        "Walk to restaurants",
+        "Shared pool",
+        "Short-let permitted",
+        "Registered green contract"
+      ],
+      "view": "Marina",
+      "floor": "2nd of 3"
+    },
+    "ar": {
+      "title": "شقة على المرسى، أبو تيج",
+      "address": "مرسى أبو تيج، الجونة",
+      "summary": "شقة غرفتين على مرسى أبو تيج، الإيجار القصير فيها مسموح، وشارع المطاعم على بُعد دقيقة ونص مشي.",
+      "description": [
+        "أبو تيج هو الجزء من الجونة اللي بيفضل زحمة حتى في فبراير. المرسى فيه أكتر مطاعم وكافيهات في المدينة، والشقق اللي بتبص على المراكب مباشرة مابتقعدش في السوق كتير.",
+        "دي شقة غرفتين في الدور التاني، والبلكونة بعرض الليفينج كله على المية. المالك بيأجّرها إيجار قصير من ست سنين وعليها طلب متكرر، والفرش والمفارش وكل محتوياتها ضمن البيعة.",
+        "الإيجار القصير مسموح هنا صراحةً، وده مش متاح في كل حتة في الجونة، ولازم تتأكد منه كويس قبل ما تشتري في أي مكان تاني."
+      ],
+      "features": [
+        "على المرسى مباشرة",
+        "مفروشة بالكامل",
+        "بلكونة على المراكب",
+        "خطوات من المطاعم",
+        "حمّام سباحة مشترك",
+        "الإيجار القصير مسموح",
+        "عقد مسجّل"
+      ],
+      "view": "المرسى",
+      "floor": "التاني من 3"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "garden-chalet-makadi-bay-heights",
+    "ref": "NS-MK-402",
+    "purpose": "sale",
+    "type": "Chalet",
+    "areaSlug": "makadi-bay",
+    "price": 92000,
+    "currency": "EUR",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "size": 104,
+    "plotSize": 58,
+    "deliveryYear": 2025,
+    "finishing": "Semi-finished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "paymentPlan": {
+      "downPayment": "10%",
+      "years": 8
+    },
+    "coordinates": {
+      "lat": 26.9833,
+      "lng": 33.9
+    },
+    "agentSlug": "omar-tawfik",
+    "images": [
+      "https://images.unsplash.com/photo-1758448511322-8bfc73daf606?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1779487552425-65861889810b?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1704383014594-01bc24b6b840?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1640109478916-f445f8f19b11?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1724618702364-8cde016bda22?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1625940119840-585d3495dc94?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1532960546490-72765f9494c9?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Garden chalet with sea view, Makadi Heights",
+      "address": "Makadi Heights, Makadi Bay",
+      "summary": "A ground-floor chalet with a private garden in Makadi Heights, available on an eight-year interest-free plan with 10% down.",
+      "description": [
+        "Makadi Heights is the largest of the bay's residential masterplans and the one with the most developed amenity — lagoon pools, a clubhouse, retail and a scheduled shuttle down to the beach.",
+        "This is a ground-floor two-bedroom with a fifty-eight square metre private garden, elevated enough on the site to hold a sea view over the lower phases. Semi-finished, which in practice means walls, floors and bathrooms are complete and the kitchen and joinery are specified by the buyer.",
+        "The commercial case here is the payment structure. Ten per cent down and eight years interest-free means a buyer can hold the asset through the delivery period while rents in the bay continue to rise. Our interiors team can deliver it rental-ready for roughly €9,000."
+      ],
+      "features": [
+        "58 m² private garden",
+        "Lagoon-style pools",
+        "8-year payment plan",
+        "Clubhouse and gym",
+        "24-hour security",
+        "Beach shuttle",
+        "Developer rental programme"
+      ],
+      "view": "Sea and landscaped gardens",
+      "planNote": "Interest-free, quarterly instalments"
+    },
+    "ar": {
+      "title": "شاليه بجنينة وفيو بحر، مكادي هايتس",
+      "address": "مكادي هايتس، مكادي باي",
+      "summary": "شاليه أرضي بجنينة خاصة في مكادي هايتس، بتقسيط 8 سنين من غير فوايد ومقدّم 10%.",
+      "description": [
+        "مكادي هايتس أكبر مخطط سكني في الخليج وأكتره خدمات — حمّامات سباحة لاجون، وكلوب هاوس، ومحلات، وشاتل منتظم للشط.",
+        "ده شاليه أرضي غرفتين بجنينة خاصة 58 متر، وعالي كفاية في الموقع إنه يحافظ على فيو البحر فوق المراحل اللي تحته. نص تشطيب، يعني الحيطان والأرضيات والحمّامات خلصانة، والمطبخ والنجارة على ذوق المشتري.",
+        "الميزة الحقيقية هنا في نظام السداد. 10% مقدّم وتمن سنين من غير فوايد، يعني تقدر تمسك الأصل طول فترة التسليم والإيجارات في الخليج بتزيد. وفريق التشطيب عندنا يقدر يجهّزه للإيجار بحوالي €9,000."
+      ],
+      "features": [
+        "جنينة خاصة 58 متر",
+        "حمّامات سباحة لاجون",
+        "تقسيط 8 سنين",
+        "كلوب هاوس وجيم",
+        "أمن 24 ساعة",
+        "شاتل للشط",
+        "برنامج إيجار من المطوّر"
+      ],
+      "view": "البحر والحدايق",
+      "planNote": "من غير فوايد، أقساط كل 3 شهور"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "furnished-studio-hurghada-village-road",
+    "ref": "NS-HG-515",
+    "purpose": "sale",
+    "type": "Studio",
+    "areaSlug": "hurghada",
+    "price": 41500,
+    "currency": "EUR",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "size": 44,
+    "deliveryYear": 2018,
+    "finishing": "Furnished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 27.2331,
+      "lng": 33.8398
+    },
+    "agentSlug": "dina-halim",
+    "images": [
+      "https://images.unsplash.com/photo-1628592102751-ba83b0314276?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1622015663319-e97e697503ee?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1635321350281-e2a91ecffd00?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1644057501622-dfa7dd26dbfb?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1596746698204-d69844da956d?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1658760046471-896cbc719c9d?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1776363284806-873eeef565a7?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1710224002849-a76ea1068b0d?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Furnished studio, Village Road",
+      "address": "Village Road, Sheraton District, Hurghada",
+      "summary": "A turnkey studio in a well-run Sheraton District compound — the cleanest entry point we currently hold on the Red Sea.",
+      "description": [
+        "Village Road is the part of Hurghada that has aged well: established compounds, mature planting, and a short walk to both the beach and the restaurant strip without being inside the noise of it.",
+        "The compound is genuinely well managed, which is the variable that matters most at this price point. The pool is maintained year-round, the service charge is modest and actually collected, and the common areas have been repainted twice since delivery.",
+        "The studio itself is furnished, let through the winter season, and can be handed over with the tenancy running. For a first purchase on the coast, or a straightforward income asset, it does the job without complication."
+      ],
+      "features": [
+        "Fully furnished",
+        "Pool view",
+        "Managed compound",
+        "Ready to let",
+        "Low service charge",
+        "Walk to the beach",
+        "Registered green contract"
+      ],
+      "view": "Pool",
+      "floor": "3rd of 5"
+    },
+    "ar": {
+      "title": "ستوديو مفروش، فيلدج رود",
+      "address": "فيلدج رود، منطقة الشيراتون، الغردقة",
+      "summary": "ستوديو جاهز في كمبوند إدارته كويسة في منطقة الشيراتون — أنضف بداية عندنا دلوقتي على البحر الأحمر.",
+      "description": [
+        "فيلدج رود هي المنطقة في الغردقة اللي بتكبر بشكل حلو: كمبوندات مستقرة، وزرع ناضج، ومسافة مشي قصيرة للشط وشارع المطاعم من غير ما تبقى جوّه الدوشة.",
+        "الكمبوند إدارته كويسة بجد، ودي أهم حاجة في الرينج ده. حمّام السباحة بيتصان طول السنة، ومصاريف الصيانة قليلة وبتتحصّل فعلاً، والأماكن المشتركة اتدهنت مرتين من ساعة الاستلام.",
+        "الستوديو مفروش، ومتأجّر في موسم الشتا، وممكن يتسلّم والإيجار شغال. كأول شرا على الساحل، أو كأصل بيجيب دخل ببساطة، بيأدي الغرض من غير أي تعقيد."
+      ],
+      "features": [
+        "مفروش بالكامل",
+        "فيو حمّام السباحة",
+        "كمبوند بإدارة كويسة",
+        "جاهز للإيجار",
+        "مصاريف صيانة قليلة",
+        "مشي للشط",
+        "عقد مسجّل"
+      ],
+      "view": "حمّام السباحة",
+      "floor": "التالت من 5"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "duplex-sahl-hasheesh-old-town",
+    "ref": "NS-SH-228",
+    "purpose": "sale",
+    "type": "Duplex",
+    "areaSlug": "sahl-hasheesh",
+    "price": 218000,
+    "currency": "EUR",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "size": 152,
+    "deliveryYear": 2020,
+    "finishing": "Fully finished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 27.0412,
+      "lng": 33.8821
+    },
+    "agentSlug": "laila-mansour",
+    "images": [
+      "https://images.unsplash.com/photo-1642976975710-1d8890dbf5ab?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1598737652403-6e0ee5bf5cf2?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1614597445336-8a67e9314d91?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1663811397207-418a92396ad5?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1776363284806-873eeef565a7?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1744025098626-66c0b9cb1ba8?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1774348692705-704860626289?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1648634158203-199accfd7afc?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Duplex with sea terrace, Old Town",
+      "address": "Old Town, Sahl Hasheesh",
+      "summary": "A two-storey duplex in Old Town with a double-height living room and a thirty-four metre terrace facing the bay.",
+      "description": [
+        "Old Town is Sahl Hasheesh's pedestrian core — a dense, low-rise quarter of squares and shaded lanes that feels closer to a Mediterranean village than a resort compound, and the only part of the bay where you can genuinely live without a car.",
+        "The duplex occupies the top two floors. A double-height living room faces the sea through a full-width glazed wall, with the principal bedroom on a mezzanine above it and a second bedroom behind. The terrace is large enough to dine ten.",
+        "Second line rather than first, which places it roughly forty per cent below equivalent beachfront stock while keeping an uninterrupted sea outlook over the low-rise roofs in front."
+      ],
+      "features": [
+        "Double-height living space",
+        "34 m² sea terrace",
+        "Walk to the promenade",
+        "Shared infinity pool",
+        "Underground parking",
+        "Concierge"
+      ],
+      "view": "Sea, second line",
+      "floor": "3rd & 4th"
+    },
+    "ar": {
+      "title": "دوبلكس بتراس على البحر، أولد تاون",
+      "address": "أولد تاون، سهل حشيش",
+      "summary": "دوبلكس دورين في أولد تاون، بليفينج بارتفاع دورين وتراس 34 متر بيبص على الخليج.",
+      "description": [
+        "أولد تاون هو قلب سهل حشيش للمشي — حي منخفض الارتفاع فيه ميادين وحواري مضلّلة، أقرب لقرية على البحر المتوسط منه لكمبوند منتجع، والمكان الوحيد في الخليج اللي تقدر تعيش فيه من غير عربية.",
+        "الدوبلكس في آخر دورين. الليفينج بارتفاع دورين بيبص على البحر من واجهة إزاز كاملة، والماستر على ميزانين فوقه، وغرفة تانية وراه. والتراس يكفي عشر أشخاص على العشا.",
+        "صف تاني مش أول، وده بيخلّيه أرخص بحوالي 40% من الوحدات اللي على البحر مباشرة، مع فيو بحر مفتوح فوق أسطح المباني الواطية اللي قدامه."
+      ],
+      "features": [
+        "ليفينج بارتفاع دورين",
+        "تراس 34 متر على البحر",
+        "مشي للممشى",
+        "إنفينيتي بول مشترك",
+        "جراج تحت الأرض",
+        "كونسيرج"
+      ],
+      "view": "البحر، صف تاني",
+      "floor": "التالت والرابع"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "two-bed-apartment-hurghada-al-ahyaa",
+    "ref": "NS-HG-533",
+    "purpose": "sale",
+    "type": "Apartment",
+    "areaSlug": "hurghada",
+    "price": 68000,
+    "currency": "USD",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "size": 96,
+    "deliveryYear": 2023,
+    "finishing": "Fully finished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "paymentPlan": {
+      "downPayment": "25%",
+      "years": 5
+    },
+    "coordinates": {
+      "lat": 27.3117,
+      "lng": 33.7683
+    },
+    "agentSlug": "omar-tawfik",
+    "images": [
+      "https://images.unsplash.com/photo-1611755489400-3c53602ab783?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1673469110171-dbf5d19a8336?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1600684388091-627109f3cd60?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1616594092403-fb65629b0a46?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1622816951464-df6fc7ab2ced?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1564540583246-934409427776?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1767555027401-6829988ca9df?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1653204095671-3ed81a4bc561?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Two-bedroom apartment, Al Ahyaa",
+      "address": "Al Ahyaa, North Hurghada",
+      "summary": "A completed two-bedroom in North Hurghada's fastest-growing corridor, with a five-year plan available on the balance.",
+      "description": [
+        "Al Ahyaa has absorbed most of North Hurghada's new supply over the last five years, and the infrastructure has broadly kept pace — the coastal road is now dual carriageway to the airport and the retail along it has filled in.",
+        "This apartment is delivered and ready rather than off-plan, in a compound with two pools and a small aqua park that makes it easy to let to families. First floor, so the pool is in view without being underneath the bedroom windows.",
+        "The developer will extend a five-year plan on the balance for buyers who prefer not to settle in full, which is unusual on completed stock."
+      ],
+      "features": [
+        "Two shared pools",
+        "Aqua park in compound",
+        "Ready to move",
+        "Covered parking",
+        "24-hour security",
+        "5-year payment plan available"
+      ],
+      "view": "Pool and gardens",
+      "floor": "1st of 4",
+      "planNote": "On completed unit, monthly instalments"
+    },
+    "ar": {
+      "title": "شقة غرفتين، الأحياء",
+      "address": "الأحياء، شمال الغردقة",
+      "summary": "شقة غرفتين متسلّمة في أسرع منطقة بتكبر في شمال الغردقة، وتقسيط 5 سنين متاح على الباقي.",
+      "description": [
+        "الأحياء أخدت أغلب المعروض الجديد في شمال الغردقة في آخر خمس سنين، والبنية التحتية ماشية معاها — الطريق الساحلي بقى اتجاهين للمطار والمحلات اتملت على جنبه.",
+        "الشقة دي متسلّمة وجاهزة مش أوف بلان، في كمبوند فيه حمّامين سباحة وأكوا بارك صغير بيسهّل تأجيرها للعائلات. الدور الأول، فحمّام السباحة قدامك من غير ما يكون تحت شبابيك غرف النوم.",
+        "المطوّر موافق يدّي تقسيط 5 سنين على الباقي للي مش عايز يدفع كاش، وده مش العادي في وحدة متسلّمة."
+      ],
+      "features": [
+        "حمّامين سباحة مشتركين",
+        "أكوا بارك في الكمبوند",
+        "جاهزة للسكن",
+        "جراج مغطّى",
+        "أمن 24 ساعة",
+        "تقسيط 5 سنين متاح"
+      ],
+      "view": "حمّام السباحة والحدايق",
+      "floor": "الأول من 4",
+      "planNote": "على وحدة متسلّمة، أقساط شهرية"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "nubian-villa-el-gouna-white-villas",
+    "ref": "NS-EG-142",
+    "purpose": "sale",
+    "type": "Villa",
+    "areaSlug": "el-gouna",
+    "price": 780000,
+    "currency": "EUR",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "size": 312,
+    "plotSize": 620,
+    "deliveryYear": 2008,
+    "finishing": "Fully finished",
+    "status": "available",
+    "featured": true,
+    "exclusive": true,
+    "coordinates": {
+      "lat": 27.3871,
+      "lng": 33.6809
+    },
+    "agentSlug": "nadia-fahmy",
+    "images": [
+      "https://images.unsplash.com/photo-1680416124510-5eae1beca412?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1543489822-c49534f3271f?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1684928365167-e91916573122?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1780914149187-c4f302dafbb0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1564540579594-0930edb6de43?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1758907749704-7ad4e48b2aa0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1642541070065-3912f347e7c6?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Nubian villa, White Villas",
+      "address": "White Villas, El Gouna",
+      "summary": "An original White Villas house in El Gouna's oldest district — domed, hand-plastered and set in a garden that has had sixteen years to grow in.",
+      "description": [
+        "White Villas is where El Gouna started, and the houses built there in the first phases have a character the later phases do not attempt: hand-finished plaster, domed and vaulted ceilings, thick walls that stay cool without air conditioning for most of the day.",
+        "This one has four bedrooms in the main house and a self-contained guest annexe across the courtyard, arranged around a pool and a garden with sixteen-year-old planting. It has been carefully maintained and sympathetically updated — new kitchen and bathrooms, original ceilings untouched.",
+        "Houses of this vintage rarely come to market, and when they do they are usually bought by people who already live in the town. We expect this to be one of them."
+      ],
+      "features": [
+        "Original Nubian architecture",
+        "Private pool",
+        "Domed ceilings",
+        "Mature garden",
+        "Guest annexe",
+        "Golf buggy included",
+        "Registered green contract"
+      ],
+      "view": "Garden and domes"
+    },
+    "ar": {
+      "title": "فيلا نوبي، وايت فيلاز",
+      "address": "وايت فيلاز، الجونة",
+      "summary": "فيلا أصلية في وايت فيلاز، أقدم منطقة في الجونة — بقِباب ومحارة يدوي، وجنينة بقالها 16 سنة بتكبر.",
+      "description": [
+        "وايت فيلاز هي المكان اللي الجونة بدأت منه، والبيوت اللي اتبنت هناك في المراحل الأولى ليها طابع المراحل الجديدة ماحاولتش تقلّده: محارة يدوي، وأسقف بقِباب وقبوات، وحيطان تخينة بتفضل ساقعة من غير تكييف أغلب اليوم.",
+        "البيت فيه أربع غرف نوم في المبنى الأساسي، وملحق ضيوف مستقل على الناحية التانية من الكورت يارد، حوالين حمّام سباحة وجنينة زرعها عمره 16 سنة. متحافظ عليه كويس ومتجدّد باحترام — مطبخ وحمّامات جداد، والأسقف الأصلية زي ما هي.",
+        "بيوت من الجيل ده نادرًا ما بتنزل السوق، ولما بتنزل غالبًا بيشتريها حد ساكن في الجونة أصلاً. ومتوقعين إن ده يبقى واحد منهم."
+      ],
+      "features": [
+        "معمار نوبي أصلي",
+        "حمّام سباحة خاص",
+        "أسقف بقِباب",
+        "جنينة ناضجة",
+        "ملحق للضيوف",
+        "عربية جولف ضمن البيعة",
+        "عقد مسجّل"
+      ],
+      "view": "الجنينة والقِباب"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "one-bed-apartment-makadi-serena",
+    "ref": "NS-MK-418",
+    "purpose": "sale",
+    "type": "Apartment",
+    "areaSlug": "makadi-bay",
+    "price": 54500,
+    "currency": "EUR",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "size": 68,
+    "plotSize": 42,
+    "deliveryYear": 2024,
+    "finishing": "Fully finished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 26.9902,
+      "lng": 33.8942
+    },
+    "agentSlug": "omar-tawfik",
+    "images": [
+      "https://images.unsplash.com/photo-1512914890251-2f96a9b0bbe2?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1649083048428-3d8ed23a3ce0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1710224002849-a76ea1068b0d?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1699413935716-aa75fb58ec1a?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1572742482459-e04d6cfdd6f3?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1617695591915-87d753983ac0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1696762932825-2737db830bbe?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "One-bedroom with garden, Serena Heights",
+      "address": "Serena Heights, Makadi Bay",
+      "summary": "A delivered one-bedroom with private garden in Serena Heights, currently producing a shade over ten per cent gross on short lets.",
+      "description": [
+        "Serena Heights sits on the rising ground behind Makadi Bay, which gives the upper terraces a view across the bay and keeps the compound noticeably cooler in the evening than the units down on the flat.",
+        "A one-bedroom with a forty-two square metre private garden — the format that lets best in Makadi, because it suits couples and small families equally and commands a premium over the internal units.",
+        "The current owner lets it through a local manager and has averaged just over ten per cent gross across the last two full years. Booking history is available to serious buyers."
+      ],
+      "features": [
+        "42 m² private garden",
+        "Ready to move",
+        "Three shared pools",
+        "Gym and spa",
+        "Beach shuttle",
+        "Strong short-let demand"
+      ],
+      "view": "Pool and mountains"
+    },
+    "ar": {
+      "title": "شقة غرفة بجنينة، سيرينا هايتس",
+      "address": "سيرينا هايتس، مكادي باي",
+      "summary": "شقة غرفة متسلّمة بجنينة خاصة في سيرينا هايتس، بتجيب حاليًا أكتر من 10% إجمالي من الإيجار القصير.",
+      "description": [
+        "سيرينا هايتس على الأرض العالية ورا مكادي باي، وده بيدّي الأدوار العليا فيو على الخليج، وبيخلّي الكمبوند أبرد بالليل بشكل ملحوظ من الوحدات اللي تحت.",
+        "شقة غرفة بجنينة خاصة 42 متر — ده النوع اللي بيتأجّر أحسن حاجة في مكادي، لأنه مناسب للأزواج والعائلات الصغيرة، وسعره أعلى من الوحدات اللي جوّه.",
+        "المالك بيأجّرها عن طريق مدير محلي، ومتوسط العائد في آخر سنتين كاملين أكتر من 10% إجمالي بشوية. سجل الحجوزات متاح للمشترين الجادّين."
+      ],
+      "features": [
+        "جنينة خاصة 42 متر",
+        "جاهزة للسكن",
+        "تلات حمّامات سباحة مشتركة",
+        "جيم وسبا",
+        "شاتل للشط",
+        "طلب عالي على الإيجار القصير"
+      ],
+      "view": "حمّام السباحة والجبل"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "sea-view-apartment-soma-bay-residences",
+    "ref": "NS-SB-327",
+    "purpose": "sale",
+    "type": "Apartment",
+    "areaSlug": "soma-bay",
+    "price": 340000,
+    "currency": "EUR",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "size": 142,
+    "deliveryYear": 2022,
+    "finishing": "Fully finished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 26.8502,
+      "lng": 33.9878
+    },
+    "agentSlug": "laila-mansour",
+    "images": [
+      "https://images.unsplash.com/photo-1738168273959-952fdc961991?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1582610116397-edb318620f90?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1643949915134-73a4c880f7c7?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1648634158203-199accfd7afc?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1672421186928-ac9709797b07?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1625940119840-585d3495dc94?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1532960546490-72765f9494c9?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1710883734891-93709398496d?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Sea-view apartment, The Residences",
+      "address": "The Residences, Soma Bay",
+      "summary": "A two-bedroom in Soma Bay's Residences with an open sea outlook and access to the thalasso spa and Cascades course.",
+      "description": [
+        "The Residences is the most recent and most tightly specified of Soma Bay's residential phases, sitting between the golf course and the sea with an infinity pool on the seaward edge.",
+        "This apartment faces the water directly across the pool terrace, with a living space that runs the full frontage and both bedrooms taking the same view. Finishes are the developer's upper specification — stone floors, imported sanitaryware, full air conditioning.",
+        "Owners here have spa and beach club access as standard; golf membership at Cascades is available separately and can be arranged as part of the purchase."
+      ],
+      "features": [
+        "Direct sea view",
+        "Infinity pool",
+        "Thalasso spa access",
+        "Golf membership available",
+        "Gated peninsula",
+        "Concierge"
+      ],
+      "view": "Open sea",
+      "floor": "2nd of 3"
+    },
+    "ar": {
+      "title": "شقة بفيو بحر، ذا ريزيدنسز",
+      "address": "ذا ريزيدنسز، سوما باي",
+      "summary": "شقة غرفتين في ذا ريزيدنسز بسوما باي، بفيو بحر مفتوح ودخول لسبا التالاسو وملعب كاسكيدز.",
+      "description": [
+        "ذا ريزيدنسز أحدث مرحلة سكنية في سوما باي وأعلاها مواصفات، بين ملعب الجولف والبحر، وفيها إنفينيتي بول على ناحية البحر.",
+        "الشقة بتبص على المية مباشرة من فوق تراس حمّام السباحة، والليفينج بعرض الواجهة كلها، والغرفتين بنفس الفيو. التشطيب أعلى مواصفات المطوّر — أرضيات حجر، وأطقم حمّامات مستوردة، وتكييف كامل.",
+        "الملاك هنا ليهم دخول السبا والبيتش كلوب كأساس، وعضوية جولف كاسكيدز متاحة لوحدها وممكن نظبطها ضمن الشرا."
+      ],
+      "features": [
+        "فيو بحر مباشر",
+        "إنفينيتي بول",
+        "دخول سبا التالاسو",
+        "عضوية جولف متاحة",
+        "شبه جزيرة مقفولة",
+        "كونسيرج"
+      ],
+      "view": "بحر مفتوح",
+      "floor": "التاني من 3"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "beachfront-studio-hurghada-mamsha",
+    "ref": "NS-HG-548",
+    "purpose": "sale",
+    "type": "Studio",
+    "areaSlug": "hurghada",
+    "price": 63000,
+    "currency": "USD",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "size": 52,
+    "deliveryYear": 2021,
+    "finishing": "Furnished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 27.2225,
+      "lng": 33.8442
+    },
+    "agentSlug": "dina-halim",
+    "images": [
+      "https://images.unsplash.com/photo-1751998816160-0bdb329a3b9f?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1599777560450-e462cffc5368?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1610177534644-34d881503b83?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1653204095671-3ed81a4bc561?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1532960546490-72765f9494c9?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1658760046471-896cbc719c9d?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1776363284806-873eeef565a7?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1625579002297-aeebbf69de89?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Beachfront studio, El Mamsha",
+      "address": "El Mamsha, Hurghada",
+      "summary": "A furnished sea-view studio directly on the Mamsha promenade, with rooftop pool and strong winter letting history.",
+      "description": [
+        "El Mamsha is Hurghada's seafront promenade and the busiest pedestrian address in the city — three kilometres of restaurants, cafés and shopfronts with the water on one side.",
+        "This is a fourth-floor studio facing the sea, furnished and currently on a short-let programme. The building has a rooftop pool and lift access, and the location does the heavy lifting on occupancy: bookings hold up through the winter months when compounds further inland go quiet.",
+        "A compact, liquid asset with a clear rental story. Priced in dollars at the seller's request."
+      ],
+      "features": [
+        "Sea view",
+        "On the promenade",
+        "Furnished",
+        "Rooftop pool",
+        "Short-let permitted",
+        "High winter occupancy"
+      ],
+      "view": "Sea",
+      "floor": "4th of 6"
+    },
+    "ar": {
+      "title": "ستوديو على البحر، الممشى",
+      "address": "الممشى، الغردقة",
+      "summary": "ستوديو مفروش بفيو بحر على الممشى مباشرة، بحمّام سباحة على الروف وسجل إيجار قوي في الشتا.",
+      "description": [
+        "الممشى هو كورنيش الغردقة وأزحم عنوان للمشي في المدينة — تلاتة كيلو مطاعم وكافيهات ومحلات، والبحر على جنب.",
+        "ده ستوديو في الدور الرابع بيبص على البحر، مفروش وشغال إيجار قصير. العمارة فيها أسانسير وحمّام سباحة على الروف، والموقع هو اللي شايل الإشغال: الحجوزات بتفضل مستمرة في الشتا لما الكمبوندات اللي جوّه بتهدى.",
+        "أصل صغير وسهل البيع، وقصته في الإيجار واضحة. السعر بالدولار بناءً على طلب المالك."
+      ],
+      "features": [
+        "فيو بحر",
+        "على الممشى",
+        "مفروش",
+        "حمّام سباحة على الروف",
+        "الإيجار القصير مسموح",
+        "إشغال عالي في الشتا"
+      ],
+      "view": "البحر",
+      "floor": "الرابع من 6"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "twin-house-el-gouna-joubal",
+    "ref": "NS-EG-156",
+    "purpose": "sale",
+    "type": "Twin House",
+    "areaSlug": "el-gouna",
+    "price": 540000,
+    "currency": "EUR",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "size": 224,
+    "plotSize": 340,
+    "deliveryYear": 2018,
+    "finishing": "Fully finished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 27.4103,
+      "lng": 33.6721
+    },
+    "agentSlug": "karim-el-shazly",
+    "images": [
+      "https://images.unsplash.com/photo-1702411200201-3061d0eea802?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1663811396777-05505d999151?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1642541070065-3912f347e7c6?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1724618702364-8cde016bda22?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1744025098626-66c0b9cb1ba8?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1774348692705-704860626289?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1640109478916-f445f8f19b11?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Twin house on the lagoon, Joubal",
+      "address": "Joubal, El Gouna",
+      "summary": "A three-bedroom twin house on Joubal's lagoon edge with its own jetty and swimming access from the garden.",
+      "description": [
+        "Joubal is El Gouna's northern lagoon district, quieter than Abu Tig and favoured by owners who use the town for months rather than weeks. The lagoon here is wide enough for tenders and paddleboards and calm enough to swim from the garden.",
+        "The house has three bedrooms over two floors, with the principal suite and a roof terrace above taking the water view. The garden runs down to a private jetty.",
+        "Delivered in 2018 and maintained to a high standard throughout, with a registered green contract and service charges current."
+      ],
+      "features": [
+        "Lagoon frontage",
+        "Private jetty",
+        "Shared pool",
+        "Roof terrace",
+        "Covered parking",
+        "Registered green contract"
+      ],
+      "view": "Lagoon"
+    },
+    "ar": {
+      "title": "توين هاوس على البحيرة، جوبال",
+      "address": "جوبال، الجونة",
+      "summary": "توين هاوس تلات غرف على طرف بحيرة جوبال، برصيف خاص وتقدر تعوم من الجنينة.",
+      "description": [
+        "جوبال منطقة البحيرات الشمالية في الجونة، أهدى من أبو تيج، وبيفضّلها الملاك اللي بيقعدوا في المدينة شهور مش أسابيع. البحيرة هنا واسعة كفاية للقوارب الصغيرة والبادل بورد، وهادية كفاية إنك تعوم من الجنينة.",
+        "البيت فيه تلات غرف نوم على دورين، والماستر والروف فوق بيبصوا على المية. والجنينة نازلة لحد رصيف خاص.",
+        "اتسلّم في 2018 ومتحافظ عليه بمستوى عالي طول الوقت، بعقد مسجّل ومصاريف صيانة مدفوعة."
+      ],
+      "features": [
+        "على البحيرة مباشرة",
+        "رصيف خاص",
+        "حمّام سباحة مشترك",
+        "روف",
+        "جراج مغطّى",
+        "عقد مسجّل"
+      ],
+      "view": "البحيرة"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "investor-studio-makadi-tulip",
+    "ref": "NS-MK-425",
+    "purpose": "sale",
+    "type": "Studio",
+    "areaSlug": "makadi-bay",
+    "price": 38900,
+    "currency": "EUR",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "size": 41,
+    "deliveryYear": 2024,
+    "finishing": "Furnished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "paymentPlan": {
+      "downPayment": "15%",
+      "years": 6
+    },
+    "coordinates": {
+      "lat": 26.9788,
+      "lng": 33.8971
+    },
+    "agentSlug": "omar-tawfik",
+    "images": [
+      "https://images.unsplash.com/photo-1776362355123-ca966d36e29c?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1628012209120-d9db7abf7eab?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1689043528099-2ba014dd7c64?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1696762932825-2737db830bbe?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1596746698204-d69844da956d?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1564540583246-934409427776?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1767555027401-6829988ca9df?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1644057501622-dfa7dd26dbfb?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Investor studio, Tulip Resort",
+      "address": "Tulip Resort, Makadi Bay",
+      "summary": "The lowest entry point in our Makadi inventory — furnished, inside the developer's rental programme, and available on a six-year plan.",
+      "description": [
+        "Tulip is a large, amenity-heavy resort compound built for the rental market rather than for permanent residence, and it performs accordingly: four pools, an aqua park, a shuttle to the beach and a management company that handles bookings end to end.",
+        "This studio is furnished and already enrolled in the programme, which means an owner abroad can hold it without arranging anything locally.",
+        "It is not a lifestyle purchase and we would not present it as one. It is an income unit at the cheapest credible entry price on the bay, with a six-year plan available on the balance."
+      ],
+      "features": [
+        "Turnkey furnished",
+        "Managed rental programme",
+        "Four shared pools",
+        "Aqua park",
+        "Beach shuttle",
+        "6-year payment plan"
+      ],
+      "view": "Pool",
+      "floor": "2nd of 4",
+      "planNote": "Interest-free, monthly instalments"
+    },
+    "ar": {
+      "title": "ستوديو للمستثمرين، توليب ريزورت",
+      "address": "توليب ريزورت، مكادي باي",
+      "summary": "أقل سعر بداية في عقاراتنا في مكادي — مفروش، وداخل برنامج الإيجار بتاع المطوّر، ومتاح بتقسيط 6 سنين.",
+      "description": [
+        "توليب كمبوند منتجع كبير مليان خدمات، متبني لسوق الإيجار مش للسكن الدايم، وأداؤه على الأساس ده: أربع حمّامات سباحة، وأكوا بارك، وشاتل للشط، وشركة إدارة بتتولّى الحجوزات من الأول للآخر.",
+        "الستوديو مفروش ومشترك في البرنامج أصلاً، يعني المالك اللي برّه مصر يقدر يمسكه من غير ما يرتّب أي حاجة هنا.",
+        "ده مش شرا لأسلوب حياة ومش هنقدّمه على إنه كده. ده وحدة دخل بأرخص سعر معقول في الخليج، وبتقسيط 6 سنين على الباقي."
+      ],
+      "features": [
+        "مفروش جاهز",
+        "برنامج إيجار مُدار",
+        "أربع حمّامات سباحة مشتركة",
+        "أكوا بارك",
+        "شاتل للشط",
+        "تقسيط 6 سنين"
+      ],
+      "view": "حمّام السباحة",
+      "floor": "التاني من 4",
+      "planNote": "من غير فوايد، أقساط شهرية"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "penthouse-hurghada-magawish",
+    "ref": "NS-HG-561",
+    "purpose": "sale",
+    "type": "Penthouse",
+    "areaSlug": "hurghada",
+    "price": 129000,
+    "currency": "EUR",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "size": 168,
+    "deliveryYear": 2019,
+    "finishing": "Fully finished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 27.1804,
+      "lng": 33.8241
+    },
+    "agentSlug": "dina-halim",
+    "images": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1745761320630-148540d19a6c?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1704383014594-01bc24b6b840?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1710883734891-93709398496d?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1767555027401-6829988ca9df?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1564540579594-0930edb6de43?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1758907749704-7ad4e48b2aa0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1663811397207-418a92396ad5?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Penthouse with roof terrace, Magawish",
+      "address": "Magawish, Hurghada",
+      "summary": "A three-bedroom penthouse in Magawish with a seventy-metre roof terrace and a sea view over the compound.",
+      "description": [
+        "Magawish is one of Hurghada's more settled districts — low-rise, green, and close enough to the beach to walk but far enough from the promenade to be quiet at night.",
+        "The penthouse occupies the top floor with a seventy square metre private roof terrace above it, which is where the value sits: the terrace has an open sea view and enough space for a plunge pool, which several neighbours have added.",
+        "Three bedrooms, two bathrooms, fully finished and in good order. A realistic family-sized purchase at a price that would buy a one-bedroom in El Gouna."
+      ],
+      "features": [
+        "70 m² roof terrace",
+        "Sea view",
+        "Two shared pools",
+        "Walk to the beach",
+        "Covered parking",
+        "Registered green contract"
+      ],
+      "view": "Sea and pool",
+      "floor": "Top floor of 4"
+    },
+    "ar": {
+      "title": "بنتهاوس بروف، مجاويش",
+      "address": "مجاويش، الغردقة",
+      "summary": "بنتهاوس تلات غرف في مجاويش بروف 70 متر وفيو بحر فوق الكمبوند.",
+      "description": [
+        "مجاويش من أهدى مناطق الغردقة — ارتفاعات قليلة، وخضرة، وقريبة من الشط كفاية إنك تمشي، وبعيدة عن الممشى كفاية إنها تبقى هادية بالليل.",
+        "البنتهاوس في الدور الأخير وفوقه روف خاص 70 متر، وهنا القيمة الحقيقية: الروف بفيو بحر مفتوح ومساحة تكفي بلانج بول، وجيران كتير عملوها.",
+        "تلات غرف وحمّامين، تشطيب كامل وفي حالة كويسة. شرا واقعي لعيلة بسعر يجيب شقة غرفة في الجونة."
+      ],
+      "features": [
+        "روف 70 متر",
+        "فيو بحر",
+        "حمّامين سباحة مشتركين",
+        "مشي للشط",
+        "جراج مغطّى",
+        "عقد مسجّل"
+      ],
+      "view": "البحر وحمّام السباحة",
+      "floor": "الدور الأخير من 4"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "reserved-apartment-sahl-hasheesh-azzurra",
+    "ref": "NS-SH-233",
+    "purpose": "sale",
+    "type": "Apartment",
+    "areaSlug": "sahl-hasheesh",
+    "price": 175000,
+    "currency": "EUR",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "size": 128,
+    "deliveryYear": 2017,
+    "finishing": "Fully finished",
+    "status": "reserved",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 27.0455,
+      "lng": 33.8767
+    },
+    "agentSlug": "laila-mansour",
+    "images": [
+      "https://images.unsplash.com/photo-1757924461488-ef9ad0670978?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1598911096723-af003b4ea77a?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1635321350281-e2a91ecffd00?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1625579002297-aeebbf69de89?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1622816951464-df6fc7ab2ced?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1572742482459-e04d6cfdd6f3?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1617695591915-87d753983ac0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1616594092403-fb65629b0a46?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Two-bedroom apartment, Azzurra",
+      "address": "Azzurra, Sahl Hasheesh",
+      "summary": "Reserved — a two-bedroom on the lagoon pool at Azzurra. Comparable units in the same phase are available on request.",
+      "description": [
+        "Azzurra is built around a large lagoon-style pool that runs through the centre of the development, with the apartments stepping down toward the beach.",
+        "This unit faces directly onto the lagoon pool from a ground-adjacent first floor, which is the configuration that holds its value best in the scheme.",
+        "It is currently reserved. We hold two comparable units in the same phase and can arrange viewings of both — speak to Laila for current availability."
+      ],
+      "features": [
+        "Lagoon pool frontage",
+        "Beach access",
+        "Gated compound",
+        "Covered parking",
+        "Concierge"
+      ],
+      "view": "Lagoon pool",
+      "floor": "1st of 3"
+    },
+    "ar": {
+      "title": "شقة غرفتين، أزورا",
+      "address": "أزورا، سهل حشيش",
+      "summary": "محجوزة — شقة غرفتين على حمّام السباحة اللاجون في أزورا. فيه وحدات شبهها في نفس المرحلة لو طلبت.",
+      "description": [
+        "أزورا متبنية حوالين حمّام سباحة لاجون كبير ماشي في نص المشروع، والشقق نازلة بدرجات ناحية الشط.",
+        "الوحدة دي بتبص على حمّام السباحة مباشرة من الدور الأول، وده الشكل اللي بيحافظ على قيمته أكتر في المشروع.",
+        "هي محجوزة دلوقتي. عندنا وحدتين شبهها في نفس المرحلة ونقدر نرتّب معاينة للاتنين — كلّم ليلى عشان تعرف المتاح."
+      ],
+      "features": [
+        "على حمّام السباحة اللاجون",
+        "دخول للشط",
+        "كمبوند مقفول",
+        "جراج مغطّى",
+        "كونسيرج"
+      ],
+      "view": "حمّام سباحة لاجون",
+      "floor": "الأول من 3"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "villa-new-cairo-katameya-dunes",
+    "ref": "NS-NC-602",
+    "purpose": "sale",
+    "type": "Villa",
+    "areaSlug": "new-cairo",
+    "price": 48500000,
+    "currency": "EGP",
+    "bedrooms": 5,
+    "bathrooms": 6,
+    "size": 620,
+    "plotSize": 1250,
+    "deliveryYear": 2014,
+    "finishing": "Fully finished",
+    "status": "available",
+    "featured": true,
+    "exclusive": true,
+    "coordinates": {
+      "lat": 30.0074,
+      "lng": 31.4913
+    },
+    "agentSlug": "yasmine-abdel-rahman",
+    "images": [
+      "https://images.unsplash.com/photo-1707484687082-9493754d389f?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1774685110718-c5b4fe026144?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1614597445336-8a67e9314d91?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1640109478916-f445f8f19b11?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1780914149187-c4f302dafbb0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1625940119840-585d3495dc94?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1532960546490-72765f9494c9?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Golf villa, Katameya Dunes",
+      "address": "Katameya Dunes, New Cairo",
+      "summary": "A five-bedroom villa fronting the Katameya Dunes course, on a 1,250 m² plot with transferable club membership.",
+      "description": [
+        "Katameya Dunes remains the benchmark address in New Cairo, and golf-frontage plots within it are the scarcest product in the compound — the course boundary is fixed, so the number of houses on it cannot increase.",
+        "This house sits on 1,250 square metres with the fairway directly beyond the pool terrace. Five bedrooms, six bathrooms, a separate reception wing and staff quarters with independent access.",
+        "Fully renovated three years ago to a high specification, with a complete smart-home installation. Club membership is transferable, which materially affects the effective price for a buyer who would otherwise join at current rates."
+      ],
+      "features": [
+        "Direct golf frontage",
+        "Private pool",
+        "Staff quarters",
+        "Smart home system",
+        "Double garage",
+        "Mature landscaping",
+        "Club membership transferable"
+      ],
+      "view": "Golf course"
+    },
+    "ar": {
+      "title": "فيلا على الجولف، قطامية ديونز",
+      "address": "قطامية ديونز، القاهرة الجديدة",
+      "summary": "فيلا خمس غرف على ملعب قطامية ديونز، على أرض 1,250 متر وعضوية النادي بتنتقل للمشتري.",
+      "description": [
+        "قطامية ديونز لسه هي المقياس في القاهرة الجديدة، والأراضي اللي على الجولف جوّاها أندر حاجة في الكمبوند — حدود الملعب ثابتة، يعني عدد البيوت عليه مش هيزيد.",
+        "البيت على 1,250 متر، والملعب ورا حمّام السباحة على طول. خمس غرف نوم، وست حمّامات، وجناح ريسبشن منفصل، وسكن للعاملين بمدخل مستقل.",
+        "اتجدّد بالكامل من تلات سنين بمستوى عالي، وفيه سمارت هوم كامل. وعضوية النادي بتنتقل، ودي بتفرق فعلاً في السعر الحقيقي للي كان هيشترك بأسعار النهارده."
+      ],
+      "features": [
+        "على ملعب الجولف مباشرة",
+        "حمّام سباحة خاص",
+        "سكن للعاملين",
+        "نظام سمارت هوم",
+        "جراج لعربيتين",
+        "زرع ناضج",
+        "عضوية النادي بتنتقل"
+      ],
+      "view": "ملعب الجولف"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "apartment-new-cairo-mivida",
+    "ref": "NS-NC-618",
+    "purpose": "sale",
+    "type": "Apartment",
+    "areaSlug": "new-cairo",
+    "price": 13800000,
+    "currency": "EGP",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "size": 205,
+    "deliveryYear": 2020,
+    "finishing": "Fully finished",
+    "status": "available",
+    "featured": true,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 30.0201,
+      "lng": 31.4788
+    },
+    "agentSlug": "yasmine-abdel-rahman",
+    "images": [
+      "https://images.unsplash.com/photo-1780257562963-3389a4105371?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1768200498972-fd56353d73fc?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1600684388091-627109f3cd60?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1644057501622-dfa7dd26dbfb?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1747336755296-a9e715350b32?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1658760046471-896cbc719c9d?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1776363284806-873eeef565a7?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1710224002849-a76ea1068b0d?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Three-bedroom apartment, Mivida",
+      "address": "Mivida, Fifth Settlement",
+      "summary": "A delivered three-bedroom in Mivida facing the central park, in one of New Cairo's most liquid resale compounds.",
+      "description": [
+        "Mivida is among the most consistently traded compounds in New Cairo, which matters more than it sounds: resale liquidity is the difference between an asset you can exit and one you can only own.",
+        "This apartment faces the central landscaped park rather than a road or a car court, with a wide terrace running off the reception. Three bedrooms, three bathrooms, fully finished and in move-in condition.",
+        "Two parking spaces are included, and the retail spine with supermarket, pharmacy and cafés is a short walk rather than a drive."
+      ],
+      "features": [
+        "Park-facing",
+        "Fully finished",
+        "Clubhouse and gym",
+        "Two parking spaces",
+        "24-hour security",
+        "Walk to retail"
+      ],
+      "view": "Landscaped park",
+      "floor": "2nd of 4"
+    },
+    "ar": {
+      "title": "شقة تلات غرف، ميفيدا",
+      "address": "ميفيدا، التجمع الخامس",
+      "summary": "شقة تلات غرف متسلّمة في ميفيدا على الحديقة المركزية، في واحد من أسهل كمبوندات القاهرة الجديدة في إعادة البيع.",
+      "description": [
+        "ميفيدا من أكتر الكمبوندات اللي بيتباع ويتشرى فيها في القاهرة الجديدة، وده أهم مما يبان: سهولة إعادة البيع هي الفرق بين أصل تقدر تخرج منه وأصل بتملكه وخلاص.",
+        "الشقة بتبص على الحديقة المركزية مش على شارع أو باركينج، وفيها تراس واسع طالع من الريسبشن. تلات غرف وتلات حمّامات، تشطيب كامل وجاهزة للسكن.",
+        "فيها مكانين للعربيات، والمحلات — سوبر ماركت وصيدلية وكافيهات — مسافة مشي مش عربية."
+      ],
+      "features": [
+        "على الحديقة",
+        "تشطيب كامل",
+        "كلوب هاوس وجيم",
+        "مكانين للعربيات",
+        "أمن 24 ساعة",
+        "مشي للمحلات"
+      ],
+      "view": "الحديقة المركزية",
+      "floor": "التاني من 4"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "townhouse-sheikh-zayed-allegria",
+    "ref": "NS-SZ-704",
+    "purpose": "sale",
+    "type": "Townhouse",
+    "areaSlug": "sheikh-zayed",
+    "price": 22400000,
+    "currency": "EGP",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "size": 285,
+    "plotSize": 320,
+    "deliveryYear": 2013,
+    "finishing": "Fully finished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 30.0444,
+      "lng": 30.97
+    },
+    "agentSlug": "yasmine-abdel-rahman",
+    "images": [
+      "https://images.unsplash.com/photo-1758448511322-8bfc73daf606?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1779487552425-65861889810b?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1684928365167-e91916573122?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1663811397207-418a92396ad5?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1753618282399-a2d823f8e823?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1744025098626-66c0b9cb1ba8?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1774348692705-704860626289?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1648634158203-199accfd7afc?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Townhouse, Allegria",
+      "address": "Allegria, Sheikh Zayed",
+      "summary": "A four-bedroom townhouse backing onto the Allegria course, in one of Sheikh Zayed's most established compounds.",
+      "description": [
+        "Allegria was one of the earliest golf compounds in West Cairo and its landscaping has had a decade longer to establish than almost anything comparable — the difference is immediately visible when you drive in.",
+        "This townhouse backs directly onto the course with a private garden between, four bedrooms over two floors and a roof terrace above.",
+        "West Cairo resale supply at this level is thin. Buyers looking in Sheikh Zayed typically wait months for the right house rather than choosing between several."
+      ],
+      "features": [
+        "Golf course outlook",
+        "Private garden",
+        "Roof terrace",
+        "Mature compound landscaping",
+        "Two parking spaces",
+        "Clubhouse access"
+      ],
+      "view": "Golf course"
+    },
+    "ar": {
+      "title": "تاون هاوس، أليجريا",
+      "address": "أليجريا، الشيخ زايد",
+      "summary": "تاون هاوس أربع غرف ضهره لملعب أليجريا، في واحد من أعرق كمبوندات الشيخ زايد.",
+      "description": [
+        "أليجريا من أول كمبوندات الجولف في غرب القاهرة، وزرعها بقاله عشر سنين أكتر من أي حاجة شبهها — والفرق ده باين من أول ما تدخل.",
+        "التاون هاوس ضهره للملعب مباشرة وبينهم جنينة خاصة، فيه أربع غرف على دورين وروف فوقهم.",
+        "المعروض لإعادة البيع في غرب القاهرة بالمستوى ده قليل. اللي بيدوّروا في الشيخ زايد غالبًا بيستنوا شهور على البيت الصح بدل ما يختاروا بين كذا واحد."
+      ],
+      "features": [
+        "فيو على ملعب الجولف",
+        "جنينة خاصة",
+        "روف",
+        "زرع كمبوند ناضج",
+        "مكانين للعربيات",
+        "دخول الكلوب هاوس"
+      ],
+      "view": "ملعب الجولف"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "apartment-new-capital-r7-district",
+    "ref": "NS-CA-802",
+    "purpose": "sale",
+    "type": "Apartment",
+    "areaSlug": "new-capital",
+    "price": 6200000,
+    "currency": "EGP",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "size": 138,
+    "deliveryYear": 2026,
+    "finishing": "Semi-finished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "paymentPlan": {
+      "downPayment": "5%",
+      "years": 10
+    },
+    "coordinates": {
+      "lat": 30.01,
+      "lng": 31.74
+    },
+    "agentSlug": "sherif-badawy",
+    "images": [
+      "https://images.unsplash.com/photo-1628592102751-ba83b0314276?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1622015663319-e97e697503ee?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1649083048428-3d8ed23a3ce0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1616594092403-fb65629b0a46?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1565572473525-02d61e3d37dc?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1564540583246-934409427776?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1767555027401-6829988ca9df?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1653204095671-3ed81a4bc561?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Two-bedroom apartment, R7 District",
+      "address": "R7 District, New Administrative Capital",
+      "summary": "An off-plan two-bedroom in R7 facing the Green River, from a developer that has already handed over a completed phase in the Capital.",
+      "description": [
+        "R7 is the residential district closest to the government quarter and the diplomatic area, and the first part of the Capital where delivery has actually happened at scale rather than being promised.",
+        "This apartment faces the Green River — the linear park running the length of the city — from the third floor, with a ten-year payment plan on the balance.",
+        "We list this developer because it has completed and handed over a prior phase in the Capital. That is the single filter we apply to off-plan here, and it excludes most of what is marketed."
+      ],
+      "features": [
+        "Facing the Green River park",
+        "10-year payment plan",
+        "Developer with delivered phases",
+        "Clubhouse and pools",
+        "Underground parking"
+      ],
+      "view": "Central park",
+      "floor": "3rd of 6",
+      "planNote": "Interest-free, quarterly instalments"
+    },
+    "ar": {
+      "title": "شقة غرفتين، حي R7",
+      "address": "حي R7، العاصمة الإدارية الجديدة",
+      "summary": "شقة غرفتين أوف بلان في R7 على النهر الأخضر، من مطوّر سلّم مرحلة كاملة في العاصمة قبل كده.",
+      "description": [
+        "R7 أقرب حي سكني للحي الحكومي والحي الدبلوماسي، وأول حتة في العاصمة التسليم فيها حصل فعلاً على نطاق واسع مش مجرد وعود.",
+        "الشقة بتبص على النهر الأخضر — الحديقة الطولية اللي ماشية على طول المدينة — من الدور التالت، وبتقسيط عشر سنين على الباقي.",
+        "بنعرض المطوّر ده لأنه سلّم مرحلة سابقة في العاصمة. ده الفلتر الوحيد اللي بنطبّقه على الأوف بلان هنا، وبيستبعد أغلب اللي بيتسوّق."
+      ],
+      "features": [
+        "على النهر الأخضر",
+        "تقسيط 10 سنين",
+        "مطوّر سلّم مراحل قبل كده",
+        "كلوب هاوس وحمّامات سباحة",
+        "جراج تحت الأرض"
+      ],
+      "view": "النهر الأخضر",
+      "floor": "التالت من 6",
+      "planNote": "من غير فوايد، أقساط كل 3 شهور"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "penthouse-new-cairo-palm-hills",
+    "ref": "NS-NC-631",
+    "purpose": "sale",
+    "type": "Penthouse",
+    "areaSlug": "new-cairo",
+    "price": 19600000,
+    "currency": "EGP",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "size": 240,
+    "deliveryYear": 2021,
+    "finishing": "Fully finished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 30.0288,
+      "lng": 31.4602
+    },
+    "agentSlug": "yasmine-abdel-rahman",
+    "images": [
+      "https://images.unsplash.com/photo-1642976975710-1d8890dbf5ab?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1598737652403-6e0ee5bf5cf2?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1643949915134-73a4c880f7c7?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1767555027401-6829988ca9df?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1564540579594-0930edb6de43?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1758907749704-7ad4e48b2aa0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1642541070065-3912f347e7c6?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Penthouse with roof, Palm Hills New Cairo",
+      "address": "Palm Hills, New Cairo",
+      "summary": "A corner penthouse with a 110 m² private roof terrace in Palm Hills New Cairo, finished and ready.",
+      "description": [
+        "A top-floor corner unit, which means glazing on two elevations and cross ventilation that the internal units do not get.",
+        "The private roof runs to a hundred and ten square metres with services already stubbed for an outdoor kitchen — the most common addition owners make here.",
+        "Three bedrooms, three bathrooms, fully finished to the developer's upper specification and never rented."
+      ],
+      "features": [
+        "110 m² private roof",
+        "Corner unit",
+        "Fully finished",
+        "Clubhouse and pools",
+        "Two parking spaces"
+      ],
+      "view": "Compound gardens",
+      "floor": "Top floor of 3"
+    },
+    "ar": {
+      "title": "بنتهاوس بروف، بالم هيلز القاهرة الجديدة",
+      "address": "بالم هيلز، القاهرة الجديدة",
+      "summary": "بنتهاوس كورنر بروف خاص 110 متر في بالم هيلز القاهرة الجديدة، متشطّب وجاهز.",
+      "description": [
+        "وحدة كورنر في الدور الأخير، يعني إزاز على واجهتين وتهوية من الناحيتين، وده مش متاح للوحدات اللي جوّه.",
+        "الروف الخاص 110 متر، والتوصيلات جاهزة لمطبخ خارجي — ودي أكتر إضافة الملاك بيعملوها هنا.",
+        "تلات غرف وتلات حمّامات، تشطيب كامل بأعلى مواصفات المطوّر، وعمرها ما اتأجّرت."
+      ],
+      "features": [
+        "روف خاص 110 متر",
+        "وحدة كورنر",
+        "تشطيب كامل",
+        "كلوب هاوس وحمّامات سباحة",
+        "مكانين للعربيات"
+      ],
+      "view": "حدايق الكمبوند",
+      "floor": "الدور الأخير من 3"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "twin-house-sheikh-zayed-beverly-hills",
+    "ref": "NS-SZ-718",
+    "purpose": "sale",
+    "type": "Twin House",
+    "areaSlug": "sheikh-zayed",
+    "price": 17900000,
+    "currency": "EGP",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "size": 265,
+    "plotSize": 400,
+    "deliveryYear": 2009,
+    "finishing": "Fully finished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 30.0361,
+      "lng": 30.9812
+    },
+    "agentSlug": "yasmine-abdel-rahman",
+    "images": [
+      "https://images.unsplash.com/photo-1611755489400-3c53602ab783?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1673469110171-dbf5d19a8336?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1610177534644-34d881503b83?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1710224002849-a76ea1068b0d?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1507307210924-d7eaf52c948c?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1572742482459-e04d6cfdd6f3?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1617695591915-87d753983ac0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1696762932825-2737db830bbe?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Twin house, Beverly Hills",
+      "address": "Beverly Hills, Sheikh Zayed",
+      "summary": "A renovated four-bedroom twin house on a 400 m² plot in Beverly Hills, walking distance to two international schools.",
+      "description": [
+        "Beverly Hills is one of the original Sheikh Zayed compounds and its plot sizes reflect that era — four hundred square metres here would be a villa allocation in most newer schemes.",
+        "The house was taken back to shell and rebuilt internally two years ago: new kitchen, new bathrooms, rewired, replumbed. The garden is original and fully grown.",
+        "Two international schools are within walking distance, which is the reason most buyers look at this compound specifically."
+      ],
+      "features": [
+        "400 m² plot",
+        "Mature garden",
+        "Recently renovated",
+        "Covered parking",
+        "Walk to schools"
+      ],
+      "view": "Garden"
+    },
+    "ar": {
+      "title": "توين هاوس، بيفرلي هيلز",
+      "address": "بيفرلي هيلز، الشيخ زايد",
+      "summary": "توين هاوس أربع غرف متجدّد على أرض 400 متر في بيفرلي هيلز، مسافة مشي لمدرستين دوليتين.",
+      "description": [
+        "بيفرلي هيلز من أول كمبوندات الشيخ زايد، ومساحات الأراضي فيه بتعكس الفترة دي — 400 متر هنا تبقى مساحة فيلا في أغلب الكمبوندات الجديدة.",
+        "البيت اترجّع على الطوب من جوّه واتبنى من جديد من سنتين: مطبخ جديد، وحمّامات جديدة، وكهربا وسباكة جديدة. والجنينة أصلية وزرعها ناضج.",
+        "فيه مدرستين دوليتين مسافة مشي، وده السبب اللي أغلب المشترين بيدوّروا في الكمبوند ده بالذات عشانه."
+      ],
+      "features": [
+        "أرض 400 متر",
+        "جنينة ناضجة",
+        "متجدّد قريب",
+        "جراج مغطّى",
+        "مشي للمدارس"
+      ],
+      "view": "الجنينة"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "office-new-cairo-cfc",
+    "ref": "NS-NC-640",
+    "purpose": "sale",
+    "type": "Office",
+    "areaSlug": "new-cairo",
+    "price": 26500000,
+    "currency": "EGP",
+    "bedrooms": 0,
+    "bathrooms": 2,
+    "size": 310,
+    "deliveryYear": 2019,
+    "finishing": "Fully finished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 30.0294,
+      "lng": 31.4079
+    },
+    "agentSlug": "omar-tawfik",
+    "images": [
+      "https://images.unsplash.com/photo-1680416124510-5eae1beca412?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1543489822-c49534f3271f?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1663811396777-05505d999151?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1648634158203-199accfd7afc?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1747336755334-c7bd5a5e104d?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1625940119840-585d3495dc94?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1532960546490-72765f9494c9?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1710883734891-93709398496d?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Fitted office floor, Cairo Festival City",
+      "address": "Business Park, Cairo Festival City",
+      "summary": "A fitted 310 m² office floor at Cairo Festival City with a multinational tenant in place and four years left on the lease.",
+      "description": [
+        "Cairo Festival City's business park carries the strongest corporate tenant covenant in New Cairo, and vacancy across it has stayed low through every recent cycle.",
+        "The floor is fully fitted with raised floors, structured cabling and meeting-room glazing already installed — a new occupier could move in without works.",
+        "A multinational tenant is in place with four years remaining on the lease and an annual escalation clause. Income figures and the lease are available under NDA."
+      ],
+      "features": [
+        "Fully fitted",
+        "Raised floors and data cabling",
+        "Backup generator",
+        "Six parking bays",
+        "Tenant in place",
+        "Commercial licence"
+      ],
+      "view": "Business park",
+      "floor": "5th of 8"
+    },
+    "ar": {
+      "title": "دور مكاتب متجهّز، كايرو فستيفال سيتي",
+      "address": "البيزنس بارك، كايرو فستيفال سيتي",
+      "summary": "دور مكاتب متجهّز 310 متر في كايرو فستيفال سيتي، عليه مستأجر شركة دولية وفاضل في العقد أربع سنين.",
+      "description": [
+        "البيزنس بارك في كايرو فستيفال سيتي فيه أقوى مستأجرين شركات في القاهرة الجديدة، ونسبة الإشغال فيه فضلت عالية في كل الدورات اللي فاتت.",
+        "الدور متجهّز بالكامل بأرضيات مرفوعة، وكابلات منظّمة، وإزاز غرف الاجتماعات متركّب — أي شركة جديدة تقدر تدخل من غير أي تشطيب.",
+        "عليه مستأجر شركة دولية فاضل في عقده أربع سنين، وفيه زيادة سنوية. أرقام الدخل والعقد متاحة بعد اتفاقية سرية."
+      ],
+      "features": [
+        "متجهّز بالكامل",
+        "أرضيات مرفوعة وكابلات داتا",
+        "مولّد احتياطي",
+        "ست أماكن للعربيات",
+        "مستأجر حالي",
+        "رخصة تجارية"
+      ],
+      "view": "البيزنس بارك",
+      "floor": "الخامس من 8"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "apartment-new-capital-business-district",
+    "ref": "NS-CA-815",
+    "purpose": "sale",
+    "type": "Apartment",
+    "areaSlug": "new-capital",
+    "price": 3750000,
+    "currency": "EGP",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "size": 82,
+    "deliveryYear": 2026,
+    "finishing": "Core & shell",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "paymentPlan": {
+      "downPayment": "10%",
+      "years": 9
+    },
+    "coordinates": {
+      "lat": 30.0043,
+      "lng": 31.7291
+    },
+    "agentSlug": "sherif-badawy",
+    "images": [
+      "https://images.unsplash.com/photo-1512914890251-2f96a9b0bbe2?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1689043528099-2ba014dd7c64?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1653204095671-3ed81a4bc561?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1747336755307-16278194efb4?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1658760046471-896cbc719c9d?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1776363284806-873eeef565a7?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1625579002297-aeebbf69de89?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "One-bedroom, Downtown District",
+      "address": "Downtown District, New Administrative Capital",
+      "summary": "A compact one-bedroom beside the business district, aimed squarely at the relocating-employee rental market.",
+      "description": [
+        "The Downtown District sits immediately beside the central business district towers, and its residential buildings are designed around short and medium-term corporate occupancy rather than family living.",
+        "This is a one-bedroom of eighty-two square metres on the seventh floor, delivered core and shell with a nine-year plan on the balance.",
+        "The thesis is straightforward: tens of thousands of government and corporate staff are being relocated into the Capital, and very little serviced rental stock exists to house them. We would treat this as an income position, not a residence."
+      ],
+      "features": [
+        "CBD-adjacent",
+        "9-year payment plan",
+        "Serviced building",
+        "Short-let permitted",
+        "Underground parking"
+      ],
+      "view": "City and CBD towers",
+      "floor": "7th of 12",
+      "planNote": "Interest-free, quarterly instalments"
+    },
+    "ar": {
+      "title": "شقة غرفة، حي داون تاون",
+      "address": "حي داون تاون، العاصمة الإدارية الجديدة",
+      "summary": "شقة غرفة صغيرة جنب حي المال والأعمال، معمولة مخصوص لسوق إيجار الموظفين اللي بينتقلوا للعاصمة.",
+      "description": [
+        "حي داون تاون جنب أبراج حي المال والأعمال على طول، ومبانيه السكنية متصمّمة للإقامات القصيرة والمتوسطة للشركات مش لسكن العائلات.",
+        "دي شقة غرفة 82 متر في الدور السابع، بتتسلّم على الطوب الأحمر وبتقسيط تسع سنين على الباقي.",
+        "الفكرة بسيطة: عشرات الآلاف من موظفي الحكومة والشركات بيتنقلوا للعاصمة، ومفيش وحدات إيجار مخدومة تكفيهم. وإحنا بنتعامل معاها كاستثمار دخل، مش كسكن."
+      ],
+      "features": [
+        "جنب حي المال والأعمال",
+        "تقسيط 9 سنين",
+        "مبنى بخدمات فندقية",
+        "الإيجار القصير مسموح",
+        "جراج تحت الأرض"
+      ],
+      "view": "المدينة وأبراج حي المال والأعمال",
+      "floor": "السابع من 12",
+      "planNote": "من غير فوايد، أقساط كل 3 شهور"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "rent-lagoon-apartment-el-gouna-tawila",
+    "ref": "NS-R-EG-011",
+    "purpose": "rent",
+    "type": "Apartment",
+    "areaSlug": "el-gouna",
+    "price": 1150,
+    "currency": "EUR",
+    "period": "month",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "size": 112,
+    "finishing": "Furnished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 27.3999,
+      "lng": 33.6688
+    },
+    "agentSlug": "dina-halim",
+    "images": [
+      "https://images.unsplash.com/photo-1738168273959-952fdc961991?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1582610116397-edb318620f90?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1704383014594-01bc24b6b840?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1642541070065-3912f347e7c6?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1780914149187-c4f302dafbb0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1744025098626-66c0b9cb1ba8?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1774348692705-704860626289?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1640109478916-f445f8f19b11?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Lagoon apartment, Tawila",
+      "address": "Tawila, El Gouna",
+      "summary": "A furnished two-bedroom on the Tawila lagoon, available on three-month minimum terms with bills included.",
+      "description": [
+        "Tawila is one of El Gouna's quieter island districts, a short buggy ride from Abu Tig but entirely removed from its noise.",
+        "The apartment is furnished to a good standard with a terrace over the lagoon, and comes with bills, water and Wi-Fi included in the monthly figure.",
+        "Minimum term is three months. Longer commitments are negotiable on price."
+      ],
+      "features": [
+        "Fully furnished",
+        "Lagoon view terrace",
+        "Shared pool",
+        "Bills included",
+        "Minimum 3 months",
+        "Wi-Fi installed"
+      ],
+      "view": "Lagoon",
+      "floor": "1st of 2"
+    },
+    "ar": {
+      "title": "شقة على البحيرة، الطويلة",
+      "address": "الطويلة، الجونة",
+      "summary": "شقة غرفتين مفروشة على بحيرة الطويلة، أقل مدة تلات شهور والفواتير شاملة.",
+      "description": [
+        "الطويلة من أهدى جزر الجونة، على بُعد مشوار عربية جولف قصير من أبو تيج بس بعيد تمامًا عن دوشته.",
+        "الشقة مفروشة بمستوى كويس وليها تراس على البحيرة، والكهربا والمية والواي فاي داخلين في الإيجار الشهري.",
+        "أقل مدة تلات شهور. ولو هتلتزم مدة أطول، السعر قابل للتفاوض."
+      ],
+      "features": [
+        "مفروشة بالكامل",
+        "تراس بفيو البحيرة",
+        "حمّام سباحة مشترك",
+        "الفواتير شاملة",
+        "أقل مدة 3 شهور",
+        "واي فاي"
+      ],
+      "view": "البحيرة",
+      "floor": "الأول من 2"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "rent-sea-view-studio-hurghada-mamsha",
+    "ref": "NS-R-HG-024",
+    "purpose": "rent",
+    "type": "Studio",
+    "areaSlug": "hurghada",
+    "price": 380,
+    "currency": "USD",
+    "period": "month",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "size": 48,
+    "finishing": "Furnished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 27.2219,
+      "lng": 33.8448
+    },
+    "agentSlug": "dina-halim",
+    "images": [
+      "https://images.unsplash.com/photo-1751998816160-0bdb329a3b9f?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1599777560450-e462cffc5368?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1635321350281-e2a91ecffd00?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1696762932825-2737db830bbe?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1774348692705-704860626289?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1564540583246-934409427776?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1767555027401-6829988ca9df?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1644057501622-dfa7dd26dbfb?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Sea-view studio, El Mamsha",
+      "address": "El Mamsha, Hurghada",
+      "summary": "A furnished sea-view studio on the promenade, available monthly — the format most long-stay visitors take.",
+      "description": [
+        "Directly on El Mamsha, with the sea from the window and the restaurant strip at street level.",
+        "Furnished, air-conditioned, with Wi-Fi installed and a rooftop pool in the building.",
+        "Available from one month. Rates drop for stays over three months."
+      ],
+      "features": [
+        "Sea view",
+        "On the promenade",
+        "Furnished",
+        "Rooftop pool",
+        "Wi-Fi installed",
+        "Minimum 1 month"
+      ],
+      "view": "Sea",
+      "floor": "3rd of 6"
+    },
+    "ar": {
+      "title": "ستوديو بفيو بحر، الممشى",
+      "address": "الممشى، الغردقة",
+      "summary": "ستوديو مفروش بفيو بحر على الممشى، متاح بالشهر — وده اللي أغلب الزوار للمدد الطويلة بياخدوه.",
+      "description": [
+        "على الممشى مباشرة، البحر من الشباك وشارع المطاعم تحت العمارة.",
+        "مفروش ومتكيّف، وفيه واي فاي، وحمّام سباحة على روف العمارة.",
+        "متاح من شهر. والسعر بيقل للمدد اللي أكتر من تلات شهور."
+      ],
+      "features": [
+        "فيو بحر",
+        "على الممشى",
+        "مفروش",
+        "حمّام سباحة على الروف",
+        "واي فاي",
+        "أقل مدة شهر"
+      ],
+      "view": "البحر",
+      "floor": "التالت من 6"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "rent-villa-el-gouna-white-villas",
+    "ref": "NS-R-EG-032",
+    "purpose": "rent",
+    "type": "Villa",
+    "areaSlug": "el-gouna",
+    "price": 3800,
+    "currency": "EUR",
+    "period": "month",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "size": 298,
+    "plotSize": 540,
+    "finishing": "Furnished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 27.3865,
+      "lng": 33.6815
+    },
+    "agentSlug": "dina-halim",
+    "images": [
+      "https://images.unsplash.com/photo-1702411200201-3061d0eea802?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1614597445336-8a67e9314d91?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1710883734891-93709398496d?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1672421186928-ac9709797b07?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1564540579594-0930edb6de43?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1758907749704-7ad4e48b2aa0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1663811397207-418a92396ad5?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Four-bedroom villa with pool, White Villas",
+      "address": "White Villas, El Gouna",
+      "summary": "A four-bedroom villa with private heated pool, buggy and housekeeping — the format families take for a winter season.",
+      "description": [
+        "A full house rather than an apartment: four bedrooms, a private heated pool, and a garden mature enough to be genuinely private.",
+        "The rent includes a golf buggy, housekeeping twice weekly and pool maintenance. Bills are metered separately.",
+        "Most tenants here take it from November through March. Shorter stays are possible outside the winter season."
+      ],
+      "features": [
+        "Private heated pool",
+        "Golf buggy included",
+        "Housekeeping twice weekly",
+        "Mature garden",
+        "Fully furnished",
+        "Minimum 1 month"
+      ],
+      "view": "Garden and pool"
+    },
+    "ar": {
+      "title": "فيلا أربع غرف بحمّام سباحة، وايت فيلاز",
+      "address": "وايت فيلاز، الجونة",
+      "summary": "فيلا أربع غرف بحمّام سباحة خاص مدفّى، وعربية جولف وتنضيف — الشكل اللي العائلات بتاخده لموسم الشتا.",
+      "description": [
+        "بيت كامل مش شقة: أربع غرف نوم، وحمّام سباحة خاص مدفّى، وجنينة ناضجة كفاية إنها تبقى خصوصية بجد.",
+        "الإيجار شامل عربية جولف، وتنضيف مرتين في الأسبوع، وصيانة حمّام السباحة. والفواتير بعدّاد منفصل.",
+        "أغلب المستأجرين بياخدوها من نوفمبر لمارس. ومدد أقصر ممكنة برّه موسم الشتا."
+      ],
+      "features": [
+        "حمّام سباحة خاص مدفّى",
+        "عربية جولف ضمن الإيجار",
+        "تنضيف مرتين في الأسبوع",
+        "جنينة ناضجة",
+        "مفروشة بالكامل",
+        "أقل مدة شهر"
+      ],
+      "view": "الجنينة وحمّام السباحة"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "rent-apartment-new-cairo-mivida",
+    "ref": "NS-R-NC-041",
+    "purpose": "rent",
+    "type": "Apartment",
+    "areaSlug": "new-cairo",
+    "price": 65000,
+    "currency": "EGP",
+    "period": "month",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "size": 198,
+    "finishing": "Furnished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 30.0198,
+      "lng": 31.4795
+    },
+    "agentSlug": "dina-halim",
+    "images": [
+      "https://images.unsplash.com/photo-1776362355123-ca966d36e29c?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1628012209120-d9db7abf7eab?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1600684388091-627109f3cd60?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1625579002297-aeebbf69de89?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1565572473525-02d61e3d37dc?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1572742482459-e04d6cfdd6f3?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1617695591915-87d753983ac0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1616594092403-fb65629b0a46?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Three-bedroom apartment, Mivida",
+      "address": "Mivida, Fifth Settlement",
+      "summary": "A furnished three-bedroom in Mivida on a twelve-month term, suited to corporate tenancies.",
+      "description": [
+        "Furnished to a standard that suits a relocating family or a corporate tenancy, facing the central park with a terrace off the reception.",
+        "Two parking spaces, full clubhouse and gym access, and a compound management that handles maintenance directly.",
+        "Twelve-month minimum. We handle tenant vetting and the annual renewal for owners who are not in the country."
+      ],
+      "features": [
+        "Fully furnished",
+        "Park-facing terrace",
+        "Two parking spaces",
+        "Clubhouse and gym",
+        "Corporate lets welcome",
+        "Minimum 12 months"
+      ],
+      "view": "Landscaped park",
+      "floor": "1st of 4"
+    },
+    "ar": {
+      "title": "شقة تلات غرف، ميفيدا",
+      "address": "ميفيدا، التجمع الخامس",
+      "summary": "شقة تلات غرف مفروشة في ميفيدا بعقد سنة، مناسبة لإيجار الشركات.",
+      "description": [
+        "مفروشة بمستوى يناسب عيلة جاية تستقر أو إيجار شركة، وبتبص على الحديقة المركزية بتراس طالع من الريسبشن.",
+        "مكانين للعربيات، ودخول كامل للكلوب هاوس والجيم، وإدارة الكمبوند بتتولّى الصيانة مباشرة.",
+        "أقل مدة سنة. وبنتولّى التحقق من المستأجر وتجديد العقد كل سنة للملاك اللي برّه مصر."
+      ],
+      "features": [
+        "مفروشة بالكامل",
+        "تراس على الحديقة",
+        "مكانين للعربيات",
+        "كلوب هاوس وجيم",
+        "مناسبة لإيجار الشركات",
+        "أقل مدة 12 شهر"
+      ],
+      "view": "الحديقة المركزية",
+      "floor": "الأول من 4"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "rent-chalet-makadi-heights",
+    "ref": "NS-R-MK-053",
+    "purpose": "rent",
+    "type": "Chalet",
+    "areaSlug": "makadi-bay",
+    "price": 520,
+    "currency": "EUR",
+    "period": "month",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "size": 104,
+    "finishing": "Furnished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 26.9845,
+      "lng": 33.8988
+    },
+    "agentSlug": "dina-halim",
+    "images": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1745761320630-148540d19a6c?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1684928365167-e91916573122?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1640109478916-f445f8f19b11?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1724618702364-8cde016bda22?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1625940119840-585d3495dc94?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1532960546490-72765f9494c9?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Garden chalet, Makadi Heights",
+      "address": "Makadi Heights, Makadi Bay",
+      "summary": "A furnished two-bedroom garden chalet in Makadi Heights, available from two months with the beach shuttle included.",
+      "description": [
+        "Ground floor with its own garden, opening onto the compound's landscaped run of lagoon pools.",
+        "Furnished, air conditioned and Wi-Fi equipped, with the scheduled beach shuttle included in the service charge.",
+        "Available from two months. Popular with remote workers wintering on the coast."
+      ],
+      "features": [
+        "Private garden",
+        "Lagoon pools",
+        "Beach shuttle",
+        "Furnished",
+        "Wi-Fi installed",
+        "Minimum 2 months"
+      ],
+      "view": "Gardens and pool"
+    },
+    "ar": {
+      "title": "شاليه بجنينة، مكادي هايتس",
+      "address": "مكادي هايتس، مكادي باي",
+      "summary": "شاليه غرفتين مفروش بجنينة في مكادي هايتس، متاح من شهرين والشاتل للشط شامل.",
+      "description": [
+        "دور أرضي بجنينة خاصة، مفتوح على حمّامات السباحة اللاجون المتنسّقة في الكمبوند.",
+        "مفروش ومتكيّف وفيه واي فاي، والشاتل المنتظم للشط داخل في مصاريف الصيانة.",
+        "متاح من شهرين. ومطلوب من اللي بيشتغلوا أونلاين وعايزين يقضّوا الشتا على الساحل."
+      ],
+      "features": [
+        "جنينة خاصة",
+        "حمّامات سباحة لاجون",
+        "شاتل للشط",
+        "مفروش",
+        "واي فاي",
+        "أقل مدة شهرين"
+      ],
+      "view": "الحدايق وحمّام السباحة"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "rent-penthouse-sahl-hasheesh",
+    "ref": "NS-R-SH-061",
+    "purpose": "rent",
+    "type": "Penthouse",
+    "areaSlug": "sahl-hasheesh",
+    "price": 1900,
+    "currency": "EUR",
+    "period": "month",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "size": 186,
+    "finishing": "Furnished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 27.0408,
+      "lng": 33.8833
+    },
+    "agentSlug": "laila-mansour",
+    "images": [
+      "https://images.unsplash.com/photo-1757924461488-ef9ad0670978?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1598911096723-af003b4ea77a?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1649083048428-3d8ed23a3ce0?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1644057501622-dfa7dd26dbfb?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1532960546490-72765f9494c9?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1658760046471-896cbc719c9d?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1776363284806-873eeef565a7?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1710224002849-a76ea1068b0d?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Sea-view penthouse, Sahl Hasheesh",
+      "address": "Old Town, Sahl Hasheesh",
+      "summary": "A furnished three-bedroom penthouse with private roof and open sea view in Old Town, from three months.",
+      "description": [
+        "Top floor with a private roof terrace over it and an uninterrupted view across the bay.",
+        "Three bedrooms, furnished throughout, with concierge and an infinity pool in the building.",
+        "Three-month minimum. The owner prefers longer winter lets and will negotiate on term."
+      ],
+      "features": [
+        "Private roof terrace",
+        "Open sea view",
+        "Infinity pool in building",
+        "Walk to the beach",
+        "Concierge",
+        "Minimum 3 months"
+      ],
+      "view": "Open sea",
+      "floor": "Top floor of 4"
+    },
+    "ar": {
+      "title": "بنتهاوس بفيو بحر، سهل حشيش",
+      "address": "أولد تاون، سهل حشيش",
+      "summary": "بنتهاوس تلات غرف مفروش بروف خاص وفيو بحر مفتوح في أولد تاون، من تلات شهور.",
+      "description": [
+        "الدور الأخير وفوقه روف خاص، وفيو مفتوح على الخليج كله.",
+        "تلات غرف نوم، مفروش بالكامل، وفيه كونسيرج وإنفينيتي بول في العمارة.",
+        "أقل مدة تلات شهور. والمالك بيفضّل إيجارات الشتا الطويلة ومستعد يتفاوض على المدة."
+      ],
+      "features": [
+        "روف خاص",
+        "فيو بحر مفتوح",
+        "إنفينيتي بول في العمارة",
+        "مشي للشط",
+        "كونسيرج",
+        "أقل مدة 3 شهور"
+      ],
+      "view": "بحر مفتوح",
+      "floor": "الدور الأخير من 4"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "rent-villa-sheikh-zayed-allegria",
+    "ref": "NS-R-SZ-072",
+    "purpose": "rent",
+    "type": "Villa",
+    "areaSlug": "sheikh-zayed",
+    "price": 180000,
+    "currency": "EGP",
+    "period": "month",
+    "bedrooms": 5,
+    "bathrooms": 5,
+    "size": 480,
+    "plotSize": 800,
+    "finishing": "Furnished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 30.0448,
+      "lng": 30.9688
+    },
+    "agentSlug": "dina-halim",
+    "images": [
+      "https://images.unsplash.com/photo-1707484687082-9493754d389f?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1774685110718-c5b4fe026144?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1643949915134-73a4c880f7c7?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1663811397207-418a92396ad5?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1766214573285-1b3df1b0a980?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1744025098626-66c0b9cb1ba8?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1774348692705-704860626289?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1648634158203-199accfd7afc?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Furnished villa, Allegria",
+      "address": "Allegria, Sheikh Zayed",
+      "summary": "A furnished five-bedroom villa on the Allegria course, on twelve-month terms and suitable for a diplomatic or corporate tenancy.",
+      "description": [
+        "A full five-bedroom house on the golf frontage, furnished to a standard appropriate to a senior corporate or diplomatic posting.",
+        "Private pool, staff quarters with separate access, and compound security.",
+        "Twelve-month minimum with the usual corporate documentation. We manage the tenancy on the owner's behalf."
+      ],
+      "features": [
+        "Golf frontage",
+        "Private pool",
+        "Staff quarters",
+        "Fully furnished",
+        "Corporate lets welcome",
+        "Minimum 12 months"
+      ],
+      "view": "Golf course"
+    },
+    "ar": {
+      "title": "فيلا مفروشة، أليجريا",
+      "address": "أليجريا، الشيخ زايد",
+      "summary": "فيلا خمس غرف مفروشة على ملعب أليجريا بعقد سنة، مناسبة لإيجار دبلوماسي أو شركات.",
+      "description": [
+        "بيت كامل خمس غرف على الجولف، مفروش بمستوى يناسب مدير كبير في شركة أو دبلوماسي.",
+        "حمّام سباحة خاص، وسكن للعاملين بمدخل منفصل، وأمن الكمبوند.",
+        "أقل مدة سنة بالأوراق المعتادة للشركات. وبندير الإيجار بالنيابة عن المالك."
+      ],
+      "features": [
+        "على ملعب الجولف",
+        "حمّام سباحة خاص",
+        "سكن للعاملين",
+        "مفروشة بالكامل",
+        "مناسبة لإيجار الشركات",
+        "أقل مدة 12 شهر"
+      ],
+      "view": "ملعب الجولف"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "rent-apartment-new-capital-r7",
+    "ref": "NS-R-CA-084",
+    "purpose": "rent",
+    "type": "Apartment",
+    "areaSlug": "new-capital",
+    "price": 28000,
+    "currency": "EGP",
+    "period": "month",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "size": 86,
+    "finishing": "Furnished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "coordinates": {
+      "lat": 30.0112,
+      "lng": 31.7385
+    },
+    "agentSlug": "sherif-badawy",
+    "images": [
+      "https://images.unsplash.com/photo-1780257562963-3389a4105371?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1768200498972-fd56353d73fc?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1610177534644-34d881503b83?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1616594092403-fb65629b0a46?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1747336755307-16278194efb4?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1564540583246-934409427776?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1767555027401-6829988ca9df?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1653204095671-3ed81a4bc561?auto=format&fit=crop&w=1400&q=80"
+    ],
+    "en": {
+      "title": "Serviced one-bedroom, R7 District",
+      "address": "R7 District, New Administrative Capital",
+      "summary": "A serviced, furnished one-bedroom in R7 facing the Green River — built for relocating government and corporate staff.",
+      "description": [
+        "Furnished and serviced, in one of the few R7 buildings actually delivered and occupied rather than still under construction.",
+        "Facing the Green River park, with Wi-Fi and building services included and underground parking allocated.",
+        "Six-month minimum. Most tenants here are on government or corporate relocation contracts."
+      ],
+      "features": [
+        "Serviced building",
+        "Park view",
+        "Furnished",
+        "Wi-Fi included",
+        "Underground parking",
+        "Minimum 6 months"
+      ],
+      "view": "Green River park",
+      "floor": "4th of 6"
+    },
+    "ar": {
+      "title": "شقة غرفة بخدمات فندقية، حي R7",
+      "address": "حي R7، العاصمة الإدارية الجديدة",
+      "summary": "شقة غرفة مفروشة بخدمات فندقية في R7 على النهر الأخضر — معمولة للموظفين اللي بينتقلوا للعاصمة.",
+      "description": [
+        "مفروشة وبخدمات، في واحدة من العماير القليلة في R7 اللي اتسلّمت واتسكنت فعلاً مش لسه تحت الإنشاء.",
+        "بتبص على حديقة النهر الأخضر، والواي فاي وخدمات العمارة شاملين، ومكان عربية تحت الأرض.",
+        "أقل مدة ست شهور. وأغلب المستأجرين هنا على عقود انتقال حكومية أو شركات."
+      ],
+      "features": [
+        "مبنى بخدمات فندقية",
+        "فيو على الحديقة",
+        "مفروشة",
+        "الواي فاي شامل",
+        "جراج تحت الأرض",
+        "أقل مدة 6 شهور"
+      ],
+      "view": "النهر الأخضر",
+      "floor": "الرابع من 6"
+    },
+    "updatedAt": "2026-09-21T00:00:00.000Z"
+  }
+]

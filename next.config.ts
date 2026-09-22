@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Files read at runtime from disk must be shipped with the server build (e.g. on Vercel).
+  outputFileTracingIncludes: {
+    "/**": ["./data/listings.json", "./src/assets/og-fonts/**"],
+  },
   images: {
     // Placeholder photography is resized by the source CDN; local files
     // in /public still go through Next's optimizer. See src/lib/imageLoader.ts.
@@ -8,6 +12,8 @@ const nextConfig: NextConfig = {
     loaderFile: "./src/lib/imageLoader.ts",
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
+      // Photos uploaded through the admin when Supabase storage is connected.
+      { protocol: "https", hostname: "*.supabase.co", pathname: "/storage/v1/object/public/**" },
     ],
     qualities: [60, 70, 75, 80, 90],
     formats: ["image/avif", "image/webp"],

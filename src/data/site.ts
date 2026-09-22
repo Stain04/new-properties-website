@@ -2,10 +2,25 @@
  * ─────────────────────────────────────────────────────────────
  *  BRAND CONFIGURATION
  *  This is the only file you need to edit to rebrand the site
- *  for a different agency: name, contact details, offices,
- *  social links and navigation all come from here.
+ *  for a different agency: name, contact details, offices and
+ *  social links all come from here. Arabic text for these fields
+ *  lives in src/i18n/content/ar/site.ts; menu labels live in the
+ *  UI dictionaries (src/i18n/dictionaries/).
  * ─────────────────────────────────────────────────────────────
  */
+
+/**
+ * The public address of the site, used for share previews, the sitemap and
+ * search-engine data. Set NEXT_PUBLIC_SITE_URL to override; on Vercel the
+ * production domain is picked up automatically.
+ */
+function siteUrl() {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL;
+  if (explicit) return explicit.replace(/\/$/, "");
+  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  if (vercel) return `https://${vercel}`;
+  return "http://localhost:3000";
+}
 
 export const site = {
   name: "New Properties",
@@ -22,11 +37,10 @@ export const site = {
 
   meta: {
     title: "New Properties — Real Estate in New Cairo & the New Capital",
+    // Kept short: this is the grey line under the title in WhatsApp and Google.
     description:
-      "Real Estate In New Cairo, TMG Group, New Capital City ( Residential, Commercial, Admin ). Curated residences, verified developers and end-to-end legal support for buyers and investors in Egypt.",
-    // ⚠ Replace with the live domain before launch — this feeds the
-    // sitemap, the Open Graph tags and the structured data.
-    url: "https://newproperties.example.com",
+      "Hand-picked homes, offices and investments in New Cairo, TMG Group communities and the New Capital — verified and registered for you.",
+    url: siteUrl(),
     locale: "en_EG",
   },
 
@@ -69,43 +83,3 @@ export const site = {
     { label: "YouTube", href: "https://youtube.com" },
   ],
 } as const;
-
-export const nav = [
-  { label: "Properties", href: "/properties" },
-  { label: "Destinations", href: "/destinations" },
-  { label: "Services", href: "/services" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-] as const;
-
-export const footerNav = [
-  {
-    title: "Browse",
-    links: [
-      { label: "All properties", href: "/properties" },
-      { label: "For sale", href: "/properties?purpose=sale" },
-      { label: "For rent", href: "/properties?purpose=rent" },
-      { label: "Exclusive listings", href: "/properties?exclusive=1" },
-      { label: "Destinations", href: "/destinations" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "About us", href: "/about" },
-      { label: "Our team", href: "/about#team" },
-      { label: "Services", href: "/services" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
-  {
-    title: "Advisory",
-    links: [
-      { label: "Buying in Egypt", href: "/services#buying" },
-      { label: "Selling your property", href: "/services#selling" },
-      { label: "Property management", href: "/services#management" },
-      { label: "Legal & conveyancing", href: "/services#legal" },
-      { label: "Interiors & furnishing", href: "/services#interiors" },
-    ],
-  },
-] as const;

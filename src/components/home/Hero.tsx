@@ -1,20 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import { heroImages } from "@/data/properties";
-import { site } from "@/data/site";
-import SearchBar from "./SearchBar";
+import { heroImages } from "@/lib/images";
+import { useI18n } from "@/i18n/I18nProvider";
+import Link from "@/i18n/Link";
+import SearchBar, { type SearchOptions } from "./SearchBar";
 
-const captions = [
-  "Cairo — The Nile",
-  "Cairo Skyline",
-  "New Capital — Business District",
-  "New Cairo — Compounds",
-];
-
-export default function Hero() {
+export default function Hero({
+  descriptor,
+  established,
+  positioning,
+  searchOptions,
+}: {
+  descriptor: string;
+  established: number;
+  positioning: string;
+  searchOptions: SearchOptions;
+}) {
+  const { dict, fmt } = useI18n();
+  const t = dict.hero;
+  const captions = t.captions;
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -59,31 +65,30 @@ export default function Hero() {
               className="eyebrow eyebrow-light"
               style={{ animation: "fade-up 1s cubic-bezier(0.16,1,0.3,1) 0.2s both" }}
             >
-              {site.descriptor} · Est. {site.established}
+              {descriptor} · {dict.common.est} {established}
             </p>
 
             <h1
               className="display-xl mt-6 text-bone-50"
               style={{ animation: "fade-up 1.1s cubic-bezier(0.16,1,0.3,1) 0.35s both" }}
             >
-              Property in Egypt,
+              {t.lineOne}
               <br />
-              <span className="italic text-gold-400">advised properly.</span>
+              <span className="italic text-gold-400">{t.lineTwo}</span>
             </h1>
 
             <p
               className="mt-7 max-w-2xl text-pretty text-[0.9375rem] font-semibold leading-relaxed tracking-wide text-gold-300 md:text-base"
               style={{ animation: "fade-up 1.1s cubic-bezier(0.16,1,0.3,1) 0.5s both" }}
             >
-              {site.positioning}
+              {positioning}
             </p>
 
             <p
               className="lede lede-light mt-5 max-w-xl"
               style={{ animation: "fade-up 1.1s cubic-bezier(0.16,1,0.3,1) 0.6s both" }}
             >
-              Residential, commercial and administrative property — sourced, verified and
-              registered by a single firm that stays with you after the keys change hands.
+              {t.lede}
             </p>
 
             <div
@@ -91,10 +96,10 @@ export default function Hero() {
               style={{ animation: "fade-up 1.1s cubic-bezier(0.16,1,0.3,1) 0.65s both" }}
             >
               <Link href="/properties" className="btn btn-gold">
-                View the catalogue
+                {dict.common.viewCatalogue}
               </Link>
               <Link href="/contact" className="btn btn-outline-light">
-                Speak to an adviser
+                {dict.common.speakToAdviser}
               </Link>
             </div>
           </div>
@@ -104,7 +109,7 @@ export default function Hero() {
             className="mt-9 max-w-5xl"
             style={{ animation: "fade-up 1.2s cubic-bezier(0.16,1,0.3,1) 0.8s both" }}
           >
-            <SearchBar />
+            <SearchBar options={searchOptions} />
           </div>
 
           {/* Footer strip */}
@@ -118,7 +123,7 @@ export default function Hero() {
                   key={src}
                   type="button"
                   onClick={() => setIndex(i)}
-                  aria-label={`Show ${captions[i]}`}
+                  aria-label={fmt(t.show, { caption: captions[i] })}
                   className="group -my-4 py-4"
                 >
                   <span
@@ -128,17 +133,13 @@ export default function Hero() {
                   />
                 </button>
               ))}
-              <span className="ml-2 text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-bone-100/55">
+              <span className="ms-2 text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-bone-100/55">
                 {captions[index]}
               </span>
             </div>
 
             <div className="flex flex-wrap items-center gap-x-10 gap-y-3">
-              {[
-                ["2,800+", "Transactions"],
-                ["8", "Destinations"],
-                ["16", "Years advising"],
-              ].map(([value, label]) => (
+              {t.stats.map(({ value, label }) => (
                 <div key={label} className="flex items-baseline gap-2">
                   <span className="font-display text-xl text-bone-50">{value}</span>
                   <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-bone-100/50">

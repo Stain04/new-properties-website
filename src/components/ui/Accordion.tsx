@@ -21,10 +21,10 @@ export default function Accordion({ items }: { items: readonly Item[] }) {
               type="button"
               onClick={() => setOpen(isOpen ? null : i)}
               aria-expanded={isOpen}
-              className="group flex w-full items-start justify-between gap-6 py-6 text-left"
+              className="group flex w-full items-start justify-between gap-6 py-6 text-start"
             >
               <span
-                className={`display-sm pr-4 transition-colors duration-300 ${
+                className={`display-sm pe-4 transition-colors duration-300 ${
                   isOpen ? "text-gold-600" : "text-ink-900 group-hover:text-gold-600"
                 }`}
               >

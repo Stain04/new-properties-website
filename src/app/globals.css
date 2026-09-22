@@ -41,6 +41,8 @@
   /* --- Type --- */
   --font-display: var(--font-fraunces), "Times New Roman", serif;
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  /* The wordmark stays in the Latin display face in every language. */
+  --font-latin-display: var(--font-fraunces), "Times New Roman", serif;
 
   /* --- Motion --- */
   --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -384,6 +386,9 @@
     transform-origin: right;
     transition: transform 0.55s var(--ease-expo);
   }
+  /* In RTL the underline grows from the right and retreats to the left. */
+  [dir="rtl"] .link-sweep::after { transform-origin: left; }
+  @media (hover: hover) { [dir="rtl"] .link-sweep:hover::after { transform-origin: right; } }
   @media (hover: hover) { .link-sweep:hover::after {
     transform: scaleX(1);
     transform-origin: left;
@@ -439,3 +444,54 @@
   }
   [data-reveal] { opacity: 1; transform: none; }
 }
+
+/* ============================================================
+   Arabic
+   Swaps in Arabic typefaces and undoes the Latin-specific
+   typography that would break Arabic script.
+   ============================================================ */
+
+html[lang="ar"] {
+  /* Alexandria for display, IBM Plex Sans Arabic for text. Latin characters
+     inside Arabic copy fall through to the English faces. */
+  --font-display: var(--font-alexandria), var(--font-fraunces), serif;
+  --font-sans: var(--font-plex-arabic), var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  font-synthesis: none;
+}
+
+/* Arabic letters join; any letter-spacing tears the words apart. */
+html[lang="ar"] body *:not(.font-latin-display):not(.font-latin-display *) {
+  letter-spacing: 0 !important;
+}
+
+/* No true italic exists in Arabic — a synthetic slant looks broken. */
+html[lang="ar"] .italic { font-style: normal; }
+
+/* Arabic ascenders, descenders and dots need far more vertical room than Latin. */
+html[lang="ar"] .display-xl {
+  font-weight: 300;
+  font-size: clamp(2.3rem, 6.2vw, 5.25rem);
+  line-height: 1.28;
+}
+html[lang="ar"] .display-lg {
+  font-weight: 300;
+  font-size: clamp(1.85rem, 4.2vw, 3.35rem);
+  line-height: 1.35;
+}
+html[lang="ar"] .display-md {
+  font-size: clamp(1.45rem, 2.8vw, 2.2rem);
+  line-height: 1.45;
+}
+html[lang="ar"] .display-sm {
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  line-height: 1.55;
+}
+html[lang="ar"] .lede { line-height: 1.95; }
+html[lang="ar"] .leading-relaxed { line-height: 1.9; }
+
+/* Small uppercase labels are a Latin device; in Arabic give them a touch more size instead. */
+html[lang="ar"] .eyebrow { font-size: 0.8125rem; }
+html[lang="ar"] .btn { font-size: 0.9375rem; }
+html[lang="ar"] .btn-sm { font-size: 0.875rem; }
+html[lang="ar"] .chip { font-size: 0.75rem; }
+html[lang="ar"] .field-label { font-size: 0.8125rem; }

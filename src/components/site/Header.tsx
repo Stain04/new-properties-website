@@ -1,16 +1,51 @@
 "use client";
 
 import { Menu, Phone, X } from "lucide-react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { nav, site } from "@/data/site";
+import { localeNames, localePath, stripLocale, type Locale } from "@/i18n/config";
+import { useI18n } from "@/i18n/I18nProvider";
+import Link from "@/i18n/Link";
 import Logo from "./Logo";
 
-export default function Header() {
+interface HeaderProps {
+  nav: { label: string; href: string }[];
+  phone: { phoneDisplay: string; phoneHref: string; email: string };
+  tagline: string;
+}
+
+/** Link to the same page in the other language, keeping query string and hash. */
+function LanguageSwitch({ className = "", onDone }: { className?: string; onDone?: () => void }) {
+  const { locale, dict } = useI18n();
+  const pathname = usePathname();
+  const router = useRouter();
+  const other: Locale = locale === "ar" ? "en" : "ar";
+  const target = localePath(other, stripLocale(pathname));
+
+  return (
+    <a
+      href={target}
+      hrefLang={other}
+      lang={other}
+      aria-label={`${dict.common.switchLanguage}: ${localeNames[other]}`}
+      onClick={(e) => {
+        e.preventDefault();
+        onDone?.();
+        router.push(target + window.location.search + window.location.hash);
+      }}
+      className={className}
+    >
+      {localeNames[other]}
+    </a>
+  );
+}
+
+export default function Header({ nav, phone, tagline }: HeaderProps) {
+  const { dict } = useI18n();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const current = stripLocale(pathname);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 72);
@@ -38,12 +73,12 @@ export default function Header() {
             : "border-b border-transparent py-6"
         }`}
       >
-        <div className="shell flex items-center justify-between gap-8">
-          <Logo light={!solid} />
+        <div className="shell flex items-center justify-between gap-6">
+          <Logo light={!solid} tagline={tagline} />
 
-          <nav className="hidden items-center gap-9 lg:flex">
+          <nav className="hidden items-center gap-8 lg:flex xl:gap-9">
             {nav.map((item) => {
-              const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+              const active = current === item.href || current.startsWith(`${item.href}/`);
               return (
                 <Link
                   key={item.href}
@@ -64,28 +99,37 @@ export default function Header() {
             })}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5 sm:gap-3">
             <a
-              href={`tel:${site.contact.phoneHref}`}
-              className={`hidden items-center gap-2 text-[0.8125rem] font-semibold tracking-wide transition-colors duration-500 xl:inline-flex ${
+              href={`tel:${phone.phoneHref}`}
+              dir="ltr"
+              className={`hidden items-center gap-2 text-[0.8125rem] font-semibold tracking-wide transition-colors duration-500 2xl:inline-flex ${
                 solid ? "text-ink-700 hover:text-gold-600" : "text-bone-100/85 hover:text-gold-400"
               }`}
             >
               <Phone className="size-3.5" strokeWidth={1.75} />
-              {site.contact.phoneDisplay}
+              {phone.phoneDisplay}
             </a>
+
+            <LanguageSwitch
+              className={`hidden min-h-10 items-center rounded-full border px-4 text-[0.8125rem] font-semibold transition-colors duration-500 sm:inline-flex ${
+                solid
+                  ? "border-ink-900/15 text-ink-700 hover:border-ink-900 hover:text-ink-900"
+                  : "border-bone-100/25 text-bone-50 hover:border-bone-50"
+              }`}
+            />
 
             <Link
               href="/contact"
-              className={`btn btn-sm hidden sm:inline-flex ${solid ? "btn-ink" : "btn-gold"}`}
+              className={`btn btn-sm hidden md:inline-flex ${solid ? "btn-ink" : "btn-gold"}`}
             >
-              Book a consultation
+              {dict.common.bookConsultation}
             </Link>
 
             <button
               type="button"
               onClick={() => setMenuOpen((v) => !v)}
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-label={menuOpen ? dict.common.closeMenu : dict.common.openMenu}
               aria-expanded={menuOpen}
               className={`grid size-10 place-items-center rounded-full border transition-colors duration-500 lg:hidden ${
                 solid
@@ -136,14 +180,18 @@ export default function Header() {
 
           <div className="space-y-4">
             <Link href="/contact" onClick={() => setMenuOpen(false)} className="btn btn-gold w-full">
-              Book a consultation
+              {dict.common.bookConsultation}
             </Link>
+            <LanguageSwitch
+              onDone={() => setMenuOpen(false)}
+              className="btn btn-outline w-full"
+            />
             <div className="flex flex-col text-sm text-ink-500">
-              <a href={`tel:${site.contact.phoneHref}`} className="py-2 hover:text-gold-600">
-                {site.contact.phoneDisplay}
+              <a href={`tel:${phone.phoneHref}`} className="py-2 hover:text-gold-600">
+                <span dir="ltr">{phone.phoneDisplay}</span>
               </a>
-              <a href={`mailto:${site.contact.email}`} className="py-2 hover:text-gold-600">
-                {site.contact.email}
+              <a href={`mailto:${phone.email}`} className="py-2 hover:text-gold-600">
+                <span dir="ltr">{phone.email}</span>
               </a>
             </div>
           </div>

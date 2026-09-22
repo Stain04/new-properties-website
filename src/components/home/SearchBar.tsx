@@ -3,27 +3,27 @@
 import { Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { areas } from "@/data/areas";
-import { propertyTypes } from "@/data/properties";
+import { formatPrice } from "@/i18n/format";
+import { useI18n } from "@/i18n/I18nProvider";
 
-const saleCeilings = [
-  { label: "No maximum", value: "" },
-  { label: "Up to €75,000", value: "75000" },
-  { label: "Up to €150,000", value: "150000" },
-  { label: "Up to €350,000", value: "350000" },
-  { label: "Up to €750,000", value: "750000" },
-];
+export interface SearchOptions {
+  areas: { slug: string; name: string }[];
+  types: { value: string; label: string }[];
+}
 
-const rentCeilings = [
-  { label: "No maximum", value: "" },
-  { label: "Up to €500 / month", value: "500" },
-  { label: "Up to €1,000 / month", value: "1000" },
-  { label: "Up to €2,500 / month", value: "2500" },
-  { label: "Up to €5,000 / month", value: "5000" },
-];
+const SALE_CEILINGS = [75000, 150000, 350000, 750000];
+const RENT_CEILINGS = [500, 1000, 2500, 5000];
 
-export default function SearchBar({ tone = "glass" }: { tone?: "glass" | "solid" }) {
+export default function SearchBar({
+  options,
+  tone = "glass",
+}: {
+  options: SearchOptions;
+  tone?: "glass" | "solid";
+}) {
   const router = useRouter();
+  const { locale, dict, fmt, href } = useI18n();
+  const t = dict.search;
   const [purpose, setPurpose] = useState<"sale" | "rent">("sale");
   const [area, setArea] = useState("");
   const [type, setType] = useState("");
@@ -35,8 +35,16 @@ export default function SearchBar({ tone = "glass" }: { tone?: "glass" | "solid"
     if (area) params.set("area", area);
     if (type) params.set("type", type);
     if (max) params.set("max", max);
-    router.push(`/properties?${params.toString()}`);
+    router.push(`${href("/properties")}?${params.toString()}`);
   }
+
+  const ceilings = (purpose === "sale" ? SALE_CEILINGS : RENT_CEILINGS).map((v) => {
+    const amount = formatPrice(locale, v, "EUR");
+    return {
+      value: String(v),
+      label: fmt(t.upTo, { amount: purpose === "rent" ? fmt(t.perMonth, { amount }) : amount }),
+    };
+  });
 
   const glass = tone === "glass";
   const shell = glass
@@ -48,9 +56,7 @@ export default function SearchBar({ tone = "glass" }: { tone?: "glass" | "solid"
   const label = glass
     ? "block text-[0.625rem] font-semibold uppercase tracking-[0.2em] text-bone-100/55"
     : "block text-[0.625rem] font-semibold uppercase tracking-[0.2em] text-ink-400";
-  const divider = glass ? "md:border-l md:border-white/15" : "md:border-l md:border-ink-900/10";
-
-  const ceilings = purpose === "sale" ? saleCeilings : rentCeilings;
+  const divider = glass ? "md:border-s md:border-white/15" : "md:border-s md:border-ink-900/10";
 
   return (
     <form onSubmit={submit} className={`rounded-2xl border p-2 ${shell}`}>
@@ -64,7 +70,7 @@ export default function SearchBar({ tone = "glass" }: { tone?: "glass" | "solid"
               setPurpose(p);
               setMax("");
             }}
-            className={`rounded-full px-5 py-2.5 text-[0.6875rem] lg:px-4 lg:py-1.5 font-semibold uppercase tracking-[0.16em] transition-all duration-400 ${
+            className={`rounded-full px-5 py-2.5 text-[0.6875rem] font-semibold uppercase tracking-[0.16em] transition-all duration-400 lg:px-4 lg:py-1.5 ${
               purpose === p
                 ? "bg-gold-500 text-ink-950"
                 : glass
@@ -72,7 +78,7 @@ export default function SearchBar({ tone = "glass" }: { tone?: "glass" | "solid"
                   : "text-ink-400 hover:text-ink-900"
             }`}
           >
-            {p === "sale" ? "Buy" : "Rent"}
+            {p === "sale" ? t.buy : t.rent}
           </button>
         ))}
       </div>
@@ -80,7 +86,7 @@ export default function SearchBar({ tone = "glass" }: { tone?: "glass" | "solid"
       <div className="grid grid-cols-1 items-stretch sm:grid-cols-2 md:grid-cols-[1.15fr_1fr_1.15fr_auto]">
         <div className="px-4 py-3">
           <label className={label} htmlFor="sb-area">
-            Destination
+            {t.destination}
           </label>
           <select
             id="sb-area"
@@ -88,8 +94,8 @@ export default function SearchBar({ tone = "glass" }: { tone?: "glass" | "solid"
             onChange={(e) => setArea(e.target.value)}
             className={`${select} mt-1.5`}
           >
-            <option value="">All of Egypt</option>
-            {areas.map((a) => (
+            <option value="">{t.allEgypt}</option>
+            {options.areas.map((a) => (
               <option key={a.slug} value={a.slug}>
                 {a.name}
               </option>
@@ -99,7 +105,7 @@ export default function SearchBar({ tone = "glass" }: { tone?: "glass" | "solid"
 
         <div className={`px-4 py-3 ${divider}`}>
           <label className={label} htmlFor="sb-type">
-            Property type
+            {t.type}
           </label>
           <select
             id="sb-type"
@@ -107,10 +113,10 @@ export default function SearchBar({ tone = "glass" }: { tone?: "glass" | "solid"
             onChange={(e) => setType(e.target.value)}
             className={`${select} mt-1.5`}
           >
-            <option value="">Any type</option>
-            {propertyTypes.map((t) => (
-              <option key={t} value={t}>
-                {t}
+            <option value="">{t.anyType}</option>
+            {options.types.map((o) => (
+              <option key={o.value} value={o.value}>
+                {o.label}
               </option>
             ))}
           </select>
@@ -118,7 +124,7 @@ export default function SearchBar({ tone = "glass" }: { tone?: "glass" | "solid"
 
         <div className={`px-4 py-3 ${divider}`}>
           <label className={label} htmlFor="sb-max">
-            Budget
+            {t.budget}
           </label>
           <select
             id="sb-max"
@@ -126,8 +132,9 @@ export default function SearchBar({ tone = "glass" }: { tone?: "glass" | "solid"
             onChange={(e) => setMax(e.target.value)}
             className={`${select} mt-1.5`}
           >
+            <option value="">{t.noMax}</option>
             {ceilings.map((c) => (
-              <option key={c.label} value={c.value}>
+              <option key={c.value} value={c.value}>
                 {c.label}
               </option>
             ))}
@@ -137,7 +144,7 @@ export default function SearchBar({ tone = "glass" }: { tone?: "glass" | "solid"
         <div className="p-1.5">
           <button type="submit" className="btn btn-gold h-full w-full md:px-7">
             <Search className="size-4" strokeWidth={2} />
-            Search
+            {t.submit}
           </button>
         </div>
       </div>

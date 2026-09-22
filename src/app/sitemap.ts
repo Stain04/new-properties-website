@@ -1,34 +1,33 @@
 import type { MetadataRoute } from "next";
 import { areas } from "@/data/areas";
-import { properties } from "@/data/properties";
 import { site } from "@/data/site";
+import { localePath, locales } from "@/i18n/config";
+import { getListings } from "@/lib/listings/store";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+/** Every page in every language, each entry pointing at its translations. */
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const properties = await getListings();
   const base = site.meta.url;
   const now = new Date();
 
-  const staticRoutes = ["", "/properties", "/destinations", "/services", "/about", "/contact"].map(
-    (path) => ({
-      url: `${base}${path}`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
+  const paths: { path: string; priority: number; changeFrequency: "weekly" | "monthly" }[] = [
+    ...["", "/properties", "/destinations", "/services", "/about", "/contact"].map((path) => ({
+      path: path || "/",
       priority: path === "" ? 1 : 0.8,
-    }),
-  );
+      changeFrequency: "weekly" as const,
+    })),
+    ...areas.map((a) => ({ path: `/destinations/${a.slug}`, priority: 0.7, changeFrequency: "monthly" as const })),
+    ...properties.map((p) => ({ path: `/properties/${p.slug}`, priority: 0.6, changeFrequency: "weekly" as const })),
+  ];
 
-  const areaRoutes = areas.map((a) => ({
-    url: `${base}/destinations/${a.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
-
-  const propertyRoutes = properties.map((p) => ({
-    url: `${base}/properties/${p.slug}`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
-    priority: 0.6,
-  }));
-
-  return [...staticRoutes, ...areaRoutes, ...propertyRoutes];
+  return paths.flatMap(({ path, priority, changeFrequency }) => {
+    const languages = Object.fromEntries(locales.map((l) => [l, `${base}${localePath(l, path)}`]));
+    return locales.map((l) => ({
+      url: `${base}${localePath(l, path)}`,
+      lastModified: now,
+      changeFrequency,
+      priority,
+      alternates: { languages },
+    }));
+  });
 }

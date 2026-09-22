@@ -3,9 +3,11 @@
 import { SlidersHorizontal, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { areas, regions } from "@/data/areas";
-import { properties, propertyTypes } from "@/data/properties";
-import { toEur } from "@/lib/format";
+import type { LocalProperty } from "@/i18n/data";
+import { formatPrice } from "@/i18n/format";
+import { useI18n } from "@/i18n/I18nProvider";
+import Link from "@/i18n/Link";
+import type { Area } from "@/lib/types";
 import PropertyCard from "./PropertyCard";
 
 export interface ExplorerInitial {
@@ -19,23 +21,28 @@ export interface ExplorerInitial {
   sort?: string;
 }
 
-const FEATURE_FILTERS = [
-  { key: "sea", label: "Sea view", test: (s: string) => /sea|beach|lagoon|marina/i.test(s) },
-  { key: "pool", label: "Pool", test: (s: string) => /pool/i.test(s) },
-  { key: "furnished", label: "Furnished", test: (s: string) => /furnish/i.test(s) },
-  { key: "garden", label: "Garden or terrace", test: (s: string) => /garden|terrace|roof/i.test(s) },
-  { key: "parking", label: "Parking", test: (s: string) => /parking|garage/i.test(s) },
-];
+const FEATURE_KEYS = ["sea", "pool", "furnished", "garden", "parking"] as const;
+const SORT_KEYS = ["featured", "price-asc", "price-desc", "size-desc"] as const;
+const SALE_CEILINGS = [75000, 150000, 350000, 750000, 1500000];
+const RENT_CEILINGS = [500, 1000, 2500, 5000];
 
-const SORTS = [
-  { key: "featured", label: "Curated order" },
-  { key: "price-asc", label: "Price — low to high" },
-  { key: "price-desc", label: "Price — high to low" },
-  { key: "size-desc", label: "Largest first" },
-];
-
-export default function Explorer({ initial }: { initial: ExplorerInitial }) {
+export default function Explorer({
+  initial,
+  properties,
+  areas,
+  regions,
+  types,
+}: {
+  initial: ExplorerInitial;
+  /** Listings already translated for the active language. */
+  properties: LocalProperty[];
+  areas: Area[];
+  regions: { key: string; label: string }[];
+  types: { value: string; label: string }[];
+}) {
   const router = useRouter();
+  const { locale, dict, fmt, plural, href } = useI18n();
+  const t = dict.explorer;
 
   const [purpose, setPurpose] = useState(initial.purpose ?? "all");
   const [area, setArea] = useState(initial.area ?? "");
@@ -61,8 +68,9 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
     if (features.length) params.set("feature", features.join(","));
     if (sort !== "featured") params.set("sort", sort);
     const qs = params.toString();
-    router.replace(qs ? `/properties?${qs}` : "/properties", { scroll: false });
-  }, [purpose, area, type, max, beds, exclusiveOnly, features, sort, router]);
+    const base = href("/properties");
+    router.replace(qs ? `${base}?${qs}` : base, { scroll: false });
+  }, [purpose, area, type, max, beds, exclusiveOnly, features, sort, router, href]);
 
   useEffect(() => {
     document.body.style.overflow = drawerOpen ? "hidden" : "";
@@ -81,35 +89,23 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
       if (type && p.type !== type) return false;
       if (minBeds && p.bedrooms < minBeds) return false;
       if (exclusiveOnly && !p.exclusive) return false;
-      if (ceiling && toEur(p.price, p.currency) > ceiling) return false;
-
-      if (features.length) {
-        const haystack = [...p.features, p.view, p.finishing].join(" ");
-        const ok = features.every((key) => {
-          const f = FEATURE_FILTERS.find((x) => x.key === key);
-          return f ? f.test(haystack) : true;
-        });
-        if (!ok) return false;
-      }
+      if (ceiling && p.eurValue > ceiling) return false;
+      if (features.some((k) => !p.featureKeys.includes(k))) return false;
       return true;
     });
 
     const sorted = [...filtered];
-    if (sort === "price-asc") {
-      sorted.sort((a, b) => toEur(a.price, a.currency) - toEur(b.price, b.currency));
-    } else if (sort === "price-desc") {
-      sorted.sort((a, b) => toEur(b.price, b.currency) - toEur(a.price, a.currency));
-    } else if (sort === "size-desc") {
-      sorted.sort((a, b) => b.size - a.size);
-    } else {
+    if (sort === "price-asc") sorted.sort((a, b) => a.eurValue - b.eurValue);
+    else if (sort === "price-desc") sorted.sort((a, b) => b.eurValue - a.eurValue);
+    else if (sort === "size-desc") sorted.sort((a, b) => b.size - a.size);
+    else
       sorted.sort(
         (a, b) =>
           Number(Boolean(b.featured)) - Number(Boolean(a.featured)) ||
           Number(Boolean(b.exclusive)) - Number(Boolean(a.exclusive)),
       );
-    }
     return sorted;
-  }, [purpose, area, type, max, beds, exclusiveOnly, features, sort]);
+  }, [properties, purpose, area, type, max, beds, exclusiveOnly, features, sort]);
 
   const activeCount =
     (purpose !== "all" ? 1 : 0) +
@@ -131,34 +127,21 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
     setSort("featured");
   }
 
-  const priceCeilings =
-    purpose === "rent"
-      ? [
-          { label: "Any", value: "" },
-          { label: "€500 / month", value: "500" },
-          { label: "€1,000 / month", value: "1000" },
-          { label: "€2,500 / month", value: "2500" },
-          { label: "€5,000 / month", value: "5000" },
-        ]
-      : [
-          { label: "Any", value: "" },
-          { label: "€75,000", value: "75000" },
-          { label: "€150,000", value: "150000" },
-          { label: "€350,000", value: "350000" },
-          { label: "€750,000", value: "750000" },
-          { label: "€1,500,000", value: "1500000" },
-        ];
+  const priceCeilings = (purpose === "rent" ? RENT_CEILINGS : SALE_CEILINGS).map((v) => {
+    const amount = formatPrice(locale, v, "EUR");
+    return { value: String(v), label: purpose === "rent" ? fmt(t.perMonth, { amount }) : amount };
+  });
 
   const filterPanel = (
     <div className="space-y-8">
       {/* Purpose */}
       <div>
-        <p className="field-label">Looking to</p>
+        <p className="field-label">{t.lookingTo}</p>
         <div className="flex gap-1.5">
           {[
-            { k: "all", l: "All" },
-            { k: "sale", l: "Buy" },
-            { k: "rent", l: "Rent" },
+            { k: "all", l: t.all },
+            { k: "sale", l: t.buy },
+            { k: "rent", l: t.rent },
           ].map((o) => (
             <button
               key={o.k}
@@ -168,9 +151,7 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
                 setMax("");
               }}
               className={`min-h-10 flex-1 rounded-full px-3 py-2 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] transition-all duration-400 ${
-                purpose === o.k
-                  ? "bg-ink-900 text-bone-50"
-                  : "bg-bone-100 text-ink-400 hover:text-ink-900"
+                purpose === o.k ? "bg-ink-900 text-bone-50" : "bg-bone-100 text-ink-400 hover:text-ink-900"
               }`}
             >
               {o.l}
@@ -182,15 +163,10 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
       {/* Destination */}
       <div>
         <label className="field-label" htmlFor="fx-area">
-          Destination
+          {t.destination}
         </label>
-        <select
-          id="fx-area"
-          value={area}
-          onChange={(e) => setArea(e.target.value)}
-          className="field"
-        >
-          <option value="">All of Egypt</option>
+        <select id="fx-area" value={area} onChange={(e) => setArea(e.target.value)} className="field">
+          <option value="">{t.allEgypt}</option>
           {regions.map((r) => (
             <optgroup key={r.key} label={r.label}>
               {areas
@@ -208,18 +184,13 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
       {/* Type */}
       <div>
         <label className="field-label" htmlFor="fx-type">
-          Property type
+          {t.type}
         </label>
-        <select
-          id="fx-type"
-          value={type}
-          onChange={(e) => setType(e.target.value)}
-          className="field"
-        >
-          <option value="">Any type</option>
-          {propertyTypes.map((t) => (
-            <option key={t} value={t}>
-              {t}
+        <select id="fx-type" value={type} onChange={(e) => setType(e.target.value)} className="field">
+          <option value="">{t.anyType}</option>
+          {types.map((o) => (
+            <option key={o.value} value={o.value}>
+              {o.label}
             </option>
           ))}
         </select>
@@ -228,23 +199,22 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
       {/* Budget */}
       <div>
         <label className="field-label" htmlFor="fx-max">
-          Maximum {purpose === "rent" ? "rent" : "price"}
+          {purpose === "rent" ? t.maxRent : t.maxPrice}
         </label>
         <select id="fx-max" value={max} onChange={(e) => setMax(e.target.value)} className="field">
+          <option value="">{t.any}</option>
           {priceCeilings.map((c) => (
-            <option key={c.label} value={c.value}>
+            <option key={c.value} value={c.value}>
               {c.label}
             </option>
           ))}
         </select>
-        <p className="mt-2 text-[0.6875rem] leading-relaxed text-ink-300">
-          Listings priced in USD and EGP are converted for comparison.
-        </p>
+        <p className="mt-2 text-[0.6875rem] leading-relaxed text-ink-300">{t.converted}</p>
       </div>
 
       {/* Bedrooms */}
       <div>
-        <p className="field-label">Bedrooms, minimum</p>
+        <p className="field-label">{t.bedsMin}</p>
         <div className="flex gap-1.5">
           {["", "1", "2", "3", "4"].map((b) => (
             <button
@@ -257,7 +227,7 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
                   : "border-ink-900/12 text-ink-400 hover:border-ink-900/30"
               }`}
             >
-              {b === "" ? "Any" : `${b}+`}
+              {b === "" ? t.all : <span dir="ltr">{b}+</span>}
             </button>
           ))}
         </div>
@@ -265,26 +235,22 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
 
       {/* Features */}
       <div>
-        <p className="field-label">Must have</p>
+        <p className="field-label">{t.mustHave}</p>
         <div className="flex flex-wrap gap-1.5">
-          {FEATURE_FILTERS.map((f) => {
-            const on = features.includes(f.key);
+          {FEATURE_KEYS.map((key) => {
+            const on = features.includes(key);
             return (
               <button
-                key={f.key}
+                key={key}
                 type="button"
-                onClick={() =>
-                  setFeatures((prev) =>
-                    on ? prev.filter((x) => x !== f.key) : [...prev, f.key],
-                  )
-                }
+                onClick={() => setFeatures((prev) => (on ? prev.filter((x) => x !== key) : [...prev, key]))}
                 className={`chip min-h-9 border px-3.5 transition-all duration-300 ${
                   on
                     ? "border-gold-500 bg-gold-500/12 text-gold-700"
                     : "border-ink-900/10 bg-bone-100 text-ink-500 hover:border-ink-900/25"
                 }`}
               >
-                {f.label}
+                {t.features[key]}
               </button>
             );
           })}
@@ -300,18 +266,14 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
           className="mt-0.5 size-4 shrink-0 accent-[var(--color-gold-600)]"
         />
         <span>
-          <span className="block text-sm font-semibold text-ink-900">
-            Exclusive instructions only
-          </span>
-          <span className="mt-0.5 block text-[0.75rem] leading-relaxed text-ink-400">
-            Properties we represent solely, not available through other agents.
-          </span>
+          <span className="block text-sm font-semibold text-ink-900">{t.exclusiveOnly}</span>
+          <span className="mt-0.5 block text-[0.75rem] leading-relaxed text-ink-400">{t.exclusiveHint}</span>
         </span>
       </label>
 
       {activeCount > 0 && (
         <button type="button" onClick={reset} className="btn btn-outline btn-sm w-full">
-          Clear {activeCount} filter{activeCount === 1 ? "" : "s"}
+          {plural(activeCount, t.clear)}
         </button>
       )}
     </div>
@@ -322,7 +284,7 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
       {/* Desktop rail */}
       <aside className="hidden lg:block">
         <div className="sticky top-28">
-          <p className="eyebrow">Refine</p>
+          <p className="eyebrow">{t.refine}</p>
           <div className="mt-6">{filterPanel}</div>
         </div>
       </aside>
@@ -331,33 +293,31 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
       <div>
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-ink-900/10 pb-5">
           <p className="text-sm text-ink-500">
-            <span className="font-display text-2xl text-ink-900">{results.length}</span>{" "}
-            {results.length === 1 ? "property" : "properties"}
+            <span className="font-display text-2xl text-ink-900">
+              {plural(results.length, dict.labels.properties)}
+            </span>
             {area && <span className="text-ink-300"> · {areas.find((a) => a.slug === area)?.name}</span>}
           </p>
 
           <div className="flex w-full items-center gap-2 sm:w-auto">
-            <button
-              type="button"
-              onClick={() => setDrawerOpen(true)}
-              className="btn btn-outline btn-sm lg:hidden"
-            >
+            <button type="button" onClick={() => setDrawerOpen(true)} className="btn btn-outline btn-sm lg:hidden">
               <SlidersHorizontal className="size-3.5" strokeWidth={2} />
-              Filters{activeCount > 0 ? ` (${activeCount})` : ""}
+              {t.filters}
+              {activeCount > 0 ? ` (${activeCount})` : ""}
             </button>
 
             <label className="sr-only" htmlFor="fx-sort">
-              Sort results
+              {t.sortLabel}
             </label>
             <select
               id="fx-sort"
               value={sort}
               onChange={(e) => setSort(e.target.value)}
-              className="min-h-10 min-w-0 flex-1 rounded-full border border-ink-900/12 bg-white px-4 py-2 text-[0.75rem] sm:flex-none font-semibold text-ink-700 outline-none transition-colors hover:border-ink-900/30 focus:border-gold-500"
+              className="min-h-10 min-w-0 flex-1 rounded-full border border-ink-900/12 bg-white px-4 py-2 text-[0.75rem] font-semibold text-ink-700 outline-none transition-colors hover:border-ink-900/30 focus:border-gold-500 sm:flex-none"
             >
-              {SORTS.map((s) => (
-                <option key={s.key} value={s.key}>
-                  {s.label}
+              {SORT_KEYS.map((k) => (
+                <option key={k} value={k}>
+                  {t.sorts[k]}
                 </option>
               ))}
             </select>
@@ -365,19 +325,16 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
         </div>
 
         {results.length === 0 ? (
-          <div className="rounded-2xl border border-dashed border-ink-900/15 px-8 py-20 text-center">
-            <p className="display-sm text-ink-900">Nothing matches that combination</p>
-            <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-ink-400">
-              Our full inventory runs well beyond what is published here. Tell an adviser what
-              you are looking for and we will search the off-market stock.
-            </p>
+          <div className="mt-8 rounded-2xl border border-dashed border-ink-900/15 px-8 py-20 text-center">
+            <p className="display-sm text-ink-900">{t.emptyTitle}</p>
+            <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-ink-400">{t.emptyBody}</p>
             <div className="mt-7 flex flex-wrap justify-center gap-3">
               <button type="button" onClick={reset} className="btn btn-outline btn-sm">
-                Clear filters
+                {t.clearFilters}
               </button>
-              <a href="/contact" className="btn btn-gold btn-sm">
-                Send us your brief
-              </a>
+              <Link href="/contact" className="btn btn-gold btn-sm">
+                {t.sendBrief}
+              </Link>
             </div>
           </div>
         ) : (
@@ -389,20 +346,17 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
         )}
       </div>
 
-      {/* Mobile drawer */}
+      {/* Mobile drawer — slides in from the reading edge */}
       {drawerOpen && (
         <div className="fixed inset-0 z-[60] lg:hidden">
-          <div
-            className="absolute inset-0 bg-ink-950/60 backdrop-blur-sm"
-            onClick={() => setDrawerOpen(false)}
-          />
-          <div className="absolute inset-y-0 right-0 flex w-[88%] max-w-sm flex-col bg-bone-50">
+          <div className="absolute inset-0 bg-ink-950/60 backdrop-blur-sm" onClick={() => setDrawerOpen(false)} />
+          <div className="absolute inset-y-0 end-0 flex w-[88%] max-w-sm flex-col bg-bone-50">
             <div className="flex items-center justify-between border-b border-ink-900/10 px-5 py-4">
-              <p className="display-sm text-ink-900">Refine</p>
+              <p className="display-sm text-ink-900">{t.refine}</p>
               <button
                 type="button"
                 onClick={() => setDrawerOpen(false)}
-                aria-label="Close filters"
+                aria-label={t.closeFilters}
                 className="grid size-9 place-items-center rounded-full border border-ink-900/15"
               >
                 <X className="size-4" strokeWidth={1.5} />
@@ -410,12 +364,8 @@ export default function Explorer({ initial }: { initial: ExplorerInitial }) {
             </div>
             <div className="flex-1 overflow-y-auto px-5 py-6">{filterPanel}</div>
             <div className="border-t border-ink-900/10 p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
-              <button
-                type="button"
-                onClick={() => setDrawerOpen(false)}
-                className="btn btn-ink w-full"
-              >
-                Show {results.length} {results.length === 1 ? "property" : "properties"}
+              <button type="button" onClick={() => setDrawerOpen(false)} className="btn btn-ink w-full">
+                {plural(results.length, t.show)}
               </button>
             </div>
           </div>

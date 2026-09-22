@@ -1,20 +1,22 @@
-import Link from "next/link";
 import { site } from "@/data/site";
+import Link from "@/i18n/Link";
 
 /**
  * Wordmark. Swap the markup here for an <Image> if the agency
  * supplies a drawn logo — nothing else references the type.
+ * The brand name stays in Latin script in both languages.
  */
-export default function Logo({ light = false }: { light?: boolean }) {
+export default function Logo({ light = false, tagline }: { light?: boolean; tagline: string }) {
   return (
-    <Link href="/" aria-label={`${site.name} — home`} className="group inline-flex items-center gap-3">
+    <Link href="/" aria-label={site.name} className="group inline-flex items-center gap-3">
       <span
         className={`grid size-9 shrink-0 place-items-center rounded-full border transition-colors duration-500 ${
           light ? "border-bone-100/35" : "border-ink-900/20"
         }`}
       >
         <span
-          className={`font-display text-[0.8rem] leading-none transition-colors duration-500 ${
+          dir="ltr"
+          className={`font-latin-display text-[0.8rem] leading-none transition-colors duration-500 ${
             light ? "text-gold-400" : "text-gold-600"
           }`}
         >
@@ -23,7 +25,8 @@ export default function Logo({ light = false }: { light?: boolean }) {
       </span>
       <span className="flex flex-col leading-none">
         <span
-          className={`whitespace-nowrap font-display text-[1.15rem] tracking-tight transition-colors duration-500 ${
+          dir="ltr"
+          className={`whitespace-nowrap font-latin-display text-[1.15rem] tracking-tight transition-colors duration-500 ${
             light ? "text-bone-50" : "text-ink-900"
           }`}
         >
@@ -34,7 +37,7 @@ export default function Logo({ light = false }: { light?: boolean }) {
             light ? "text-bone-100/55" : "text-ink-400"
           }`}
         >
-          {site.tagline}
+          {tagline}
         </span>
       </span>
     </Link>

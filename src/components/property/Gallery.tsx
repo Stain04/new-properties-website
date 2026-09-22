@@ -3,8 +3,13 @@
 import { ChevronLeft, ChevronRight, Expand, X } from "lucide-react";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useI18n } from "@/i18n/I18nProvider";
 
 export default function Gallery({ images, title }: { images: string[]; title: string }) {
+  const { dict, fmt, locale } = useI18n();
+  const t = dict.gallery;
+  // In Arabic the "next" photo sits to the left, so arrow keys and swipes flip.
+  const flip = locale === "ar" ? -1 : 1;
   const [lightbox, setLightbox] = useState<number | null>(null);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
 
@@ -21,7 +26,7 @@ export default function Gallery({ images, title }: { images: string[]; title: st
     const t = e.changedTouches[0];
     const dx = t.clientX - start.x;
     const dy = t.clientY - start.y;
-    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.3) step(dx < 0 ? 1 : -1);
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.3) step(((dx < 0 ? 1 : -1) * flip) as 1 | -1);
   };
 
   const step = useCallback(
@@ -34,8 +39,8 @@ export default function Gallery({ images, title }: { images: string[]; title: st
     if (lightbox === null) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setLightbox(null);
-      if (e.key === "ArrowRight") step(1);
-      if (e.key === "ArrowLeft") step(-1);
+      if (e.key === "ArrowRight") step(flip as 1 | -1);
+      if (e.key === "ArrowLeft") step((-flip) as 1 | -1);
     };
     window.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
@@ -43,7 +48,7 @@ export default function Gallery({ images, title }: { images: string[]; title: st
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
-  }, [lightbox, step]);
+  }, [lightbox, step, flip]);
 
   const [hero, ...rest] = images;
 
@@ -64,9 +69,9 @@ export default function Gallery({ images, title }: { images: string[]; title: st
             sizes="(min-width:768px) 62vw, 100vw"
             className="img-zoom object-cover"
           />
-          <span className="absolute bottom-4 left-4 chip chip-glass">
+          <span className="absolute bottom-4 start-4 chip chip-glass">
             <Expand className="size-3.5" strokeWidth={2} />
-            {images.length} photographs
+            {fmt(t.count, { n: images.length })}
           </span>
         </button>
 
@@ -80,7 +85,7 @@ export default function Gallery({ images, title }: { images: string[]; title: st
             >
               <Image
                 src={src}
-                alt={`${title} — photograph ${i + 2}`}
+                alt={fmt(t.photo, { title, n: i + 2 })}
                 fill
                 sizes="(min-width:768px) 32vw, 48vw"
                 className="img-zoom object-cover"
@@ -102,7 +107,7 @@ export default function Gallery({ images, title }: { images: string[]; title: st
             key={src + i}
             type="button"
             onClick={() => setLightbox(i)}
-            aria-label={`Open photograph ${i + 1}`}
+            aria-label={fmt(t.open, { n: i + 1 })}
             className="relative h-16 w-24 shrink-0 overflow-hidden rounded-lg bg-ink-800 ring-offset-2 transition-all duration-300 hover:ring-2 hover:ring-gold-500"
           >
             <Image
@@ -122,15 +127,15 @@ export default function Gallery({ images, title }: { images: string[]; title: st
           className="fixed inset-0 z-[70] flex items-center justify-center bg-ink-950/96 backdrop-blur-sm"
           role="dialog"
           aria-modal="true"
-          aria-label={`${title} — photograph viewer`}
+          aria-label={fmt(t.viewer, { title })}
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
         >
           <button
             type="button"
             onClick={() => setLightbox(null)}
-            aria-label="Close"
-            className="absolute right-5 top-[max(1.25rem,env(safe-area-inset-top))] z-10 grid size-11 place-items-center rounded-full border border-bone-100/25 text-bone-50 transition-colors hover:bg-bone-50 hover:text-ink-950"
+            aria-label={t.close}
+            className="absolute end-5 top-[max(1.25rem,env(safe-area-inset-top))] z-10 grid size-11 place-items-center rounded-full border border-bone-100/25 text-bone-50 transition-colors hover:bg-bone-50 hover:text-ink-950"
           >
             <X className="size-5" strokeWidth={1.5} />
           </button>
@@ -138,25 +143,25 @@ export default function Gallery({ images, title }: { images: string[]; title: st
           <button
             type="button"
             onClick={() => step(-1)}
-            aria-label="Previous photograph"
-            className="absolute bottom-[max(1.25rem,env(safe-area-inset-bottom))] left-5 z-10 grid size-11 place-items-center rounded-full border border-bone-100/25 text-bone-50 transition-colors hover:bg-bone-50 hover:text-ink-950 md:bottom-auto md:left-8"
+            aria-label={t.prev}
+            className="absolute bottom-[max(1.25rem,env(safe-area-inset-bottom))] start-5 z-10 grid size-11 place-items-center rounded-full border border-bone-100/25 text-bone-50 transition-colors hover:bg-bone-50 hover:text-ink-950 md:bottom-auto md:start-8"
           >
-            <ChevronLeft className="size-5" strokeWidth={1.5} />
+            <ChevronLeft className="size-5 rtl:-scale-x-100" strokeWidth={1.5} />
           </button>
 
           <button
             type="button"
             onClick={() => step(1)}
-            aria-label="Next photograph"
-            className="absolute bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-5 z-10 grid size-11 place-items-center rounded-full border border-bone-100/25 text-bone-50 transition-colors hover:bg-bone-50 hover:text-ink-950 md:bottom-auto md:right-8"
+            aria-label={t.next}
+            className="absolute bottom-[max(1.25rem,env(safe-area-inset-bottom))] end-5 z-10 grid size-11 place-items-center rounded-full border border-bone-100/25 text-bone-50 transition-colors hover:bg-bone-50 hover:text-ink-950 md:bottom-auto md:end-8"
           >
-            <ChevronRight className="size-5" strokeWidth={1.5} />
+            <ChevronRight className="size-5 rtl:-scale-x-100" strokeWidth={1.5} />
           </button>
 
           <div className="relative h-[72vh] w-[92vw] max-w-6xl">
             <Image
               src={images[lightbox]}
-              alt={`${title} — photograph ${lightbox + 1}`}
+              alt={fmt(t.photo, { title, n: lightbox + 1 })}
               fill
               sizes="92vw"
               className="object-contain"
