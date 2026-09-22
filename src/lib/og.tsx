@@ -28,12 +28,12 @@ const font = (file: string) => readFile(path.join(fontDir, file));
 
 async function fonts() {
   const [frauncesLight, fraunces, manrope, manropeBold, arabic, arabicBold] = await Promise.all([
-    font("fraunces-latin-300-normal.woff"),
-    font("fraunces-latin-400-normal.woff"),
-    font("manrope-latin-600-normal.woff"),
-    font("manrope-latin-700-normal.woff"),
-    font("ibm-plex-sans-arabic-arabic-500-normal.woff"),
-    font("ibm-plex-sans-arabic-arabic-700-normal.woff"),
+    font("fraunces-latin-300-normal.ttf"),
+    font("fraunces-latin-400-normal.ttf"),
+    font("manrope-latin-600-normal.ttf"),
+    font("manrope-latin-700-normal.ttf"),
+    font("ibm-plex-sans-arabic-arabic-500-normal.ttf"),
+    font("ibm-plex-sans-arabic-arabic-700-normal.ttf"),
   ]);
   return [
     { name: "Fraunces", data: frauncesLight, weight: 300 as const, style: "normal" as const },
@@ -115,30 +115,88 @@ export function OgBrand({ size = 1 }: { size?: number }) {
 /** Full-card layer. The renderer ignores the `inset` shorthand, so size it explicitly. */
 export const fill: CSSProperties = { position: "absolute", top: 0, left: 0, width: OG_SIZE.width, height: OG_SIZE.height };
 
-/**
- * Text that reads correctly in either language. The image renderer shapes
- * Arabic letters but has no bidirectional layout, so a line that mixes Arabic
- * with numbers ("13,800,000 جنيه") comes out in the wrong order. Laying each
- * word out as its own item in a right-to-left row sidesteps that entirely.
+/** Pango markup needs its special characters escaped. */
+const escapeMarkup = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+/** "#d2b884" or "rgba(251,249,246,0.82)" → Pango's colour and opacity attributes. */
+function pangoColor(color: string) {
+  const m = color.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(?:,\s*([\d.]+))?\s*\)/);
+  if (!m) return `foreground="${color}"`;
+  const hex = [m[1], m[2], m[3]].map((n) => Number(n).toString(16).padStart(2, "0")).join("");
+  const alpha = m[4] === undefined ? 100 : Math.round(Number(m[4]) * 100);
+  return `foreground="#${hex}" fgalpha="${alpha}%"`;
+}
+
+/*
+ * Fonts for Arabic text. Latin digits aren't in the Arabic font files, so
+ * Manrope is registered alongside and picked up for numbers automatically.
+ * libvips keeps every font file it has been given, so registering each once
+ * per server process is enough.
  */
-export function OgText({ text, rtl, style }: { text: string; rtl: boolean; style: CSSProperties }) {
+const arabicFontFile = (weight: 500 | 700) => path.join(fontDir, `ibm-plex-sans-arabic-arabic-${weight}-normal.ttf`);
+let fontsRegistered: Promise<void> | null = null;
+function registerArabicFonts() {
+  fontsRegistered ??= (async () => {
+    for (const file of [
+      "manrope-latin-600-normal.ttf",
+      "manrope-latin-700-normal.ttf",
+      "ibm-plex-sans-arabic-arabic-500-normal.ttf",
+      "ibm-plex-sans-arabic-arabic-700-normal.ttf",
+    ]) {
+      await sharp({ text: { text: "x", fontfile: path.join(fontDir, file) } }).png().toBuffer();
+    }
+  })();
+  return fontsRegistered;
+}
+
+/** Draw Arabic text to a transparent image with full shaping and right-to-left layout. */
+async function arabicImage(text: string, style: CSSProperties) {
+  const size = Number(style.fontSize ?? 24);
+  const weight = Number(style.fontWeight ?? 500) >= 600 ? 700 : 500;
+  const maxWidth = Number(style.maxWidth ?? 1060);
+  const lineHeight = Number(style.lineHeight ?? 1.3);
+  await registerArabicFonts();
+  const { data, info } = await sharp({
+    text: {
+      text: `<span ${pangoColor(String(style.color ?? OG_COLORS.bone))}>${escapeMarkup(text)}</span>`,
+      font: `IBM Plex Sans Arabic,Manrope ${weight === 700 ? "Bold" : "Medium"} ${size}`,
+      fontfile: arabicFontFile(weight),
+      width: maxWidth,
+      align: "right",
+      rgba: true,
+      dpi: 72, // 1pt = 1px, so font sizes match the card's CSS pixels
+      spacing: Math.max(0, Math.round(size * (lineHeight - 1.25))),
+    },
+  })
+    .png()
+    .toBuffer({ resolveWithObject: true });
+  return { src: `data:image/png;base64,${data.toString("base64")}`, width: info.width, height: info.height };
+}
+
+/**
+ * Text for a card, in either language. The card renderer can't lay out Arabic
+ * properly — it measures letters unjoined, so word gaps come out uneven, and it
+ * has no right-to-left ordering for lines that mix Arabic with numbers
+ * ("13,800,000 جنيه"). Arabic is therefore drawn separately, with proper
+ * shaping, and placed on the card as an image. Layout styles (margins) still apply.
+ */
+export async function ogText(rtl: boolean, text: string, style: CSSProperties) {
   if (!rtl) return <div style={{ display: "flex", ...style }}>{text}</div>;
-  const words = text.split(/\s+/).filter(Boolean);
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row-reverse",
-        flexWrap: "wrap",
-        justifyContent: "flex-start",
-        // The renderer adds its own spacing around Arabic word ends; keep the gap tight.
-        columnGap: "0.12em",
-        ...style,
-      }}
-    >
-      {words.map((w, i) => (
-        <span key={i}>{w}</span>
-      ))}
-    </div>
+  // Keep only the margins that are set — the renderer crashes on undefined style values.
+  const margins = Object.fromEntries(
+    (["margin", "marginTop", "marginBottom"] as const).filter((k) => style[k] !== undefined).map((k) => [k, style[k]]),
   );
+  try {
+    const img = await arabicImage(text, style);
+    return (
+      <div style={{ display: "flex", ...margins }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={img.src} width={img.width} height={img.height} alt="" />
+      </div>
+    );
+  } catch (err) {
+    // Fall back to the card renderer's own text — imperfect spacing beats a missing line.
+    console.warn("[og] Arabic text rendering failed:", (err as Error).message);
+    return <div style={{ display: "flex", ...style }}>{text}</div>;
+  }
 }

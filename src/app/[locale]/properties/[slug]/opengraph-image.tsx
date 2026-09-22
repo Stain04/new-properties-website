@@ -2,7 +2,7 @@ import { isLocale, type Locale } from "@/i18n/config";
 import { getProperty } from "@/i18n/data";
 import { getDictionary } from "@/i18n/dictionaries";
 import { formatArea } from "@/i18n/format";
-import { fill, OG_COLORS, OG_SIZE, OgBrand, OgText, photoDataUri, renderOg } from "@/lib/og";
+import { fill, OG_COLORS, OG_SIZE, OgBrand, ogText, photoDataUri, renderOg } from "@/lib/og";
 
 export const size = OG_SIZE;
 export const contentType = "image/jpeg";
@@ -40,6 +40,32 @@ export default async function Image({ params }: { params: Promise<{ locale: stri
   const text = ar ? "Plex Arabic" : "Manrope";
   const align = ar ? "flex-end" : "flex-start";
 
+  const chipLabels = await Promise.all(
+    chips.map((c, i) =>
+      ogText(ar, c, { fontFamily: text, fontWeight: ar ? 500 : 600, fontSize: 20, color: i === 0 ? OG_COLORS.ink : OG_COLORS.bone }),
+    ),
+  );
+  const [title, price, specLine] = await Promise.all([
+    ogText(ar, clip(p.title, ar ? 60 : 64), {
+      marginTop: 22,
+      maxWidth: 1060,
+      fontFamily: ar ? "Plex Arabic" : "Fraunces",
+      fontWeight: ar ? 700 : 400,
+      fontSize: ar ? 50 : 56,
+      lineHeight: ar ? 1.4 : 1.1,
+      letterSpacing: ar ? 0 : -1,
+      color: OG_COLORS.bone,
+    }),
+    ogText(ar, p.priceText, {
+      fontFamily: ar ? "Plex Arabic" : "Fraunces",
+      fontWeight: ar ? 700 : 300,
+      fontSize: ar ? 54 : 60,
+      lineHeight: 1,
+      color: OG_COLORS.goldLight,
+    }),
+    ogText(ar, specs, { fontFamily: text, fontWeight: ar ? 500 : 600, fontSize: 24, color: "rgba(251,249,246,0.82)" }),
+  ]);
+
   return renderOg(
     <div style={{ width: "100%", height: "100%", display: "flex", position: "relative", background: OG_COLORS.ink }}>
       {photo && (
@@ -74,35 +100,19 @@ export default async function Image({ params }: { params: Promise<{ locale: stri
                 key={c}
                 style={{
                   display: "flex",
+                  alignItems: "center",
                   padding: "8px 18px",
                   borderRadius: 999,
-                  fontFamily: text,
-                  fontWeight: ar ? 500 : 600,
-                  fontSize: 20,
-                  color: i === 0 ? OG_COLORS.ink : OG_COLORS.bone,
                   background: i === 0 ? OG_COLORS.gold : "rgba(255,255,255,0.12)",
                   border: i === 0 ? "none" : "1px solid rgba(255,255,255,0.28)",
                 }}
               >
-                {ar ? <OgText rtl text={c} style={{}} /> : c}
+                {chipLabels[i]}
               </div>
             ))}
           </div>
 
-          <OgText
-            rtl={ar}
-            text={clip(p.title, ar ? 60 : 64)}
-            style={{
-              marginTop: 22,
-              maxWidth: 1060,
-              fontFamily: ar ? "Plex Arabic" : "Fraunces",
-              fontWeight: ar ? 700 : 400,
-              fontSize: ar ? 50 : 56,
-              lineHeight: ar ? 1.4 : 1.1,
-              letterSpacing: ar ? 0 : -1,
-              color: OG_COLORS.bone,
-            }}
-          />
+          {title}
 
           <div
             style={{
@@ -114,22 +124,8 @@ export default async function Image({ params }: { params: Promise<{ locale: stri
               flexDirection: ar ? "row-reverse" : "row",
             }}
           >
-            <OgText
-              rtl={ar}
-              text={p.priceText}
-              style={{
-                fontFamily: ar ? "Plex Arabic" : "Fraunces",
-                fontWeight: ar ? 700 : 300,
-                fontSize: ar ? 54 : 60,
-                lineHeight: 1,
-                color: OG_COLORS.goldLight,
-              }}
-            />
-            <OgText
-              rtl={ar}
-              text={specs}
-              style={{ fontFamily: text, fontWeight: ar ? 500 : 600, fontSize: 24, color: "rgba(251,249,246,0.82)" }}
-            />
+            {price}
+            {specLine}
           </div>
         </div>
       </div>

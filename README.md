@@ -84,8 +84,8 @@ Every image on the site resolves through this one file. To use the agency's own 
 1. Drop the files into `public/photos/`
 2. Change the value, e.g. `heroCairo: "/photos/hero-new-cairo.jpg"`
 
-Local files are automatically optimised, resized and converted to AVIF/WebP by Next.js.
-See "Image handling" below for why.
+Local files are served exactly as saved, so export them as JPEGs of around 2000px on the
+longest edge. See "Image handling" below for why.
 
 ### 4. Listings, team and copy
 
@@ -217,9 +217,10 @@ This matters: with a hundred-odd images across the site, proxying every remote o
 through the optimizer saturates its upstream fetch budget and images start failing to load.
 Going straight to the CDN removes that failure mode entirely and costs nothing to serve.
 
-**Local files are unaffected** — anything starting with `/` is handed back to Next's own
-optimizer, so real agency photography in `public/photos/` gets full resizing, AVIF/WebP
-conversion and caching. Swapping placeholders for real photos needs no configuration change.
+**Every other photo is served as stored.** A custom loader switches Next's built-in optimizer
+off entirely (`/_next/image` returns 404), so photos are sized once instead: anything uploaded
+through the admin is turned upright, shrunk to 2000px and saved as a compact JPEG on arrival.
+Files placed in `public/photos/` by hand should be exported at that size.
 
 > **Licensing:** the placeholder photographs are free to use under the Unsplash licence, but
 > they are stock images of properties elsewhere in the world. Replace them with the agency's

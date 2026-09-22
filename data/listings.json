@@ -2363,5 +2363,140 @@
       "floor": "الرابع من 6"
     },
     "updatedAt": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "slug": "rent-single-rooms-zahraa-nasr-city",
+    "ref": "NS-R-NC-052",
+    "purpose": "rent",
+    "type": "Apartment",
+    "areaSlug": "new-cairo",
+    "price": 5000,
+    "currency": "EGP",
+    "period": "month",
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "size": 120,
+    "finishing": "Furnished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "agentSlug": "dina-halim",
+    "images": [
+      "/photos/listings/zahraa-single-living.jpg",
+      "/photos/listings/zahraa-single-bedroom.jpg",
+      "/photos/listings/zahraa-single-kitchen.jpg",
+      "/photos/listings/zahraa-single-bathroom.jpg"
+    ],
+    "en": {
+      "title": "Furnished single rooms, Zahraa Nasr City",
+      "address": "Zahraa Nasr City, Cairo",
+      "summary": "Newly furnished single rooms in a shared flat, with separate flats for women and for men. Every bill is included in the rent.",
+      "description": [
+        "Single rooms are available in two shared flats, one for women and one for men. Each room has a new bed, a wardrobe, a bedside unit and a standing fan.",
+        "Residents share a lounge with a corner sofa and a wall-mounted TV, a kitchen with a new fridge, a cooker and a microwave, and a large tiled bathroom with a bathtub and a washing machine.",
+        "The rent covers the lift, Wi-Fi, electricity, gas and water, so there are no extra bills. Zahraa Nasr City is minutes from the Fifth and First Settlements, Makram Ebeid, Abbas El Akkad and Heliopolis."
+      ],
+      "features": [
+        "Single rooms",
+        "Separate flats for women and men",
+        "Bills included: lift, Wi-Fi, electricity, gas and water",
+        "Newly furnished",
+        "Fully equipped kitchen",
+        "Washing machine",
+        "Wi-Fi",
+        "Lift"
+      ],
+      "view": "Residential street"
+    },
+    "ar": {
+      "title": "غرف سينجل مفروشة في زهراء مدينة نصر",
+      "address": "زهراء مدينة نصر، القاهرة",
+      "summary": "غرف سينجل مفروشة جديد في شقة مشتركة، فيه شقة للبنات وشقة للشباب. الإيجار شامل كل الفواتير.",
+      "description": [
+        "متاح غرف سينجل في شقتين مشتركتين، واحدة للبنات وواحدة للشباب. كل أوضة فيها سرير جديد ودولاب وكومودينو ومروحة.",
+        "فيه ليفينج بركنة وتليفزيون على الحيطة، ومطبخ فيه تلاجة جديدة وبوتاجاز وميكروويف، وحمّام واسع ببانيو وغسالة.",
+        "الإيجار شامل الأسانسير والواي فاي والكهربا والغاز والمية، يعني مفيش أي فواتير زيادة. زهراء مدينة نصر قريبة جدًا من التجمع الخامس والتجمع الأول ومكرم عبيد وعباس العقاد ومصر الجديدة."
+      ],
+      "features": [
+        "غرف سينجل",
+        "شقة للبنات وشقة للشباب",
+        "الأسعار شاملة الفواتير: أسانسير، واي فاي، كهربا، غاز، مية",
+        "فرش جديد",
+        "مطبخ كامل",
+        "غسالة",
+        "واي فاي",
+        "أسانسير"
+      ],
+      "view": "شارع سكني"
+    },
+    "updatedAt": "2026-09-22T10:30:30.634Z"
+  },
+  {
+    "slug": "rent-single-double-rooms-zahraa-nasr-city",
+    "ref": "NS-R-NC-053",
+    "purpose": "rent",
+    "type": "Apartment",
+    "areaSlug": "new-cairo",
+    "price": 3500,
+    "currency": "EGP",
+    "period": "month",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "size": 150,
+    "finishing": "Furnished",
+    "status": "available",
+    "featured": false,
+    "exclusive": false,
+    "agentSlug": "dina-halim",
+    "images": [
+      "/photos/listings/zahraa-double-bedroom.jpg",
+      "/photos/listings/zahraa-double-lounge.jpg",
+      "/photos/listings/zahraa-double-hallway.jpg",
+      "/photos/listings/zahraa-double-vanity.jpg",
+      "/photos/listings/zahraa-double-bathroom.jpg"
+    ],
+    "en": {
+      "title": "Single and double rooms, Zahraa Nasr City",
+      "address": "Zahraa Nasr City, Cairo",
+      "summary": "Single and double rooms in a warm, well-kept shared flat, with separate flats for women and for men. Every bill is included in the rent.",
+      "description": [
+        "Single and double rooms are available in two shared flats, one for women and one for men. The bedrooms are large, with proper curtains and soft lighting.",
+        "There is a reading corner with a hanging egg chair, a wide entrance hall, a guest washroom with a lit mirror and a full bathroom with a corner bathtub, a water heater and a washing machine.",
+        "The rent covers the lift, Wi-Fi, electricity, gas and water. Zahraa Nasr City is minutes from the Fifth and First Settlements, Makram Ebeid, Abbas El Akkad and Heliopolis."
+      ],
+      "features": [
+        "Single and double rooms",
+        "Separate flats for women and men",
+        "Bills included: lift, Wi-Fi, electricity, gas and water",
+        "Reading corner",
+        "Two bathrooms",
+        "Washing machine",
+        "Wi-Fi",
+        "Lift"
+      ],
+      "view": "Residential street"
+    },
+    "ar": {
+      "title": "غرف سينجل ودبل في زهراء مدينة نصر",
+      "address": "زهراء مدينة نصر، القاهرة",
+      "summary": "غرف سينجل ودبل في شقة مشتركة دافية ومتظبطة، فيه شقة للبنات وشقة للشباب. الإيجار شامل كل الفواتير.",
+      "description": [
+        "متاح غرف سينجل ودبل في شقتين مشتركتين، واحدة للبنات وواحدة للشباب. الأوض واسعة، بستاير وإضاءة هادية.",
+        "فيه ركنة قعدة بمرجيحة، وطرقة مدخل واسعة، وحمّام ضيوف بمراية منوّرة، وحمّام كامل ببانيو ركنة وسخّان وغسالة.",
+        "الإيجار شامل الأسانسير والواي فاي والكهربا والغاز والمية. زهراء مدينة نصر قريبة جدًا من التجمع الخامس والتجمع الأول ومكرم عبيد وعباس العقاد ومصر الجديدة."
+      ],
+      "features": [
+        "غرف سينجل ودبل",
+        "شقة للبنات وشقة للشباب",
+        "الأسعار شاملة الفواتير: أسانسير، واي فاي، كهربا، غاز، مية",
+        "ركنة قعدة",
+        "حمّامين",
+        "غسالة",
+        "واي فاي",
+        "أسانسير"
+      ],
+      "view": "شارع سكني"
+    },
+    "updatedAt": "2026-09-22T10:30:30.634Z"
   }
 ]

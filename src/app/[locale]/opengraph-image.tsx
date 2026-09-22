@@ -2,7 +2,7 @@ import { isLocale, type Locale } from "@/i18n/config";
 import { getSite } from "@/i18n/data";
 import { getDictionary } from "@/i18n/dictionaries";
 import { photos } from "@/lib/images";
-import { fill, OG_COLORS, OG_SIZE, OgBrand, OgText, photoDataUri, renderOg } from "@/lib/og";
+import { fill, OG_COLORS, OG_SIZE, OgBrand, ogText, photoDataUri, renderOg } from "@/lib/og";
 
 export const size = OG_SIZE;
 export const contentType = "image/jpeg";
@@ -31,6 +31,24 @@ export default async function Image({ params }: { params: Promise<{ locale: stri
     letterSpacing: ar ? 0 : -2,
   } as const;
 
+  const tagStyle = {
+    fontFamily: ar ? "Plex Arabic" : "Manrope",
+    fontWeight: ar ? 500 : 600,
+    fontSize: 22,
+    color: OG_COLORS.goldLight,
+  } as const;
+  const [lineOne, lineTwo, placesLine, ...tagLabels] = await Promise.all([
+    ogText(ar, hero.lineOne, { ...headline, color: OG_COLORS.bone }),
+    ogText(ar, hero.lineTwo, { ...headline, color: OG_COLORS.goldLight }),
+    ogText(ar, places, {
+      fontFamily: ar ? "Plex Arabic" : "Manrope",
+      fontWeight: ar ? 500 : 600,
+      fontSize: 28,
+      color: "rgba(251,249,246,0.85)",
+    }),
+    ...tags.map((t) => ogText(ar, t, tagStyle)),
+  ]);
+
   return renderOg(
     <div style={{ width: "100%", height: "100%", display: "flex", position: "relative", background: OG_COLORS.ink }}>
       {photo && (
@@ -58,14 +76,10 @@ export default async function Image({ params }: { params: Promise<{ locale: stri
         <OgBrand />
 
         <div style={{ display: "flex", flexDirection: "column", alignItems: ar ? "flex-end" : "flex-start" }}>
-          <OgText rtl={ar} text={hero.lineOne} style={{ ...headline, color: OG_COLORS.bone }} />
-          <OgText rtl={ar} text={hero.lineTwo} style={{ ...headline, color: OG_COLORS.goldLight }} />
+          {lineOne}
+          {lineTwo}
           <div style={{ display: "flex", width: 96, height: 2, background: OG_COLORS.gold, margin: "30px 0 24px" }} />
-          <OgText
-            rtl={ar}
-            text={places}
-            style={{ fontFamily: ar ? "Plex Arabic" : "Manrope", fontWeight: ar ? 500 : 600, fontSize: 28, color: "rgba(251,249,246,0.85)" }}
-          />
+          {placesLine}
         </div>
 
         <div
@@ -78,22 +92,19 @@ export default async function Image({ params }: { params: Promise<{ locale: stri
           }}
         >
           <div style={{ display: "flex", gap: 12, flexDirection: ar ? "row-reverse" : "row" }}>
-            {tags.map((t) => (
+            {tags.map((t, i) => (
               <div
                 key={t}
                 style={{
                   display: "flex",
+                  alignItems: "center",
                   padding: "10px 22px",
                   borderRadius: 999,
                   border: "1.5px solid rgba(210,184,132,0.6)",
                   background: "rgba(5,8,11,0.35)",
-                  color: OG_COLORS.goldLight,
-                  fontFamily: ar ? "Plex Arabic" : "Manrope",
-                  fontWeight: ar ? 500 : 600,
-                  fontSize: 22,
                 }}
               >
-                {t}
+                {tagLabels[i]}
               </div>
             ))}
           </div>

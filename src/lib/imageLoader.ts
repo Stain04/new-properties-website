@@ -4,16 +4,14 @@
  *
  *  Wired up through `images.loaderFile` in next.config.ts.
  *
- *  Local files (anything starting with "/") go through Next's own
- *  optimizer exactly as they normally would — so when the agency
- *  drops real photography into /public/photos/ it is resized,
- *  converted to AVIF/WebP and cached by the server.
+ *  Remote placeholder photography is resized by the source CDN,
+ *  which already does format negotiation and crops on demand.
  *
- *  Remote placeholder photography is resized by the source CDN
- *  instead. That CDN already does format negotiation and crops on
- *  demand, so proxying it through our own optimizer only adds a
- *  round trip — and, with a hundred-odd images on a page, enough
- *  concurrent upstream fetches to trip the optimizer's timeout.
+ *  Everything else — files in /public, admin uploads under /media,
+ *  photos in Supabase storage — is served as stored. A custom
+ *  loader switches off Next's built-in optimizer (/_next/image
+ *  returns 404), so those photos are instead resized once, when
+ *  they are uploaded (see src/app/api/admin/upload/route.ts).
  * ─────────────────────────────────────────────────────────────
  */
 
@@ -26,14 +24,10 @@ interface LoaderArgs {
 export default function imageLoader({ src, width, quality }: LoaderArgs): string {
   const q = quality ?? 75;
 
-  // Local asset — hand it back to the built-in optimizer.
-  if (src.startsWith("/")) {
-    return `/_next/image?url=${encodeURIComponent(src)}&w=${width}&q=${q}`;
-  }
-
-  // Anything that is not Unsplash (e.g. photos uploaded to Supabase) goes through Next's optimizer.
+  // Not Unsplash — serve the file as stored. The width is passed along only so
+  // each size is a distinct URL; static hosts and Supabase ignore it.
   if (!src.startsWith("https://images.unsplash.com/")) {
-    return `/_next/image?url=${encodeURIComponent(src)}&w=${width}&q=${q}`;
+    return `${src}${src.includes("?") ? "&" : "?"}w=${width}`;
   }
 
   // Unsplash — ask the source CDN for exactly the size we need.
